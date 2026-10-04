@@ -4,44 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="add login page">
-      <change afterPath="$PROJECT_DIR$/cloud-project/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Cloud.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/AGENTS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/app/login/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/app/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/components.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/eslint.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/next.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/postcss.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/public/file.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/public/globe.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/public/window.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/src/features/sign-in/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/src/features/sign-in/ui/sign-in-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/src/screens/login/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/src/screens/login/ui/login-screen.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/src/shared/lib/utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/src/shared/ui/button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/src/shared/ui/card.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/src/shared/ui/input.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/src/shared/ui/label.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/src/widgets/auth-panel/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/src/widgets/auth-panel/ui/auth-panel.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/cloud/tsconfig.json" beforeDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="init">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/login/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/shared/login-page.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,11 +70,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cloud-project/src/app/login" />
       <recent name="$PROJECT_DIR$/cloud-project" />
       <recent name="$PROJECT_DIR$/cloud-project/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/UI/cloud" />
-      <recent name="$PROJECT_DIR$/UI" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -121,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1790779347160</updated>
       <workItem from="1790779350588" duration="7000" />
-      <workItem from="1790959368831" duration="16180000" />
+      <workItem from="1790959368831" duration="23174000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -131,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790965129405</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <option name="closed" value="true" />
+      <created>1791027955460</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1791027955460</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -143,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add login page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add login page" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>

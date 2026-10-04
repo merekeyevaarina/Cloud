@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Вход — Northstar",
-  description: "Войдите в личный кабинет Northstar.",
+  title: "Вход — Cloud",
+  description: "Войдите в личный кабинет Cloud.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

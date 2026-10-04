@@ -1,13 +1,47 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
   --background: #f3f2f6;
   --foreground: #211b2d;
+  --card: #ffffff;
+  --card-foreground: #211b2d;
+  --popover: #ffffff;
+  --popover-foreground: #211b2d;
+  --primary: #302141;
+  --primary-foreground: #ffffff;
+  --secondary: #f1eef4;
+  --secondary-foreground: #302141;
+  --muted: #f1eef4;
+  --muted-foreground: #77717f;
+  --accent: #f1eef4;
+  --accent-foreground: #302141;
+  --destructive: #dc2626;
+  --border: #e4e1e9;
+  --input: #e4e1e9;
+  --ring: #493365;
+  --radius: 0.75rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
   --font-sans: var(--font-geist-sans, Arial, Helvetica, sans-serif);
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
