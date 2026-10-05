@@ -4,20 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="init">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="architecture changed/regester page added">
+      <change afterPath="$PROJECT_DIR$/cloud-project/prisma.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/login/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/register/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/shared/lib/prisma.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/test-db.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/shared/login-page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/users/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/users/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,6 +51,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="3K3HUU1lBeOZgHDi16iGAwtICkH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -70,8 +83,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cloud-project/src/app/login" />
       <recent name="$PROJECT_DIR$/cloud-project" />
+      <recent name="$PROJECT_DIR$/cloud-project/src/app/login" />
       <recent name="$PROJECT_DIR$/cloud-project/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/UI/cloud" />
@@ -92,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1790779347160</updated>
       <workItem from="1790779350588" duration="7000" />
-      <workItem from="1790959368831" duration="23174000" />
+      <workItem from="1790959368831" duration="33505000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -110,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791027955460</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="architecture changed/regester page added">
+      <option name="closed" value="true" />
+      <created>1791100838746</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1791100838746</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -123,6 +144,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add login page" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="architecture changed/regester page added" />
+    <option name="LAST_COMMIT_MESSAGE" value="architecture changed/regester page added" />
   </component>
 </project>
