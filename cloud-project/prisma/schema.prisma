@@ -8,8 +8,9 @@ datasource db {
 }
 
 model users {
-  id         String   @id @db.Uuid
-  email      String   @unique
-  created_at DateTime @db.Timestamptz(6)
-  updated_at DateTime @db.Timestamptz(6)
+  id            String   @id @db.Uuid
+  email         String   @unique
+  password_hash String
+  created_at    DateTime @db.Timestamptz(6)
+  updated_at    DateTime @db.Timestamptz(6)
 }

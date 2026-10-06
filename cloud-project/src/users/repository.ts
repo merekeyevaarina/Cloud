@@ -5,3 +5,15 @@ export async function findUserByEmail(email: string) {
         where: { email:email },
     })
 }
+
+export async function createUser(id: string, email: string, passwordHash: string) {
+    return prisma.users.create({
+        data:{
+            id,
+            email,
+            password_hash: passwordHash,
+            created_at: new Date(),
+            updated_at: new Date(),
+        }
+    })
+}

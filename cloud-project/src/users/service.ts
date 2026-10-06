@@ -1,10 +1,35 @@
-import {findUserByEmail} from "@/src/users/repository";
+import {findUserByEmail, createUser} from "@/src/users/repository";
+import argon2 from "argon2";
+import {ConflictError, ValidationError} from "@/src/shared/utils/errors";
+
 
 export async function registerUser(email: string, password: string) {
+    if (!email || !email.includes("@")) {
+        throw new ValidationError("Некорректный email");
+    }
+    if(!password || password.length < 8) {
+        throw new ValidationError("Пароль должен содержать минимум 8 символов")
+    }
+
+
     const existingUser = await findUserByEmail(email);
-    console.log("регистрация пользователя:", email);
+
+    if (existingUser) {
+        throw new ConflictError("email занят")
+    }
+
+    const passwordHash = await argon2.hash(password);
+
+    const id = crypto.randomUUID()
+
+    const user = await createUser(
+        id,
+        email,
+        passwordHash,
+    )
 
     return {
-        email, password
+        id: user.id,
+        email: user.email,
     }
 }
