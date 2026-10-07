@@ -5,9 +5,36 @@ import { Checkbox } from "@/src/shared/ui/checkbox";
 import { Input } from "@/src/shared/ui/input";
 import { Label } from "@/src/shared/ui/label";
 import { Separator } from "@/src/shared/ui/separator";
+import {useState} from "react";
 
 export function LoginForm() {
-  function onSubmit() {}
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+      event.preventDefault();
+
+      setError("");
+
+      const response = await fetch("/api/auth/login", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+              email,
+              password,
+          }),
+      })
+        const data = await response.json();
+
+      if(!response.ok) {
+          setError(data.error);
+          return;
+      }
+       window.location.href = "/";
+   }
 
   return (
     <>
@@ -19,16 +46,21 @@ export function LoginForm() {
 
       <form onSubmit={onSubmit} className="space-y-5">
         <div className="space-y-2">
-          <Label htmlFor="username" className="text-sm font-medium text-[#322b3d]">Логин</Label>
-          <Input id="username" name="username" autoComplete="username" required placeholder="Ваш логин" className="h-12 rounded-xl border-[#e4e1e9] bg-white px-4 text-sm text-[#211b2d] placeholder:text-[#aaa5b1] hover:border-[#c9c3d2] focus-visible:border-[#493365] focus-visible:ring-[#493365]/10" />
+          <Label htmlFor="email" className="text-sm font-medium text-[#322b3d]">Логин</Label>
+          <Input id="email" name="email" autoComplete="email" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Ваш логин" className="h-12 rounded-xl border-[#e4e1e9] bg-white px-4 text-sm text-[#211b2d] placeholder:text-[#aaa5b1] hover:border-[#c9c3d2] focus-visible:border-[#493365] focus-visible:ring-[#493365]/10" />
         </div>
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <Label htmlFor="password" className="text-sm font-medium text-[#322b3d]">Пароль</Label>
             <a href="#forgot-password" className="text-xs font-medium text-[#594276] transition hover:text-[#281b3d]">Забыли пароль?</a>
           </div>
-          <Input id="password" name="password" type="password" autoComplete="current-password" required placeholder="Введите пароль" className="h-12 rounded-xl border-[#e4e1e9] bg-white px-4 text-sm text-[#211b2d] placeholder:text-[#aaa5b1] hover:border-[#c9c3d2] focus-visible:border-[#493365] focus-visible:ring-[#493365]/10" />
+          <Input id="password" name="password" type="password" autoComplete="current-password" required placeholder="Введите пароль" value={password} onChange={(event) => setPassword(event.target.value)} className="h-12 rounded-xl border-[#e4e1e9] bg-white px-4 text-sm text-[#211b2d] placeholder:text-[#aaa5b1] hover:border-[#c9c3d2] focus-visible:border-[#493365] focus-visible:ring-[#493365]/10" />
         </div>
+          {error && (
+              <p className="text-sm text-red-600">
+                  {error}
+              </p>
+          )}
         <Label className="flex cursor-pointer items-center gap-2.5 text-sm text-[#6f6879]">
           <Checkbox name="remember" />
           Запомнить меня

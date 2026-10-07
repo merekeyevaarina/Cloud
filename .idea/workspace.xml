@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="db changed/created classes of error/ added argon2/tested post http requests">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="sessions created table in bd">
       <change afterPath="$PROJECT_DIR$/cloud-project/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/auth/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/login/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/browser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/browser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/users/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/test-db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/test-db.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/tsconfig.json" afterDir="false" />
@@ -110,7 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1790779347160</updated>
       <workItem from="1790779350588" duration="7000" />
-      <workItem from="1790959368831" duration="55923000" />
+      <workItem from="1790959368831" duration="57114000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -152,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791279767720</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="sessions created table in bd">
+      <option name="closed" value="true" />
+      <created>1791390312306</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1791390312306</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -168,7 +184,8 @@
     <MESSAGE value="architecture changed/regester page added" />
     <MESSAGE value="prisma added" />
     <MESSAGE value="db changed/created classes of error/ added argon2/tested post http requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="db changed/created classes of error/ added argon2/tested post http requests" />
+    <MESSAGE value="sessions created table in bd" />
+    <option name="LAST_COMMIT_MESSAGE" value="sessions created table in bd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
