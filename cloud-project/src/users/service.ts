@@ -1,6 +1,7 @@
-import {findUserByEmail, createUser} from "@/src/users/repository";
 import argon2 from "argon2";
 import {ConflictError, ValidationError} from "@/src/shared/utils/errors";
+import {createUserSession} from "@/src/auth/service";
+import {createUser, findUserByEmail} from "@/src/users/repository";
 
 //регистрация
 export async function registerUser(email: string, password: string) {
@@ -59,8 +60,11 @@ export async function loginUser(email: string, password: string) {
         throw new ValidationError("Неверный email или пароль")
     }
 
+    const session = await createUserSession(user.id)
+
     return {
         id: user.id,
         email: user.email,
+        sessionId: session.id,
     }
 }
