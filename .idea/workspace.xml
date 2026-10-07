@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="prisma added">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/shared/utils/errors.ts" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="db changed/created classes of error/ added argon2/tested post http requests">
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/auth/register/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/register/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/users/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/auth/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/login/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/users/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/test-db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/test-db.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +23,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="tsconfig.json" />
+        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -67,7 +71,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;unite-sevrer-with-ui&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/arinajumabaeva/Cloud&quot;,
@@ -84,11 +88,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cloud-project/src/users" />
+      <recent name="$PROJECT_DIR$/cloud-project/src/app" />
+      <recent name="$PROJECT_DIR$/cloud-project/src/auth" />
       <recent name="$PROJECT_DIR$/cloud-project" />
       <recent name="$PROJECT_DIR$/cloud-project/src/app/login" />
-      <recent name="$PROJECT_DIR$/cloud-project/src" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/UI/cloud" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -106,7 +110,7 @@
       <option name="presentableId" value="Default" />
       <updated>1790779347160</updated>
       <workItem from="1790779350588" duration="7000" />
-      <workItem from="1790959368831" duration="43815000" />
+      <workItem from="1790959368831" duration="55923000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -140,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791211644684</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="db changed/created classes of error/ added argon2/tested post http requests">
+      <option name="closed" value="true" />
+      <created>1791279767720</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1791279767720</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -155,6 +167,19 @@
     <MESSAGE value="init" />
     <MESSAGE value="architecture changed/regester page added" />
     <MESSAGE value="prisma added" />
-    <option name="LAST_COMMIT_MESSAGE" value="prisma added" />
+    <MESSAGE value="db changed/created classes of error/ added argon2/tested post http requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="db changed/created classes of error/ added argon2/tested post http requests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx</url>
+          <line>58</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
