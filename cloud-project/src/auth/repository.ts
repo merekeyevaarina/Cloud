@@ -10,3 +10,14 @@ export async function createSession(id: string, userId:string, expiresAt:Date) {
       }
     })
 }
+
+export async function findSessionById(sessionId:string){
+    return prisma.sessions.findUnique({
+        where:{
+            id: sessionId
+        },
+        include:{
+            user:true
+        }
+    })
+}
