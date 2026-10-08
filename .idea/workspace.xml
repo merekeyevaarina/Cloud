@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="src/auth create repository and service">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="change loginUser(sessionId)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/users/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/auth/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/login/route.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1790779347160</updated>
       <workItem from="1790779350588" duration="7000" />
-      <workItem from="1790959368831" duration="57881000" />
+      <workItem from="1790959368831" duration="63346000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -169,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791391699351</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="change loginUser(sessionId)">
+      <option name="closed" value="true" />
+      <created>1791392572576</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1791392572576</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -188,7 +196,8 @@
     <MESSAGE value="sessions created table in bd" />
     <MESSAGE value="src/auth create repositore and service" />
     <MESSAGE value="src/auth create repository and service" />
-    <option name="LAST_COMMIT_MESSAGE" value="src/auth create repository and service" />
+    <MESSAGE value="change loginUser(sessionId)" />
+    <option name="LAST_COMMIT_MESSAGE" value="change loginUser(sessionId)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

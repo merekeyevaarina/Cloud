@@ -1,19 +1,29 @@
-import {
-    ValidationError,
-} from "@/src/shared/utils/errors";
+import {ValidationError} from "@/src/shared/utils/errors";
 import {loginUser} from "@/src/users/service";
+import {cookies} from "next/headers";
 
 export async function POST(request: Request) {
     try {
         const body = await request.json();
 
         const result = await loginUser(
-
             body.email,
             body.password,
         );
 
-        return Response.json(result, {
+        const cookieStore = await cookies();
+        cookieStore.set("session", result.sessionId, {
+            httpOnly:true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "lax",
+            path: "/",
+            maxAge: 60 * 60 * 24 * 7
+        })
+
+        return Response.json({
+            id: result.id,
+            email: result.email,
+        }, {
             status: 200,
         });
 
