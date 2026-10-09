@@ -21,3 +21,11 @@ export async function findSessionById(sessionId:string){
         }
     })
 }
+
+export async function deleteSession(sessionId:string){
+    return prisma.sessions.deleteMany({
+        where:{
+            id: sessionId,
+        }
+    })
+}

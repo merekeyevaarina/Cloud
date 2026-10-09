@@ -1,4 +1,4 @@
-import {createSession, findSessionById} from "@/src/auth/repository";
+import {createSession, deleteSession, findSessionById} from "@/src/auth/repository";
 
 export async function createUserSession(userId: string) {
     const sessionId = crypto.randomUUID();
@@ -26,4 +26,8 @@ export async function getUserBySession(sessionId:string){
         id: session.user.id,
         email:session.user.email
     }
+}
+
+export async function logoutUser(sessionId:string){
+    await deleteSession(sessionId);
 }

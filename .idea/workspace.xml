@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="create cookies">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="session business logic">
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/logout/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/me/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/auth/components/LogoutButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/service.ts" afterDir="false" />
     </list>
@@ -18,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -104,7 +108,7 @@
       <option name="presentableId" value="Default" />
       <updated>1790779347160</updated>
       <workItem from="1790779350588" duration="7000" />
-      <workItem from="1790959368831" duration="65374000" />
+      <workItem from="1790959368831" duration="73399000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -186,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791452139632</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="session business logic">
+      <option name="closed" value="true" />
+      <created>1791474877258</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1791474877258</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -207,7 +219,8 @@
     <MESSAGE value="src/auth create repository and service" />
     <MESSAGE value="change loginUser(sessionId)" />
     <MESSAGE value="create cookies" />
-    <option name="LAST_COMMIT_MESSAGE" value="create cookies" />
+    <MESSAGE value="session business logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="session business logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
