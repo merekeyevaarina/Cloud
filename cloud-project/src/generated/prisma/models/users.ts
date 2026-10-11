@@ -26,6 +26,8 @@ export type AggregateUsers = {
 
 export type UsersMinAggregateOutputType = {
   id: string | null
+  first_name: string | null
+  last_name: string | null
   email: string | null
   password_hash: string | null
   created_at: Date | null
@@ -34,6 +36,8 @@ export type UsersMinAggregateOutputType = {
 
 export type UsersMaxAggregateOutputType = {
   id: string | null
+  first_name: string | null
+  last_name: string | null
   email: string | null
   password_hash: string | null
   created_at: Date | null
@@ -42,6 +46,8 @@ export type UsersMaxAggregateOutputType = {
 
 export type UsersCountAggregateOutputType = {
   id: number
+  first_name: number
+  last_name: number
   email: number
   password_hash: number
   created_at: number
@@ -52,6 +58,8 @@ export type UsersCountAggregateOutputType = {
 
 export type UsersMinAggregateInputType = {
   id?: true
+  first_name?: true
+  last_name?: true
   email?: true
   password_hash?: true
   created_at?: true
@@ -60,6 +68,8 @@ export type UsersMinAggregateInputType = {
 
 export type UsersMaxAggregateInputType = {
   id?: true
+  first_name?: true
+  last_name?: true
   email?: true
   password_hash?: true
   created_at?: true
@@ -68,6 +78,8 @@ export type UsersMaxAggregateInputType = {
 
 export type UsersCountAggregateInputType = {
   id?: true
+  first_name?: true
+  last_name?: true
   email?: true
   password_hash?: true
   created_at?: true
@@ -149,6 +161,8 @@ export type usersGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalAr
 
 export type UsersGroupByOutputType = {
   id: string
+  first_name: string
+  last_name: string
   email: string
   password_hash: string
   created_at: Date
@@ -178,6 +192,8 @@ export type usersWhereInput = {
   OR?: Prisma.usersWhereInput[]
   NOT?: Prisma.usersWhereInput | Prisma.usersWhereInput[]
   id?: Prisma.UuidFilter<"users"> | string
+  first_name?: Prisma.StringFilter<"users"> | string
+  last_name?: Prisma.StringFilter<"users"> | string
   email?: Prisma.StringFilter<"users"> | string
   password_hash?: Prisma.StringFilter<"users"> | string
   created_at?: Prisma.DateTimeFilter<"users"> | Date | string
@@ -187,6 +203,8 @@ export type usersWhereInput = {
 
 export type usersOrderByWithRelationInput = {
   id?: Prisma.SortOrder
+  first_name?: Prisma.SortOrder
+  last_name?: Prisma.SortOrder
   email?: Prisma.SortOrder
   password_hash?: Prisma.SortOrder
   created_at?: Prisma.SortOrder
@@ -200,6 +218,8 @@ export type usersWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.usersWhereInput | Prisma.usersWhereInput[]
   OR?: Prisma.usersWhereInput[]
   NOT?: Prisma.usersWhereInput | Prisma.usersWhereInput[]
+  first_name?: Prisma.StringFilter<"users"> | string
+  last_name?: Prisma.StringFilter<"users"> | string
   password_hash?: Prisma.StringFilter<"users"> | string
   created_at?: Prisma.DateTimeFilter<"users"> | Date | string
   updated_at?: Prisma.DateTimeFilter<"users"> | Date | string
@@ -208,6 +228,8 @@ export type usersWhereUniqueInput = Prisma.AtLeast<{
 
 export type usersOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
+  first_name?: Prisma.SortOrder
+  last_name?: Prisma.SortOrder
   email?: Prisma.SortOrder
   password_hash?: Prisma.SortOrder
   created_at?: Prisma.SortOrder
@@ -222,6 +244,8 @@ export type usersScalarWhereWithAggregatesInput = {
   OR?: Prisma.usersScalarWhereWithAggregatesInput[]
   NOT?: Prisma.usersScalarWhereWithAggregatesInput | Prisma.usersScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"users"> | string
+  first_name?: Prisma.StringWithAggregatesFilter<"users"> | string
+  last_name?: Prisma.StringWithAggregatesFilter<"users"> | string
   email?: Prisma.StringWithAggregatesFilter<"users"> | string
   password_hash?: Prisma.StringWithAggregatesFilter<"users"> | string
   created_at?: Prisma.DateTimeWithAggregatesFilter<"users"> | Date | string
@@ -230,6 +254,8 @@ export type usersScalarWhereWithAggregatesInput = {
 
 export type usersCreateInput = {
   id: string
+  first_name?: string
+  last_name?: string
   email: string
   password_hash: string
   created_at: Date | string
@@ -239,6 +265,8 @@ export type usersCreateInput = {
 
 export type usersUncheckedCreateInput = {
   id: string
+  first_name?: string
+  last_name?: string
   email: string
   password_hash: string
   created_at: Date | string
@@ -248,6 +276,8 @@ export type usersUncheckedCreateInput = {
 
 export type usersUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+  first_name?: Prisma.StringFieldUpdateOperationsInput | string
+  last_name?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password_hash?: Prisma.StringFieldUpdateOperationsInput | string
   created_at?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -257,6 +287,8 @@ export type usersUpdateInput = {
 
 export type usersUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+  first_name?: Prisma.StringFieldUpdateOperationsInput | string
+  last_name?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password_hash?: Prisma.StringFieldUpdateOperationsInput | string
   created_at?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -266,6 +298,8 @@ export type usersUncheckedUpdateInput = {
 
 export type usersCreateManyInput = {
   id: string
+  first_name?: string
+  last_name?: string
   email: string
   password_hash: string
   created_at: Date | string
@@ -274,6 +308,8 @@ export type usersCreateManyInput = {
 
 export type usersUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+  first_name?: Prisma.StringFieldUpdateOperationsInput | string
+  last_name?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password_hash?: Prisma.StringFieldUpdateOperationsInput | string
   created_at?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -282,6 +318,8 @@ export type usersUpdateManyMutationInput = {
 
 export type usersUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+  first_name?: Prisma.StringFieldUpdateOperationsInput | string
+  last_name?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password_hash?: Prisma.StringFieldUpdateOperationsInput | string
   created_at?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -290,6 +328,8 @@ export type usersUncheckedUpdateManyInput = {
 
 export type usersCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
+  first_name?: Prisma.SortOrder
+  last_name?: Prisma.SortOrder
   email?: Prisma.SortOrder
   password_hash?: Prisma.SortOrder
   created_at?: Prisma.SortOrder
@@ -298,6 +338,8 @@ export type usersCountOrderByAggregateInput = {
 
 export type usersMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
+  first_name?: Prisma.SortOrder
+  last_name?: Prisma.SortOrder
   email?: Prisma.SortOrder
   password_hash?: Prisma.SortOrder
   created_at?: Prisma.SortOrder
@@ -306,6 +348,8 @@ export type usersMaxOrderByAggregateInput = {
 
 export type usersMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
+  first_name?: Prisma.SortOrder
+  last_name?: Prisma.SortOrder
   email?: Prisma.SortOrder
   password_hash?: Prisma.SortOrder
   created_at?: Prisma.SortOrder
@@ -341,6 +385,8 @@ export type usersUpdateOneRequiredWithoutSessionsNestedInput = {
 
 export type usersCreateWithoutSessionsInput = {
   id: string
+  first_name?: string
+  last_name?: string
   email: string
   password_hash: string
   created_at: Date | string
@@ -349,6 +395,8 @@ export type usersCreateWithoutSessionsInput = {
 
 export type usersUncheckedCreateWithoutSessionsInput = {
   id: string
+  first_name?: string
+  last_name?: string
   email: string
   password_hash: string
   created_at: Date | string
@@ -373,6 +421,8 @@ export type usersUpdateToOneWithWhereWithoutSessionsInput = {
 
 export type usersUpdateWithoutSessionsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+  first_name?: Prisma.StringFieldUpdateOperationsInput | string
+  last_name?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password_hash?: Prisma.StringFieldUpdateOperationsInput | string
   created_at?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -381,6 +431,8 @@ export type usersUpdateWithoutSessionsInput = {
 
 export type usersUncheckedUpdateWithoutSessionsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+  first_name?: Prisma.StringFieldUpdateOperationsInput | string
+  last_name?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   password_hash?: Prisma.StringFieldUpdateOperationsInput | string
   created_at?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -420,6 +472,8 @@ export type UsersCountOutputTypeCountSessionsArgs<ExtArgs extends runtime.Types.
 
 export type usersSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
+  first_name?: boolean
+  last_name?: boolean
   email?: boolean
   password_hash?: boolean
   created_at?: boolean
@@ -430,6 +484,8 @@ export type usersSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
 
 export type usersSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
+  first_name?: boolean
+  last_name?: boolean
   email?: boolean
   password_hash?: boolean
   created_at?: boolean
@@ -438,6 +494,8 @@ export type usersSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensi
 
 export type usersSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
+  first_name?: boolean
+  last_name?: boolean
   email?: boolean
   password_hash?: boolean
   created_at?: boolean
@@ -446,13 +504,15 @@ export type usersSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensi
 
 export type usersSelectScalar = {
   id?: boolean
+  first_name?: boolean
+  last_name?: boolean
   email?: boolean
   password_hash?: boolean
   created_at?: boolean
   updated_at?: boolean
 }
 
-export type usersOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "email" | "password_hash" | "created_at" | "updated_at", ExtArgs["result"]["users"]>
+export type usersOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "first_name" | "last_name" | "email" | "password_hash" | "created_at" | "updated_at", ExtArgs["result"]["users"]>
 export type usersInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   sessions?: boolean | Prisma.users$sessionsArgs<ExtArgs>
   _count?: boolean | Prisma.UsersCountOutputTypeDefaultArgs<ExtArgs>
@@ -467,6 +527,8 @@ export type $usersPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
+    first_name: string
+    last_name: string
     email: string
     password_hash: string
     created_at: Date
@@ -896,6 +958,8 @@ export interface Prisma__usersClient<T, Null = never, ExtArgs extends runtime.Ty
  */
 export interface usersFieldRefs {
   readonly id: Prisma.FieldRef<"users", 'String'>
+  readonly first_name: Prisma.FieldRef<"users", 'String'>
+  readonly last_name: Prisma.FieldRef<"users", 'String'>
   readonly email: Prisma.FieldRef<"users", 'String'>
   readonly password_hash: Prisma.FieldRef<"users", 'String'>
   readonly created_at: Prisma.FieldRef<"users", 'DateTime'>

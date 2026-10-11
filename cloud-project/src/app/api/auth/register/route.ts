@@ -1,16 +1,47 @@
 import {registerUser} from "@/src/users/service";
 import {ConflictError, ValidationError} from "@/src/shared/utils/errors";
+import {cookies} from "next/headers";
+import {registerSchema} from "@/src/users/validation";
 
 export async function POST (request: Request) {
     try {
-        const body = await request.json();
+        const body: unknown = await request.json();
         console.log(body);
 
+        const validation = registerSchema.safeParse(body);
+        if (!validation.success) {
+            return Response.json(
+                {
+                    error: validation.error.issues[0]?.message ?? "Некорректные данные",
+                },
+                {status: 401},
+            )
+        }
+
         const result = await registerUser(
-            body.email,
-            body.password,
-        )
-        return Response.json(result, {status: 201});
+            validation.data.firstName,
+            validation.data.lastName,
+            validation.data.email,
+            validation.data.password,
+        );
+
+        const cookieStore = await cookies();
+        cookieStore.set("session", result.sessionId, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "lax",
+            path:"/",
+            maxAge: 60 * 60 * 24 * 7,
+        });
+
+        return Response.json(
+            {
+                id: result.id,
+                firstName: result.firstName,
+                lastName: result.lastName,
+                email: result.email,
+            }
+            , {status: 201});
     }
     catch (error) {
         if (error instanceof ValidationError) {
@@ -25,10 +56,13 @@ export async function POST (request: Request) {
         if (error instanceof ConflictError) {
             return Response.json(
                 {error: error.message},
-                {status:409}
+                {
+                    status:409
+                }
 
             )
         }
+        console.log(error);
         return Response.json(
             { error: "Внутренняя ошибка сервера" },
             { status: 500 }

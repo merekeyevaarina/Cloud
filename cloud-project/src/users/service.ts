@@ -1,12 +1,19 @@
 import argon2 from "argon2";
 import {ConflictError, ValidationError} from "@/src/shared/utils/errors";
 import {createUserSession} from "@/src/auth/service";
-import {createUser, findUserByEmail} from "@/src/users/repository";
+import {createUser, existsByEmail, findUserByEmail} from "@/src/users/repository";
+import {RegisteredUser} from "@/src/users/types";
+
 
 //регистрация
-export async function registerUser(email: string, password: string) {
-   // TODO проверка валидации доделать
-    if (!email || !email.includes("@")) {
+
+export async function registerUser(firstName:string,lastName:string,email: string, password: string): Promise<RegisteredUser> {
+    if (!firstName || !firstName.trim()) {
+        throw new ValidationError("Введите имя"); }
+    if (!lastName || !lastName.trim()) {
+        throw new ValidationError("Введите фамилию"); }
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         throw new ValidationError("Некорректный email");
     }
     if(!password || password.length < 8) {
@@ -14,7 +21,7 @@ export async function registerUser(email: string, password: string) {
     }
 
 
-    const existingUser = await findUserByEmail(email);
+    const existingUser = await existsByEmail(email);
 
     if (existingUser) {
         throw new ConflictError("email занят")
@@ -25,16 +32,24 @@ export async function registerUser(email: string, password: string) {
     const id = crypto.randomUUID()
 
 
-    const user = await createUser(
+    const user = await createUser({
         id,
+        first_name: firstName.trim(),
+        last_name: lastName.trim(),
         email,
-        passwordHash,
-    )
+        password_hash: passwordHash,
+    });
+
+    const session = await createUserSession(user.id)
 
     return {
         id: user.id,
+        firstName: user.first_name,
+        lastName: user.last_name,
         email: user.email,
+        sessionId: session.id,
     }
+
 };
 
 

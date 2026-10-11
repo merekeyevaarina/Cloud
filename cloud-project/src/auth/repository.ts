@@ -1,5 +1,9 @@
 import {prisma} from "@/src/shared/lib/prisma";
 
+export interface User {
+    email: string;
+}
+
 export async function createSession(id: string, userId:string, expiresAt:Date) {
     return prisma.sessions.create({
       data: {

@@ -4,31 +4,71 @@ import { useState, type FormEvent } from "react";
 import { Button } from "@/src/shared/ui/button";
 import { Input } from "@/src/shared/ui/input";
 import { Label } from "@/src/shared/ui/label";
+import {useRouter} from "next/navigation";
 
 const passwordPattern = "(?=.*[A-Za-z])(?=.*[0-9]).{8,}";
 
 export function RegisterForm() {
-  const [passwordError, setPasswordError] = useState("");
+  const router = useRouter();
+    const [loading, setLoading] = useState(false);
+    const [passwordError, setPasswordError] = useState("");
   const [message, setMessage] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setMessage("");
 
-    const formData = new FormData(event.currentTarget);
+    setMessage("");
+    setPasswordError("");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const firstName = String(formData.get("firstName") ?? "");
+    const lastName = String(formData.get("lastName") ?? "");
+    const email = String(formData.get("email") ?? "");
     const password = String(formData.get("password") ?? "");
     const passwordRepeat = String(formData.get("passwordRepeat") ?? "");
 
     if (password !== passwordRepeat) {
-      setPasswordError("Пароли не совпадают.");
-      return;
+        setPasswordError("Пароли не совпадают.");
+        return;
     }
 
-    setPasswordError("");
-    setMessage("Данные заполнены корректно. Отправка регистрации пока не подключена.");
-  }
+    setLoading(true);
 
-  return (
+    try {
+        const response = await fetch("/api/auth/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                firstName,
+                lastName,
+                email,
+                password,
+            }),
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            setMessage(data.error ?? "Не удалось зарегистрироваться.");
+            return;
+        }
+
+        router.replace("/");
+        router.refresh();
+    } catch (error) {
+        console.error(error);
+        setMessage("Не удалось связаться с сервером. Попробуйте ещё раз.");
+    } finally {
+        setLoading(false);
+    }
+}
+
+
+    return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-2">
         <Label htmlFor="firstName" className="text-sm font-medium text-[#322b3d]">Имя</Label>

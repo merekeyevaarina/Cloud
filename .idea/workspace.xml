@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="session business logic">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/logout/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/me/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/auth/components/LogoutButton.tsx" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="delete session/logout button">
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/users/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/users/validation.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/auth/register/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/register/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/register-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/components/register-form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/users/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/users/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,15 +33,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="unite-sevrer-with-ui" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,7 +59,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -61,29 +72,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;unite-sevrer-with-ui&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/arinajumabaeva/Cloud&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/arinajumabaeva/Cloud/cloud-project/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.cloud-project: Compose Deployment.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "drive",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/arinajumabaeva/Cloud",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Users/arinajumabaeva/Cloud/cloud-project/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cloud-project/src/users" />
@@ -92,6 +109,25 @@
       <recent name="$PROJECT_DIR$/cloud-project" />
       <recent name="$PROJECT_DIR$/cloud-project/src/app/login" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cloud-project: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="cloud-project/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.cloud-project: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -108,7 +144,9 @@
       <option name="presentableId" value="Default" />
       <updated>1790779347160</updated>
       <workItem from="1790779350588" duration="7000" />
-      <workItem from="1790959368831" duration="73399000" />
+      <workItem from="1790959368831" duration="79035000" />
+      <workItem from="1791616891186" duration="18000" />
+      <workItem from="1791616922514" duration="12158000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -198,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791474877258</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="delete session/logout button">
+      <option name="closed" value="true" />
+      <created>1791553984276</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1791553984276</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -220,7 +266,8 @@
     <MESSAGE value="change loginUser(sessionId)" />
     <MESSAGE value="create cookies" />
     <MESSAGE value="session business logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="session business logic" />
+    <MESSAGE value="delete session/logout button" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete session/logout button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -228,7 +275,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx</url>
           <line>58</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
