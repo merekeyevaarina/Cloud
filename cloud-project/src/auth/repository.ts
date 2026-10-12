@@ -1,10 +1,14 @@
 import {prisma} from "@/src/shared/lib/prisma";
+import type { sessions } from "@/src/generated/prisma/client";
+import type { Prisma } from "@/src/generated/prisma/client";
 
-export interface User {
-    email: string;
-}
+type SessionWithUser = Prisma.sessionsGetPayload<{
+    include: {
+        user:true
+    }
+}>
 
-export async function createSession(id: string, userId:string, expiresAt:Date) {
+export async function createSession(id: string, userId:string, expiresAt:Date): Promise<sessions> {
     return prisma.sessions.create({
       data: {
           id,
@@ -15,7 +19,7 @@ export async function createSession(id: string, userId:string, expiresAt:Date) {
     })
 }
 
-export async function findSessionById(sessionId:string){
+export async function findSessionById(sessionId:string):Promise<SessionWithUser | null>{
     return prisma.sessions.findUnique({
         where:{
             id: sessionId
@@ -26,7 +30,7 @@ export async function findSessionById(sessionId:string){
     })
 }
 
-export async function deleteSession(sessionId:string){
+export async function deleteSession(sessionId:string):Promise<{count:number}>{
     return prisma.sessions.deleteMany({
         where:{
             id: sessionId,

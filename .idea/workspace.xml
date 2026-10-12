@@ -4,25 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="delete session/logout button">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/users/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/users/validation.ts" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="added types and Zod">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/auth/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/login/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/auth/register/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/auth/register/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/register-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/components/register-form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/users/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/users/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/users/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/users/validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/users/validation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +51,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -146,7 +138,7 @@
       <workItem from="1790779350588" duration="7000" />
       <workItem from="1790959368831" duration="79035000" />
       <workItem from="1791616891186" duration="18000" />
-      <workItem from="1791616922514" duration="12158000" />
+      <workItem from="1791616922514" duration="18646000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -244,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791553984276</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added types and Zod">
+      <option name="closed" value="true" />
+      <created>1791724791840</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1791724791840</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -267,7 +267,8 @@
     <MESSAGE value="create cookies" />
     <MESSAGE value="session business logic" />
     <MESSAGE value="delete session/logout button" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete session/logout button" />
+    <MESSAGE value="added types and Zod" />
+    <option name="LAST_COMMIT_MESSAGE" value="added types and Zod" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

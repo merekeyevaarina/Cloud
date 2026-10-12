@@ -2,7 +2,7 @@ import argon2 from "argon2";
 import {ConflictError, ValidationError} from "@/src/shared/utils/errors";
 import {createUserSession} from "@/src/auth/service";
 import {createUser, existsByEmail, findUserByEmail} from "@/src/users/repository";
-import {RegisteredUser} from "@/src/users/types";
+import {LoginResult, RegisteredUser} from "@/src/users/types";
 
 
 //регистрация
@@ -54,7 +54,7 @@ export async function registerUser(firstName:string,lastName:string,email: strin
 
 
 //вход
-export async function loginUser(email: string, password: string) {
+export async function loginUser(email: string, password: string): Promise<LoginResult> {
     if(!email || !email.includes("@")) {
     throw new ValidationError("Некорректный email");
     }

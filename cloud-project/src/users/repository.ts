@@ -1,5 +1,5 @@
 import {prisma} from "@/src/shared/lib/prisma";
-import {Prisma, users} from "@/src/generated/prisma/client";
+import {Prisma, type users} from "@/src/generated/prisma/client";
 
 type CreateUserData = Pick<
     Prisma.usersCreateInput,
@@ -25,7 +25,7 @@ export async function existsByEmail(email: string) : Promise<boolean> {
 }
 
 
-export async function createUser(data: CreateUserData) {
+export async function createUser(data: CreateUserData): Promise<users> {
     return prisma.users.create({
         data:{
             ...data,

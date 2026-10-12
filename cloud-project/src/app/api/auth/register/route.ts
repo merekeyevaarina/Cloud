@@ -2,6 +2,7 @@ import {registerUser} from "@/src/users/service";
 import {ConflictError, ValidationError} from "@/src/shared/utils/errors";
 import {cookies} from "next/headers";
 import {registerSchema} from "@/src/users/validation";
+import {PublicUser} from "@/src/users/types";
 
 export async function POST (request: Request) {
     try {
@@ -14,7 +15,7 @@ export async function POST (request: Request) {
                 {
                     error: validation.error.issues[0]?.message ?? "Некорректные данные",
                 },
-                {status: 401},
+                {status: 400},
             )
         }
 
@@ -34,14 +35,15 @@ export async function POST (request: Request) {
             maxAge: 60 * 60 * 24 * 7,
         });
 
+        const response: PublicUser =  {
+            id: result.id,
+            firstName: result.firstName,
+            lastName: result.lastName,
+            email: result.email,
+        }
+
         return Response.json(
-            {
-                id: result.id,
-                firstName: result.firstName,
-                lastName: result.lastName,
-                email: result.email,
-            }
-            , {status: 201});
+            response, {status: 201});
     }
     catch (error) {
         if (error instanceof ValidationError) {

@@ -1,14 +1,23 @@
 import {ValidationError} from "@/src/shared/utils/errors";
 import {loginUser} from "@/src/users/service";
 import {cookies} from "next/headers";
+import {loginSchema} from "@/src/users/validation";
+import {LoginResponse} from "@/src/users/types";
 
 export async function POST(request: Request) {
     try {
-        const body = await request.json();
+        const body:unknown = await request.json();
 
+        const validation = loginSchema.safeParse(body);
+        if(!validation.success){
+            return Response.json(
+                {error: validation.error.issues[0]?.message ?? "Некорректные данные"},
+                {status: 400},
+            )
+        }
         const result = await loginUser(
-            body.email,
-            body.password,
+            validation.data.email,
+            validation.data.password,
         );
 
         const cookieStore = await cookies();
@@ -20,12 +29,12 @@ export async function POST(request: Request) {
             maxAge: 60 * 60 * 24 * 7
         })
 
-        return Response.json({
+        const response: LoginResponse = {
             id: result.id,
             email: result.email,
-        }, {
-            status: 200,
-        });
+        };
+
+        return Response.json(response, {status: 200,});
 
     } catch (error) {
         console.log(error);
