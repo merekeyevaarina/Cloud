@@ -398,7 +398,10 @@ type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRe
 
 export const ModelName = {
   users: 'users',
-  sessions: 'sessions'
+  sessions: 'sessions',
+  folders: 'folders',
+  files: 'files',
+  file_shares: 'file_shares'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -414,7 +417,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "users" | "sessions"
+    modelProps: "users" | "sessions" | "folders" | "files" | "file_shares"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -566,6 +569,228 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    folders: {
+      payload: Prisma.$foldersPayload<ExtArgs>
+      fields: Prisma.foldersFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.foldersFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$foldersPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.foldersFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$foldersPayload>
+        }
+        findFirst: {
+          args: Prisma.foldersFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$foldersPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.foldersFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$foldersPayload>
+        }
+        findMany: {
+          args: Prisma.foldersFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$foldersPayload>[]
+        }
+        create: {
+          args: Prisma.foldersCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$foldersPayload>
+        }
+        createMany: {
+          args: Prisma.foldersCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.foldersCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$foldersPayload>[]
+        }
+        delete: {
+          args: Prisma.foldersDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$foldersPayload>
+        }
+        update: {
+          args: Prisma.foldersUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$foldersPayload>
+        }
+        deleteMany: {
+          args: Prisma.foldersDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.foldersUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.foldersUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$foldersPayload>[]
+        }
+        upsert: {
+          args: Prisma.foldersUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$foldersPayload>
+        }
+        aggregate: {
+          args: Prisma.FoldersAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateFolders>
+        }
+        groupBy: {
+          args: Prisma.foldersGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.FoldersGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.foldersCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.FoldersCountAggregateOutputType> | number
+        }
+      }
+    }
+    files: {
+      payload: Prisma.$filesPayload<ExtArgs>
+      fields: Prisma.filesFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.filesFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$filesPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.filesFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$filesPayload>
+        }
+        findFirst: {
+          args: Prisma.filesFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$filesPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.filesFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$filesPayload>
+        }
+        findMany: {
+          args: Prisma.filesFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$filesPayload>[]
+        }
+        create: {
+          args: Prisma.filesCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$filesPayload>
+        }
+        createMany: {
+          args: Prisma.filesCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.filesCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$filesPayload>[]
+        }
+        delete: {
+          args: Prisma.filesDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$filesPayload>
+        }
+        update: {
+          args: Prisma.filesUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$filesPayload>
+        }
+        deleteMany: {
+          args: Prisma.filesDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.filesUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.filesUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$filesPayload>[]
+        }
+        upsert: {
+          args: Prisma.filesUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$filesPayload>
+        }
+        aggregate: {
+          args: Prisma.FilesAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateFiles>
+        }
+        groupBy: {
+          args: Prisma.filesGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.FilesGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.filesCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.FilesCountAggregateOutputType> | number
+        }
+      }
+    }
+    file_shares: {
+      payload: Prisma.$file_sharesPayload<ExtArgs>
+      fields: Prisma.file_sharesFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.file_sharesFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$file_sharesPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.file_sharesFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$file_sharesPayload>
+        }
+        findFirst: {
+          args: Prisma.file_sharesFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$file_sharesPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.file_sharesFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$file_sharesPayload>
+        }
+        findMany: {
+          args: Prisma.file_sharesFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$file_sharesPayload>[]
+        }
+        create: {
+          args: Prisma.file_sharesCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$file_sharesPayload>
+        }
+        createMany: {
+          args: Prisma.file_sharesCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.file_sharesCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$file_sharesPayload>[]
+        }
+        delete: {
+          args: Prisma.file_sharesDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$file_sharesPayload>
+        }
+        update: {
+          args: Prisma.file_sharesUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$file_sharesPayload>
+        }
+        deleteMany: {
+          args: Prisma.file_sharesDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.file_sharesUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.file_sharesUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$file_sharesPayload>[]
+        }
+        upsert: {
+          args: Prisma.file_sharesUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$file_sharesPayload>
+        }
+        aggregate: {
+          args: Prisma.File_sharesAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateFile_shares>
+        }
+        groupBy: {
+          args: Prisma.file_sharesGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.File_sharesGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.file_sharesCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.File_sharesCountAggregateOutputType> | number
+        }
+      }
+    }
   }
 } & {
   other: {
@@ -628,6 +853,43 @@ export const SessionsScalarFieldEnum = {
 export type SessionsScalarFieldEnum = (typeof SessionsScalarFieldEnum)[keyof typeof SessionsScalarFieldEnum]
 
 
+export const FoldersScalarFieldEnum = {
+  id: 'id',
+  owner_id: 'owner_id',
+  parent_id: 'parent_id',
+  name: 'name',
+  created_at: 'created_at',
+  updated_at: 'updated_at'
+} as const
+
+export type FoldersScalarFieldEnum = (typeof FoldersScalarFieldEnum)[keyof typeof FoldersScalarFieldEnum]
+
+
+export const FilesScalarFieldEnum = {
+  id: 'id',
+  owner_id: 'owner_id',
+  folder_id: 'folder_id',
+  name: 'name',
+  storage_key: 'storage_key',
+  mime_type: 'mime_type',
+  size_bytes: 'size_bytes',
+  created_at: 'created_at',
+  updated_at: 'updated_at'
+} as const
+
+export type FilesScalarFieldEnum = (typeof FilesScalarFieldEnum)[keyof typeof FilesScalarFieldEnum]
+
+
+export const File_sharesScalarFieldEnum = {
+  id: 'id',
+  file_id: 'file_id',
+  token: 'token',
+  created_at: 'created_at'
+} as const
+
+export type File_sharesScalarFieldEnum = (typeof File_sharesScalarFieldEnum)[keyof typeof File_sharesScalarFieldEnum]
+
+
 export const SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -642,6 +904,14 @@ export const QueryMode = {
 } as const
 
 export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+export const NullsOrder = {
+  first: 'first',
+  last: 'last'
+} as const
+
+export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
 
@@ -679,6 +949,20 @@ export type ListDateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaM
 
 
 /**
+ * Reference to a field of type 'BigInt'
+ */
+export type BigIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'BigInt'>
+    
+
+
+/**
+ * Reference to a field of type 'BigInt[]'
+ */
+export type ListBigIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'BigInt[]'>
+    
+
+
+/**
  * Reference to a field of type 'Int'
  */
 export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
@@ -689,6 +973,20 @@ export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'In
  * Reference to a field of type 'Int[]'
  */
 export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
+    
+
+
+/**
+ * Reference to a field of type 'Float'
+ */
+export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
+    
+
+
+/**
+ * Reference to a field of type 'Float[]'
+ */
+export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
     
 
 /**
@@ -844,6 +1142,9 @@ export type PrismaClientOptions = PrismaClientOptionsWithAccelerateUrl | PrismaC
 export type GlobalOmitConfig = {
   users?: Prisma.usersOmit
   sessions?: Prisma.sessionsOmit
+  folders?: Prisma.foldersOmit
+  files?: Prisma.filesOmit
+  file_shares?: Prisma.file_sharesOmit
 }
 
 /* Types for Logging */

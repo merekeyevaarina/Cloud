@@ -1,4 +1,4 @@
-import { Plus, Upload } from "lucide-react";
+import { Upload } from "lucide-react";
 import { Button } from "@/src/shared/ui/button";
 import { Separator } from "@/src/shared/ui/separator";
 import type { DriveFile, DriveFolder } from "./drive-data";
@@ -6,6 +6,7 @@ import { DriveHeader } from "./drive-header";
 import { DriveSidebar } from "./drive-sidebar";
 import { FileTable } from "./file-table";
 import { FolderGrid } from "./folder-grid";
+import { CreateFolderButton } from "./create-folder-button";
 
 type DrivePageViewProps = {
   folders: DriveFolder[];
@@ -29,9 +30,7 @@ export function DrivePageView({ folders, files }: DrivePageViewProps) {
                 <Button disabled title="Загрузка станет доступна после подключения хранилища" variant="outline" className="h-10 rounded-xl px-4">
                   <Upload aria-hidden="true" />Загрузить
                 </Button>
-                <Button disabled title="Создание папок станет доступно после подключения хранилища" className="h-10 rounded-xl px-4">
-                  <Plus aria-hidden="true" />Новая папка
-                </Button>
+                <CreateFolderButton />
               </div>
             </div>
 

@@ -27,3 +27,18 @@ export type users = Prisma.usersModel
  * 
  */
 export type sessions = Prisma.sessionsModel
+/**
+ * Model folders
+ * 
+ */
+export type folders = Prisma.foldersModel
+/**
+ * Model files
+ * 
+ */
+export type files = Prisma.filesModel
+/**
+ * Model file_shares
+ * 
+ */
+export type file_shares = Prisma.file_sharesModel

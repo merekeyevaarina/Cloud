@@ -10,4 +10,7 @@
  */
 export type * from './models/users'
 export type * from './models/sessions'
+export type * from './models/folders'
+export type * from './models/files'
+export type * from './models/file_shares'
 export type * from './commonInputTypes'

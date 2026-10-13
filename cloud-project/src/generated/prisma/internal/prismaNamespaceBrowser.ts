@@ -52,7 +52,10 @@ export const AnyNull = runtime.AnyNull
 
 export const ModelName = {
   users: 'users',
-  sessions: 'sessions'
+  sessions: 'sessions',
+  folders: 'folders',
+  files: 'files',
+  file_shares: 'file_shares'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -94,6 +97,43 @@ export const SessionsScalarFieldEnum = {
 export type SessionsScalarFieldEnum = (typeof SessionsScalarFieldEnum)[keyof typeof SessionsScalarFieldEnum]
 
 
+export const FoldersScalarFieldEnum = {
+  id: 'id',
+  owner_id: 'owner_id',
+  parent_id: 'parent_id',
+  name: 'name',
+  created_at: 'created_at',
+  updated_at: 'updated_at'
+} as const
+
+export type FoldersScalarFieldEnum = (typeof FoldersScalarFieldEnum)[keyof typeof FoldersScalarFieldEnum]
+
+
+export const FilesScalarFieldEnum = {
+  id: 'id',
+  owner_id: 'owner_id',
+  folder_id: 'folder_id',
+  name: 'name',
+  storage_key: 'storage_key',
+  mime_type: 'mime_type',
+  size_bytes: 'size_bytes',
+  created_at: 'created_at',
+  updated_at: 'updated_at'
+} as const
+
+export type FilesScalarFieldEnum = (typeof FilesScalarFieldEnum)[keyof typeof FilesScalarFieldEnum]
+
+
+export const File_sharesScalarFieldEnum = {
+  id: 'id',
+  file_id: 'file_id',
+  token: 'token',
+  created_at: 'created_at'
+} as const
+
+export type File_sharesScalarFieldEnum = (typeof File_sharesScalarFieldEnum)[keyof typeof File_sharesScalarFieldEnum]
+
+
 export const SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -108,4 +148,12 @@ export const QueryMode = {
 } as const
 
 export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+export const NullsOrder = {
+  first: 'first',
+  last: 'last'
+} as const
+
+export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 

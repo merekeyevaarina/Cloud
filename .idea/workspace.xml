@@ -4,35 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="fix ui">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/(auth)/login/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/(auth)/register/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/(drive)/drive/page.tsx" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="add business logic and repository for folders">
       <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/folders/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/auth/ui/auth-shell.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/auth/ui/login-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/auth/ui/register-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-page-view.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-sidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/folder-grid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/create-folder-button.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cloud-project/src/folders/repository.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cloud-project/src/folders/service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/shared/lib/s3.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/shared/ui/avatar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/shared/ui/badge.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/shared/ui/breadcrumb.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/shared/ui/progress.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/shared/ui/table.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/test-s3.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/app/drive/page.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/layout.tsx" afterDir="false" />
@@ -45,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/register-form.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/register-page.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/register-panel.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-page-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-page-view.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/files/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/browser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/browser.ts" afterDir="false" />
@@ -55,6 +34,7 @@
       <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/shared/utils/errors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/shared/utils/errors.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +45,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -178,7 +158,7 @@
       <workItem from="1790779350588" duration="7000" />
       <workItem from="1790959368831" duration="79035000" />
       <workItem from="1791616891186" duration="18000" />
-      <workItem from="1791616922514" duration="38506000" />
+      <workItem from="1791616922514" duration="41953000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -292,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791803304847</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add business logic and repository for folders">
+      <option name="closed" value="true" />
+      <created>1791890561556</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1791890561556</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -319,6 +307,7 @@
     <MESSAGE value="api types" />
     <MESSAGE value="s3 init/add components/fix ui" />
     <MESSAGE value="fix ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix ui" />
+    <MESSAGE value="add business logic and repository for folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="add business logic and repository for folders" />
   </component>
 </project>

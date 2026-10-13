@@ -12,7 +12,7 @@
   "iconLibrary": "lucide",
   "aliases": {
     "utils": "@/src/shared/utils/utils",
-    "components": "@/src/shared/components",
+    "components": "@/src/shared/ui",
     "ui": "@/src/shared/ui",
     "lib": "@/src/shared/lib"
   }
