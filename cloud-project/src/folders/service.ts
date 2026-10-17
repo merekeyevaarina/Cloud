@@ -1,8 +1,8 @@
 import {createFolder, findFoldersByOwner} from "@/src/folders/repository";
 import {prisma} from "@/src/shared/lib/prisma";
 
-export async function getUserFolders(ownerId: string) {
-    return findFoldersByOwner(ownerId);
+export async function getUserFolders(ownerId: string, parentId: string | null = null) {
+    return findFoldersByOwner(ownerId, parentId);
 }
 export async function createUserFolder(ownerId: string, name: string, parentId: string | null = null) {
     const trimmedName = name.trim();

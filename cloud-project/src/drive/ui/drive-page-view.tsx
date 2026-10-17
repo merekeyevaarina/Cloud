@@ -1,5 +1,3 @@
-import { Upload } from "lucide-react";
-import { Button } from "@/src/shared/ui/button";
 import { Separator } from "@/src/shared/ui/separator";
 import type { DriveFile, DriveFolder } from "./drive-data";
 import { DriveHeader } from "./drive-header";
@@ -7,13 +5,16 @@ import { DriveSidebar } from "./drive-sidebar";
 import { FileTable } from "./file-table";
 import { FolderGrid } from "./folder-grid";
 import { CreateFolderButton } from "./create-folder-button";
+import { DriveBreadcrumb } from "./drive-breadcrumb";
+import { UploadFileButton } from "./upload-file-button";
 
 type DrivePageViewProps = {
   folders: DriveFolder[];
   files: DriveFile[];
+  folderId: string | null;
 };
 
-export function DrivePageView({ folders, files }: DrivePageViewProps) {
+export function DrivePageView({ folders, files, folderId }: DrivePageViewProps) {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <div className="flex min-h-screen">
@@ -24,12 +25,11 @@ export function DrivePageView({ folders, files }: DrivePageViewProps) {
             <div className="mb-8 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
               <div>
                 <h1 className="text-3xl font-semibold tracking-[-0.04em]">Мой диск</h1>
+                <DriveBreadcrumb folderId={folderId} />
                 <p className="mt-2 text-sm text-muted-foreground">Ваши файлы и папки в одном месте</p>
               </div>
               <div className="flex gap-2">
-                <Button disabled title="Загрузка станет доступна после подключения хранилища" variant="outline" className="h-10 rounded-xl px-4">
-                  <Upload aria-hidden="true" />Загрузить
-                </Button>
+                <UploadFileButton folderId={folderId} />
                 <CreateFolderButton />
               </div>
             </div>

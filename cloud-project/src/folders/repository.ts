@@ -1,9 +1,10 @@
 import {prisma} from "@/src/shared/lib/prisma";
 
-export async function findFoldersByOwner(ownerId: string) {
+export async function findFoldersByOwner(ownerId: string, parentId:string | null = null) {
     return prisma.folders.findMany({
         where: {
             owner_id: ownerId,
+            parent_id: parentId,
         },
         orderBy:{
             created_at:"desc"

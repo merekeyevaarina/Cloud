@@ -11,7 +11,16 @@ export const metadata: Metadata = {
   description: "Ваши файлы и папки в Cloud.",
 };
 
-export default async function DrivePage() {
+
+type DrivePageProps = {
+  searchParams: Promise<{
+    folderId?: string;
+  }>
+}
+
+
+export default async function DrivePage({searchParams}: DrivePageProps){
+  const { folderId } = await searchParams;
   const cookieStore = await cookies()
   const sessionId = cookieStore.get("session")?.value;
   if (!sessionId) {
@@ -23,10 +32,11 @@ export default async function DrivePage() {
     redirect("/login");
   }
 
-  const files = await getUserFiles(user.id);
-  const folders = await getUserFolders(user.id);
+  const files = await getUserFiles(user.id, folderId ?? null);
+  const folders = await getUserFolders(user.id, folderId ?? null);
 
   return <DrivePageView files={files}
+                        folderId={folderId ?? null}
                         folders={folders.map((folder) => ({
     id: folder.id, name: folder.name, fileCount: "Папка", updatedAt:folder.updated_at.toLocaleDateString("ru-RU")
 

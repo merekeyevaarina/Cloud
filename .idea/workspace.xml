@@ -4,37 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="add business logic and repository for folders">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/folders/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/create-folder-button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/folders/repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/folders/service.ts" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="file loading">
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-breadcrumb.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/upload-file-button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/files/storage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6befced1-97f1-4d07-879a-58412a5b15d3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6befced1-97f1-4d07-879a-58412a5b15d3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6befced1-97f1-4d07-879a-58412a5b15d3/storage_v2/_src_/database/drive.ipm2BQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6befced1-97f1-4d07-879a-58412a5b15d3/storage_v2/_src_/database/drive.ipm2BQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/drive/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/login/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/register/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/LogoutButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/components/LogoutButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/login-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/login-page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/login-panel.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/register-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/register-page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/components/register-panel.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/(drive)/drive/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/(drive)/drive/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-page-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-page-view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/folder-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/folder-grid.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/files/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/browser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/browser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/commonInputTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/commonInputTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/prismaNamespaceBrowser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/users.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/shared/utils/errors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/shared/utils/errors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/folders/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/folders/repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/folders/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/folders/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +75,7 @@
   "keyToString": {
     "Docker.cloud-project: Compose Deployment.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.111.ts.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -122,7 +110,10 @@
       <recent name="$PROJECT_DIR$/cloud-project/src/app/login" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.111.ts">
+    <configuration name="111.ts" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cloud-project/src/files/111.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/cloud-project/src/files">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml" />
       <method v="2" />
@@ -137,6 +128,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.111.ts" />
         <item itemvalue="Docker.cloud-project: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -158,7 +150,7 @@
       <workItem from="1790779350588" duration="7000" />
       <workItem from="1790959368831" duration="79035000" />
       <workItem from="1791616891186" duration="18000" />
-      <workItem from="1791616922514" duration="41953000" />
+      <workItem from="1791616922514" duration="66222000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -280,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791890561556</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="folder create/ connect ui and business logic">
+      <option name="closed" value="true" />
+      <created>1791897525297</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1791897525298</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -308,6 +308,8 @@
     <MESSAGE value="s3 init/add components/fix ui" />
     <MESSAGE value="fix ui" />
     <MESSAGE value="add business logic and repository for folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="add business logic and repository for folders" />
+    <MESSAGE value="folder create/ connect ui and business logic" />
+    <MESSAGE value="file loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="file loading" />
   </component>
 </project>
