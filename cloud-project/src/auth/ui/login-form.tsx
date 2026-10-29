@@ -32,7 +32,7 @@ export function LoginForm() {
       setError(data.error);
       return;
     }
-    window.location.href = "/";
+    window.location.href = "/drive";
   }
 
   return (

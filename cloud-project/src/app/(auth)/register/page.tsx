@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import { AuthShell } from "@/src/auth/ui/auth-shell";
+import { RegisterForm } from "@/src/auth/ui/register-form";
 
 export const metadata: Metadata = {
   title: "Регистрация — Cloud",
   description: "Создайте аккаунт Cloud.",
 };
 
-function RegisterForm() {
-  return null;
-}
 
 export default function RegisterPage() {
   return (

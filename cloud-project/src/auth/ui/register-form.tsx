@@ -1,29 +1,34 @@
-"use client";
 
+'use client'
+
+import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { Button } from "@/src/shared/ui/button";
-import { Checkbox } from "@/src/shared/ui/checkbox";
 import { Input } from "@/src/shared/ui/input";
 import { Label } from "@/src/shared/ui/label";
-import { Separator } from "@/src/shared/ui/separator";
-import { useState, type FormEvent } from "react";
 
-export function LoginForm() {
+export function RegisterForm() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
     setError("");
+    setLoading(true);
 
     try {
-      const response = await fetch("/api/auth/login", {
+      const response = await fetch("/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          firstName,
+          lastName,
           email,
           password,
         }),
@@ -32,100 +37,109 @@ export function LoginForm() {
       const data = await response.json();
 
       if (!response.ok) {
-        setError(data.error ?? "Не удалось войти в аккаунт");
+        setError(data.error ?? "Не удалось создать аккаунт");
         return;
       }
 
-      window.location.href = "/";
+      window.location.href = "/login";
     } catch {
       setError("Не удалось подключиться к серверу");
+    } finally {
+      setLoading(false);
     }
   }
 
   return (
-      <>
-        <div className="mb-8">
-          <p className="mb-3 text-sm font-medium text-[#756d80]">
-            Личный кабинет
-          </p>
+    <>
+      <div className="mb-8">
+        <p className="mb-3 text-sm font-medium text-muted-foreground">
+          Новый аккаунт
+        </p>
 
-          <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[#211b2d]">
-            Войти в аккаунт
-          </h2>
+        <h2 className="text-3xl font-semibold tracking-[-0.04em] text-foreground">
+          Создать аккаунт
+        </h2>
 
-          <p className="mt-2 text-sm leading-6 text-[#77717f]">
-            Введите данные, которые вы указали при регистрации.
-          </p>
+        <p className="mt-2 text-sm leading-6 text-muted-foreground">
+          Заполните данные, чтобы начать пользоваться Cloud.
+        </p>
+      </div>
+
+      <form onSubmit={onSubmit} className="space-y-4">
+        <div className="space-y-2">
+          <Label htmlFor="firstName">Имя</Label>
+          <Input
+            id="firstName"
+            name="firstName"
+            autoComplete="given-name"
+            required
+            maxLength={100}
+            value={firstName}
+            onChange={(event) => setFirstName(event.target.value)}
+            placeholder="Ваше имя"
+          />
         </div>
 
-        <form onSubmit={onSubmit} className="space-y-5">
-          <div className="space-y-2">
-            <Label
-                htmlFor="email"
-                className="text-sm font-medium text-[#322b3d]"
-            >
-              Логин
-            </Label>
+        <div className="space-y-2">
+          <Label htmlFor="lastName">Фамилия</Label>
+          <Input
+            id="lastName"
+            name="lastName"
+            autoComplete="family-name"
+            required
+            maxLength={100}
+            value={lastName}
+            onChange={(event) => setLastName(event.target.value)}
+            placeholder="Ваша фамилия"
+          />
+        </div>
 
-            <Input
-                id="email"
-                name="email"
-                autoComplete="email"
-                required
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                placeholder="Ваш логин"
-                className="h-12 rounded-xl border-[#e4e1e9] bg-white px-4 text-sm text-[#211b2d] placeholder:text-[#aaa5b1] hover:border-[#c9c3d2] focus-visible:border-[#493365] focus-visible:ring-[#493365]/10"
-            />
-          </div>
+        <div className="space-y-2">
+          <Label htmlFor="register-email">Email</Label>
+          <Input
+            id="register-email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            required
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            placeholder="name@example.com"
+          />
+        </div>
 
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <Label
-                  htmlFor="password"
-                  className="text-sm font-medium text-[#322b3d]"
-              >
-                Пароль
-              </Label>
+        <div className="space-y-2">
+          <Label htmlFor="register-password">Пароль</Label>
+          <Input
+            id="register-password"
+            name="password"
+            type="password"
+            autoComplete="new-password"
+            minLength={8}
+            required
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            placeholder="Минимум 8 символов"
+          />
+        </div>
 
-              <a
-                  href="#forgot-password"
-                  className="text-xs font-medium text-[#594276] transition hover:text-[#281b3d]"
-              >
-                Забыли пароль?
-              </a>
-            </div>
+        {error && (
+          <p role="alert" className="text-sm text-red-600">
+            {error}
+          </p>
+        )}
 
-            <Input
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="current-password"
-                required
-                placeholder="Введите пароль"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-                className="h-12 rounded-xl border-[#e4e1e9] bg-white px-4 text-sm text-[#211b2d] placeholder:text-[#aaa5b1] hover:border-[#c9c3d2] focus-visible:border-[#493365] focus-visible:ring-[#493365]/10"
-            />
-          </div>
+        <Button type="submit" disabled={loading} className="h-12 w-full">
+          {loading ? "Создание аккаунта..." : "Зарегистрироваться"}
+        </Button>
+      </form>
 
-          {error && (
-              <p className="text-sm text-red-600">
-                {error}
-              </p>
-          )}
-
-          <Label className="flex cursor-pointer items-center gap-2.5 text-sm text-[#6f6879]">
-            <Checkbox />
-            Запомнить меня
-          </Label>
-
-          <Button type="submit" className="w-full">
-            Войти
-          </Button>
-
-          <Separator />
-        </form>
-      </>
+      <p className="mt-7 text-center text-sm text-muted-foreground">
+        Уже есть аккаунт?{" "}
+        <Link href="/login" className="font-semibold text-primary hover:underline">
+          Войти
+        </Link>
+      </p>
+    </>
   );
 }
