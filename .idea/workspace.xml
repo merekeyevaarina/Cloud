@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="add upload button">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/download/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/route.ts" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="register bug fix/delete file api">
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/delete-file-button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/(auth)/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/(auth)/register/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/ui/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/ui/login-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/auth/ui/register-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/auth/ui/register-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/test-db.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/test-s3.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/download/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/download/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/route.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +140,8 @@
       <workItem from="1790959368831" duration="79035000" />
       <workItem from="1791616891186" duration="18000" />
       <workItem from="1791616922514" duration="68506000" />
-      <workItem from="1793261919529" duration="3914000" />
+      <workItem from="1793261919529" duration="6409000" />
+      <workItem from="1793273014145" duration="2438000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -282,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792216667290</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="register bug fix/delete file api">
+      <option name="closed" value="true" />
+      <created>1793265899764</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1793265899764</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -313,6 +318,7 @@
     <MESSAGE value="folder create/ connect ui and business logic" />
     <MESSAGE value="file loading" />
     <MESSAGE value="add upload button" />
-    <option name="LAST_COMMIT_MESSAGE" value="add upload button" />
+    <MESSAGE value="register bug fix/delete file api" />
+    <option name="LAST_COMMIT_MESSAGE" value="register bug fix/delete file api" />
   </component>
 </project>
