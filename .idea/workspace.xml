@@ -4,22 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="init">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="register bug fix/delete file api">
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/delete-file-button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/shared/login-page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/download/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/download/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/route.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="drive" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -41,19 +51,24 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="3K3HUU1lBeOZgHDi16iGAwtICkH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Docker.cloud-project: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.111.ts.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;s3&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/arinajumabaeva/Cloud&quot;,
@@ -66,16 +81,46 @@
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/arinajumabaeva/Cloud/cloud-project/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cloud-project/src/app/login" />
+      <recent name="$PROJECT_DIR$/cloud-project/src/users" />
+      <recent name="$PROJECT_DIR$/cloud-project/src/app" />
+      <recent name="$PROJECT_DIR$/cloud-project/src/auth" />
       <recent name="$PROJECT_DIR$/cloud-project" />
-      <recent name="$PROJECT_DIR$/cloud-project/src" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/UI/cloud" />
+      <recent name="$PROJECT_DIR$/cloud-project/src/app/login" />
     </key>
+  </component>
+  <component name="RunManager" selected="Node.js.111.ts">
+    <configuration name="111.ts" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cloud-project/src/files/111.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/cloud-project/src/files">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="cloud-project: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="cloud-project/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.111.ts" />
+        <item itemvalue="Docker.cloud-project: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -92,7 +137,11 @@
       <option name="presentableId" value="Default" />
       <updated>1790779347160</updated>
       <workItem from="1790779350588" duration="7000" />
-      <workItem from="1790959368831" duration="23174000" />
+      <workItem from="1790959368831" duration="79035000" />
+      <workItem from="1791616891186" duration="18000" />
+      <workItem from="1791616922514" duration="68506000" />
+      <workItem from="1793261919529" duration="6409000" />
+      <workItem from="1793273014145" duration="2438000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -110,7 +159,135 @@
       <option name="project" value="LOCAL" />
       <updated>1791027955460</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="architecture changed/regester page added">
+      <option name="closed" value="true" />
+      <created>1791100838746</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1791100838746</updated>
+    </task>
+    <task id="LOCAL-00004" summary="prisma added">
+      <option name="closed" value="true" />
+      <created>1791211644684</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1791211644684</updated>
+    </task>
+    <task id="LOCAL-00005" summary="db changed/created classes of error/ added argon2/tested post http requests">
+      <option name="closed" value="true" />
+      <created>1791279767720</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1791279767720</updated>
+    </task>
+    <task id="LOCAL-00006" summary="sessions created table in bd">
+      <option name="closed" value="true" />
+      <created>1791390312306</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1791390312306</updated>
+    </task>
+    <task id="LOCAL-00007" summary="src/auth create repositore and service">
+      <option name="closed" value="true" />
+      <created>1791391666116</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1791391666116</updated>
+    </task>
+    <task id="LOCAL-00008" summary="src/auth create repository and service">
+      <option name="closed" value="true" />
+      <created>1791391699351</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1791391699351</updated>
+    </task>
+    <task id="LOCAL-00009" summary="change loginUser(sessionId)">
+      <option name="closed" value="true" />
+      <created>1791392572576</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1791392572576</updated>
+    </task>
+    <task id="LOCAL-00010" summary="create cookies">
+      <option name="closed" value="true" />
+      <created>1791452139632</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1791452139632</updated>
+    </task>
+    <task id="LOCAL-00011" summary="session business logic">
+      <option name="closed" value="true" />
+      <created>1791474877258</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1791474877258</updated>
+    </task>
+    <task id="LOCAL-00012" summary="delete session/logout button">
+      <option name="closed" value="true" />
+      <created>1791553984276</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1791553984276</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added types and Zod">
+      <option name="closed" value="true" />
+      <created>1791724791840</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1791724791840</updated>
+    </task>
+    <task id="LOCAL-00014" summary="api types">
+      <option name="closed" value="true" />
+      <created>1791803304846</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1791803304847</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add business logic and repository for folders">
+      <option name="closed" value="true" />
+      <created>1791890561556</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1791890561556</updated>
+    </task>
+    <task id="LOCAL-00016" summary="folder create/ connect ui and business logic">
+      <option name="closed" value="true" />
+      <created>1791897525297</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1791897525298</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add upload button">
+      <option name="closed" value="true" />
+      <created>1792216667290</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1792216667290</updated>
+    </task>
+    <task id="LOCAL-00018" summary="register bug fix/delete file api">
+      <option name="closed" value="true" />
+      <created>1793265899764</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1793265899764</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -123,6 +300,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add login page" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="architecture changed/regester page added" />
+    <MESSAGE value="prisma added" />
+    <MESSAGE value="db changed/created classes of error/ added argon2/tested post http requests" />
+    <MESSAGE value="sessions created table in bd" />
+    <MESSAGE value="src/auth create repositore and service" />
+    <MESSAGE value="src/auth create repository and service" />
+    <MESSAGE value="change loginUser(sessionId)" />
+    <MESSAGE value="create cookies" />
+    <MESSAGE value="session business logic" />
+    <MESSAGE value="delete session/logout button" />
+    <MESSAGE value="added types and Zod" />
+    <MESSAGE value="api types" />
+    <MESSAGE value="s3 init/add components/fix ui" />
+    <MESSAGE value="fix ui" />
+    <MESSAGE value="add business logic and repository for folders" />
+    <MESSAGE value="folder create/ connect ui and business logic" />
+    <MESSAGE value="file loading" />
+    <MESSAGE value="add upload button" />
+    <MESSAGE value="register bug fix/delete file api" />
+    <option name="LAST_COMMIT_MESSAGE" value="register bug fix/delete file api" />
   </component>
 </project>

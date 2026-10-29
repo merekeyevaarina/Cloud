@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Вход — Cloud",
-  description: "Войдите в личный кабинет Cloud.",
+	title: "Cloud Drive",
+	description: "Храните и организуйте файлы в Cloud Drive.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
