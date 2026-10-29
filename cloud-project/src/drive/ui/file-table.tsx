@@ -12,6 +12,8 @@ import {
   TableRow,
 } from "@/src/shared/ui/table";
 import type { DriveFile } from "./drive-data";
+import { DeleteFileButton } from "./delete-file-button";
+import { DownloadFileButton } from "./download-file-button";
 
 type FileTableProps = {
   files: DriveFile[];
@@ -72,6 +74,7 @@ export function FileTable({files}: FileTableProps) {
               <TableHead className="px-4 py-3.5 text-xs">Размер</TableHead>
               <TableHead className="px-4 py-3.5 text-xs">Дата загрузки</TableHead>
               <TableHead className="px-4 py-3.5 text-xs">Тип</TableHead>
+              <TableHead className="px-4 py-3.5 text-xs">Действия</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -88,6 +91,12 @@ export function FileTable({files}: FileTableProps) {
                         <div className="truncate text-sm font-medium">{file.name}</div>
                         <div className="mt-1 text-xs text-muted-foreground">{file.mime_type}</div>
                       </div>
+                    </div>
+                  </TableCell>
+                  <TableCell className="px-4 py-4">
+                    <div className="flex items-center gap-1">
+                      <DownloadFileButton fileId={file.id} />
+                      <DeleteFileButton fileId={file.id} />
                     </div>
                   </TableCell>
                   <TableCell className="px-4 py-4 text-sm text-muted-foreground">{formatFileSize(file.size_bytes)}</TableCell>
