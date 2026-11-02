@@ -14,38 +14,11 @@ import {
 import type { DriveFile } from "./drive-data";
 import { DeleteFileButton } from "./delete-file-button";
 import { DownloadFileButton } from "./download-file-button";
+import {ShareFileButton} from "@/src/drive/ui/share-file-button";
 
 type FileTableProps = {
   files: DriveFile[];
 }
-
-
-
-class IconService {
-  private map = new Map<string, LucideIcon>();
-  constructor() {
-    this.map = new Map<string, LucideIcon>();
-
-    this.map.set("image/",FileImage)
-    this.map.set("application/zip",FileArchive)
-    this.map.set("application/x-7z-compressed",FileArchive)
-  }
-
-  getFileIcon(mimeType: string):LucideIcon{
-   const icon = this.map.get(mimeType)
-  if (!icon) {
-    return FileIcon;
-  }
-  return icon;
-  }
-}
-
-class ColorIconService extends IconService{
-  changeIconColor(icon: LucideIcon, color:string):LucideIcon{
-    return FileIcon
-  }
-}
-
 
 
 function getFileIcon(mimeType: string):LucideIcon{
@@ -93,6 +66,7 @@ export function FileTable({files}: FileTableProps) {
     )
   }
 
+
   return (
     <Card className="overflow-hidden rounded-2xl py-0 shadow-none">
       <div className="overflow-x-auto">
@@ -125,6 +99,7 @@ export function FileTable({files}: FileTableProps) {
                   <TableCell className="px-4 py-4">
                     <div className="flex items-center gap-1">
                       <DownloadFileButton fileId={file.id} />
+                      <ShareFileButton fileId={file.id}/>
                       <DeleteFileButton fileId={file.id} />
                     </div>
                   </TableCell>
