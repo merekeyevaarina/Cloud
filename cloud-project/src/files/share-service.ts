@@ -1,5 +1,6 @@
-import {createFileShare, deleteFileShare, findFileByOwner, findFileShareByFileId} from "@/src/files/repository";
 import {randomBytes} from "node:crypto";
+import {findFileByOwner} from "@/src/files/repository";
+import {createFileShare, deleteFileShare, findFileShareByFileId} from "@/src/files/share-repository";
 
 const PUBLIC_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
 

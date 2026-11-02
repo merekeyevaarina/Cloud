@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { findPublicFileByToken } from "@/src/files/repository";
+import {findPublicFileByToken} from "@/src/files/share-repository";
 
 type PublicFilePageProps = {
     params: Promise<{ token: string }>;

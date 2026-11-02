@@ -1,7 +1,6 @@
-import {createFileRecord, findFilesByOwner} from "@/src/files/repository";
-import {prisma} from "@/src/shared/lib/prisma";
+import {createFileRecord, findFilesByOwner, findFolderByOwner} from "@/src/files/repository";
 import {randomUUID} from "node:crypto";
-import {uploadFileToStorage} from "@/src/files/storage";
+import {deleteFileFromStorage, uploadFileToStorage} from "@/src/files/storage";
 
 const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50 МБ
 export async function getUserFiles(
@@ -21,14 +20,11 @@ export async function uploadUserFile(
     if(file.size > MAX_FILE_SIZE){
         throw new Error("Размер файла не должен превышать 50МБ")
     }
+    if (!file.name.trim()) {
+        throw new Error("Имя файла не может быть пустым");
+    }
     if(folderId){
-        const folder = await prisma.folders.findFirst({
-            where: {
-                id: folderId,
-                owner_id: ownerId,
-            },
-            select:{id:true}
-        })
+        const folder = await findFolderByOwner(folderId, ownerId);
         if(!folder){
             throw new Error("Папка не найдена")
         }
@@ -45,15 +41,15 @@ export async function uploadUserFile(
             mimeType: file.type || "application/octet-stream",
             sizeBytes: BigInt(file.size),
         })
-    }catch(error){
-        const {DeleteObjectCommand} = await import("@aws-sdk/client-s3");
-        const { s3 } = await import("@/src/shared/lib/s3");
-        await s3.send(
-            new DeleteObjectCommand({
-                Bucket: process.env.S3_BUCKET,
-                Key: storageKey,
-            })
-        ).catch(() => {});
+    }catch (error) {
+        try {
+            await deleteFileFromStorage(storageKey);
+        } catch (cleanupError) {
+            console.error(
+                "Не удалось удалить загруженный файл из Storage:",
+                cleanupError,
+            );
+        }
         throw error;
     }
 }

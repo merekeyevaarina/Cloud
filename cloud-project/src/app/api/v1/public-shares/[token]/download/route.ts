@@ -1,6 +1,6 @@
 import { GetObjectCommand } from "@aws-sdk/client-s3";
-import { findPublicFileByToken } from "@/src/files/repository";
 import { s3 } from "@/src/shared/lib/s3";
+import {findPublicFileByToken} from "@/src/files/share-repository";
 
 type DownloadRouteProps = {
     params: Promise<{ token: string }>;

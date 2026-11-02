@@ -1,5 +1,14 @@
 import {prisma} from "@/src/shared/lib/prisma";
 
+type CreateFileRecordInput = {
+    ownerId: string;
+    folderId: string | null;
+    name: string;
+    storageKey: string;
+    mimeType: string;
+    sizeBytes: bigint;
+};
+
 export async function findFilesByOwner(ownerId: string, folderId: string | null = null) {
     return prisma.files.findMany({
         where: {
@@ -20,16 +29,9 @@ export async function findFilesByOwner(ownerId: string, folderId: string | null 
     })
 }
 
-export async function createFileRecord(data:{
-    ownerId: string,
-    folderId: string | null;
-    name: string,
-    storageKey: string,
-    mimeType: string,
-    sizeBytes: bigint,
-}){
+export async function createFileRecord(data: CreateFileRecordInput) {
     return prisma.files.create({
-        data:{
+        data: {
             owner_id: data.ownerId,
             folder_id: data.folderId,
             name: data.name,
@@ -37,15 +39,15 @@ export async function createFileRecord(data:{
             mime_type: data.mimeType,
             size_bytes: data.sizeBytes,
         },
-        select:{
+        select: {
             id: true,
             name: true,
             mime_type: true,
             size_bytes: true,
             folder_id: true,
             created_at: true,
-        }
-    })
+        },
+    });
 }
 
 export async function findFileByOwner(fileId: string, ownerId:string){
@@ -60,53 +62,17 @@ export async function findFileByOwner(fileId: string, ownerId:string){
     })
 }
 
-export async function createFileShare(fileId:string, token:string){
-    return prisma.file_shares.create({
-        data:{
-            file_id:fileId,
-            token,
-        },
-        select:{
-            id: true,
-            token: true,
-            created_at: true,
-        }
-    })
-}
-
-export async function deleteFileShare(fileId:string){
-    return prisma.file_shares.deleteMany({
+export async function findFolderByOwner(
+    folderId: string,
+    ownerId: string,
+) {
+    return prisma.folders.findFirst({
         where: {
-            file_id:fileId
-        }
-    })
-}
-
-export async function findFileShareByFileId(fileId:string){
-    return prisma.file_shares.findUnique({
-        where:{
-            file_id:fileId,
+            id: folderId,
+            owner_id: ownerId,
         },
-        select:{
-            token:true
-        }
-    })
+        select: {
+            id: true,
+        },
+    });
 }
-
-export async function findPublicFileByToken(token:string){
-    return prisma.file_shares.findUnique({
-        where:{token},
-        select:{
-            file:{
-                select:{
-                    id: true,
-                    name: true,
-                    mime_type: true,
-                    size_bytes: true,
-                    storage_key: true,
-                }
-            }
-        }
-    })
-}
-

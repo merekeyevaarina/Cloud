@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="share">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/public-shares/[token]/download/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/s/[token]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/share-file-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/files/share-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/public-shares/[token]/download/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/public-shares/[token]/download/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/s/[token]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/s/[token]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/components/.gitkeep" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/files/share-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/share-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/storage.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -70,7 +73,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "publicShare",
+    "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/arinajumabaeva/Cloud",
@@ -121,6 +124,9 @@
       <list>
         <item itemvalue="Node.js.111.ts" />
         <item itemvalue="Docker.cloud-project: Compose Deployment" />
+        <item itemvalue="Node.js.111.ts" />
+        <item itemvalue="Docker.cloud-project: Compose Deployment" />
+        <item itemvalue="Node.js.111.ts" />
       </list>
     </recent_temporary>
   </component>
@@ -364,7 +370,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx</url>
           <line>50</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

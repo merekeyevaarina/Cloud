@@ -1,4 +1,4 @@
-import {PutObjectCommand} from "@aws-sdk/client-s3";
+import {PutObjectCommand, DeleteObjectCommand} from "@aws-sdk/client-s3";
 import {s3} from "@/src/shared/lib/s3";
 
 const bucket = process.env.S3_BUCKET;
@@ -21,4 +21,15 @@ export async function uploadFileToStorage(
         })
     )
 
+}
+
+export async function deleteFileFromStorage(
+    storageKey: string,
+) {
+    await s3.send(
+        new DeleteObjectCommand({
+            Bucket: bucket,
+            Key: storageKey,
+        })
+    ).catch(() => {});
 }
