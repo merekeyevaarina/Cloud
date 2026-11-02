@@ -66,6 +66,7 @@ export function FileTable({files}: FileTableProps) {
     )
   }
 
+
   return (
     <Card className="overflow-hidden rounded-2xl py-0 shadow-none">
       <div className="overflow-x-auto">
