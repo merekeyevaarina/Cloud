@@ -47,3 +47,37 @@ export async function createFileRecord(data:{
         }
     })
 }
+
+export async function findFileByOwner(fileId: string, ownerId:string){
+    return prisma.files.findFirst({
+        where: {
+            id: fileId,
+            owner_id: ownerId,
+        },
+        select:{
+            id: true,
+        }
+    })
+}
+
+export async function createFileShare(fileId:string, token:string){
+    return prisma.file_shares.create({
+        data:{
+            file_id:fileId,
+            token,
+        },
+        select:{
+            id: true,
+            token: true,
+            created_at: true,
+        }
+    })
+}
+
+export async function deleteFileShare(fileId:string){
+    return prisma.file_shares.deleteMany({
+        where: {
+            file_id:fileId
+        }
+    })
+}

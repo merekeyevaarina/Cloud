@@ -4,6 +4,20 @@ import {prisma} from "@/src/shared/lib/prisma";
 import {s3} from "@/src/shared/lib/s3";
 import {DeleteObjectCommand} from "@aws-sdk/client-s3";
 
+class SessionService {
+    checkSession(sessionId:string){
+        const user = getUserBySession(sessionId);
+        if (!user) {
+            return Response.json(
+                {error:"Сессия недействительна"},
+                {status: 401},
+            )
+        };
+    }
+}
+
+
+
 export async function DELETE (
     request:Request,
     {params}:{params:Promise<{fileId:string}>}) {

@@ -19,6 +19,35 @@ type FileTableProps = {
   files: DriveFile[];
 }
 
+
+
+class IconService {
+  private map = new Map<string, LucideIcon>();
+  constructor() {
+    this.map = new Map<string, LucideIcon>();
+
+    this.map.set("image/",FileImage)
+    this.map.set("application/zip",FileArchive)
+    this.map.set("application/x-7z-compressed",FileArchive)
+  }
+
+  getFileIcon(mimeType: string):LucideIcon{
+   const icon = this.map.get(mimeType)
+  if (!icon) {
+    return FileIcon;
+  }
+  return icon;
+  }
+}
+
+class ColorIconService extends IconService{
+  changeIconColor(icon: LucideIcon, color:string):LucideIcon{
+    return FileIcon
+  }
+}
+
+
+
 function getFileIcon(mimeType: string):LucideIcon{
   if(mimeType.startsWith("image/")) return FileImage;
   if( mimeType === "application/zip" ||

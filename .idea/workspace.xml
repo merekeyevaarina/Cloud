@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="delete file, download file business logic">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/download-file-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/files/share-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6befced1-97f1-4d07-879a-58412a5b15d3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6befced1-97f1-4d07-879a-58412a5b15d3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/internal/class.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/file_shares.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/generated/prisma/models/file_shares.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +72,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "files",
+    "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/arinajumabaeva/Cloud",

@@ -70,14 +70,13 @@ model files {
   @@index([owner_id, folder_id])
 }
 
+
 model file_shares {
   id         String   @id @default(uuid()) @db.Uuid
-  file_id    String   @db.Uuid
+  file_id    String   @unique @db.Uuid
   token      String   @unique
   created_at DateTime @default(now()) @db.Timestamptz(6)
 
   file files @relation(fields: [file_id], references: [id], onDelete: Cascade)
-
-  @@index([file_id])
 }
 

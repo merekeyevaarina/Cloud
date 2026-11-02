@@ -187,14 +187,14 @@ export type file_sharesOrderByWithRelationInput = {
 
 export type file_sharesWhereUniqueInput = Prisma.AtLeast<{
   id?: string
+  file_id?: string
   token?: string
   AND?: Prisma.file_sharesWhereInput | Prisma.file_sharesWhereInput[]
   OR?: Prisma.file_sharesWhereInput[]
   NOT?: Prisma.file_sharesWhereInput | Prisma.file_sharesWhereInput[]
-  file_id?: Prisma.UuidFilter<"file_shares"> | string
   created_at?: Prisma.DateTimeFilter<"file_shares"> | Date | string
   file?: Prisma.XOR<Prisma.FilesScalarRelationFilter, Prisma.filesWhereInput>
-}, "id" | "token">
+}, "id" | "file_id" | "token">
 
 export type file_sharesOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
