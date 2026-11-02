@@ -51,6 +51,7 @@ export async function DELETE (
     request:Request,
     {params}:{params:Promise<{fileId:string}>}){
     try{
+
         const {fileId} = await params;
 
         const cookieStore = await cookies();
