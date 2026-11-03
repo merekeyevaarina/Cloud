@@ -1,23 +1,13 @@
-import {cookies} from "next/headers";
-import {getUserBySession} from "@/src/auth/service";
 import {createUserFolder} from "@/src/folders/service";
+import {requireAuth} from "@/src/auth/require-auth";
 
 export async function POST(request: Request) {
-    const cookieStore = await cookies();
-    const sessionId = cookieStore.get("session")?.value;
-    if (!sessionId) {
-        return Response.json(
-            { error: "Не авторизован" },
-            {status: 401},);
-    };
+    const user = await requireAuth();
 
-    const user = await getUserBySession(sessionId);
-    if (!user) {
-        return Response.json(
-            {error:"Сессия недействительна"},
-            {status: 401},
-        )
-    };
+    if (user instanceof Response) {
+        return user;
+    }
+
 
     let body: {name?:string, parentId?:unknown};
     try{

@@ -2,10 +2,16 @@ import {prisma} from "@/src/shared/lib/prisma";
 import type { sessions } from "@/src/generated/prisma/client";
 import type { Prisma } from "@/src/generated/prisma/client";
 
+
 type SessionWithUser = Prisma.sessionsGetPayload<{
     include: {
-        user:true
-    }
+        user: {
+            select: {
+                id: true;
+                email: true;
+            };
+        };
+    };
 }>
 
 export async function createSession(id: string, userId:string, expiresAt:Date): Promise<sessions> {
@@ -25,7 +31,12 @@ export async function findSessionById(sessionId:string):Promise<SessionWithUser 
             id: sessionId
         },
         include:{
-            user:true
+            user:{
+                select: {
+                    id: true,
+                    email: true
+                }
+            }
         }
     })
 }

@@ -8,5 +8,6 @@ export async function POST(){
         await logoutUser(sessionId)
     }
 
+    cookieStore.delete("session");
     return Response.json({message: "Вы вышли из аккаунта"});
 }

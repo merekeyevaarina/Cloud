@@ -1,12 +1,12 @@
 import { Separator } from "@/src/shared/ui/separator";
-import type { DriveFile, DriveFolder } from "./drive-data";
+import type { DriveFile, DriveFolder } from "../lib/drive-data";
 import { DriveHeader } from "./drive-header";
 import { DriveSidebar } from "./drive-sidebar";
 import { FileTable } from "./file-table";
 import { FolderGrid } from "./folder-grid";
-import { CreateFolderButton } from "./create-folder-button";
+import { CreateFolderButton } from "./buttons/create-folder-button";
 import { DriveBreadcrumb } from "./drive-breadcrumb";
-import { UploadFileButton } from "./upload-file-button";
+import { UploadFileButton } from "./buttons/upload-file-button";
 
 type DrivePageViewProps = {
   folders: DriveFolder[];

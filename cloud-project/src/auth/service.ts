@@ -22,6 +22,7 @@ export async function getUserBySession(sessionId:string):Promise<SessionUser | n
         return null
     }
     if(session.expires_at < new Date()){
+        await deleteSession(sessionId);
         return null
     }
     return {

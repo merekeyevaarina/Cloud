@@ -1,5 +1,3 @@
-import {cookies} from "next/headers";
-import {getUserBySession} from "@/src/auth/service";
 import {createPublicFileShare, disablePublicFileShare} from "@/src/files/share-service";
 import {requireAuth} from "@/src/auth/require-auth";
 

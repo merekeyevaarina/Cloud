@@ -1,7 +1,7 @@
 import {cookies} from "next/headers";
 import {redirect} from "next/navigation";
 import {getUserBySession} from "@/src/auth/service";
-import {LogoutButton} from "@/src/auth/components/LogoutButton";
+import {LogoutButton} from "@/src/auth/ui/LogoutButton";
 
 export default async function HomePage() {
     const cookieStore = await cookies();

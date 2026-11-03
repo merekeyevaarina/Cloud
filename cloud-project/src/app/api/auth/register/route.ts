@@ -7,7 +7,6 @@ import {PublicUser} from "@/src/users/types";
 export async function POST (request: Request) {
     try {
         const body: unknown = await request.json();
-        console.log(body);
 
         const validation = registerSchema.safeParse(body);
         if (!validation.success) {

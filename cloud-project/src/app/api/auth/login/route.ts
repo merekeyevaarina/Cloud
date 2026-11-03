@@ -45,6 +45,13 @@ export async function POST(request: Request) {
             );
         }
 
+        if(error instanceof SyntaxError) {
+            return Response.json(
+                { error: "Некорректный JSON" },
+                { status: 400 },
+            );
+        }
+
         return Response.json(
             { error: "Внутренняя ошибка сервера" },
             { status: 500 }

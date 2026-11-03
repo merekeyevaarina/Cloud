@@ -3,7 +3,7 @@ import { HardDrive } from "lucide-react";
 import { Badge } from "@/src/shared/ui/badge";
 import { Button } from "@/src/shared/ui/button";
 import { Progress } from "@/src/shared/ui/progress";
-import { storageUsage } from "./drive-data";
+import { storageUsage } from "../lib/drive-data";
 
 export function DriveSidebar() {
   return (

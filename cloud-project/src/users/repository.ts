@@ -12,18 +12,18 @@ export async function findUserByEmail(email: string): Promise<users | null> {
     })
 }
 
-export async function existsByEmail(email: string) : Promise<boolean> {
-    const result = await prisma.$queryRaw<{ exists: boolean }[]>`
-    SELECT EXISTS (
-        SELECT 1
-        FROM users
-        WHERE email = ${email}
-    ) AS exists
-`;
-    const exists = result[0].exists;
-    return exists;
-}
+export async function existsByEmail(email: string): Promise<boolean> {
+    const user = await prisma.users.findUnique({
+        where: {
+            email,
+        },
+        select: {
+            id: true,
+        },
+    });
 
+    return user !== null;
+}
 
 export async function createUser(data: CreateUserData): Promise<users> {
     return prisma.users.create({

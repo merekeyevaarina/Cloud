@@ -1,5 +1,3 @@
-import { GetObjectCommand } from "@aws-sdk/client-s3";
-import { s3 } from "@/src/shared/lib/s3";
 import {downloadPublicFile} from "@/src/files/share-service";
 
 type DownloadRouteProps = {

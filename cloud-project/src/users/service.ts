@@ -5,8 +5,6 @@ import {createUser, existsByEmail, findUserByEmail} from "@/src/users/repository
 import {LoginResult, RegisteredUser} from "@/src/users/types";
 
 
-//регистрация
-
 export async function registerUser(firstName:string,lastName:string,email: string, password: string): Promise<RegisteredUser> {
     if (!firstName || !firstName.trim()) {
         throw new ValidationError("Введите имя"); }
@@ -53,7 +51,6 @@ export async function registerUser(firstName:string,lastName:string,email: strin
 };
 
 
-//вход
 export async function loginUser(email: string, password: string): Promise<LoginResult> {
     if(!email || !email.includes("@")) {
     throw new ValidationError("Некорректный email");

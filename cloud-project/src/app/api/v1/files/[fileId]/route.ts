@@ -1,6 +1,3 @@
-import {prisma} from "@/src/shared/lib/prisma";
-import {s3} from "@/src/shared/lib/s3";
-import {DeleteObjectCommand} from "@aws-sdk/client-s3";
 import {requireAuth} from "@/src/auth/require-auth";
 import {deleteUserFile} from "@/src/files/service";
 
