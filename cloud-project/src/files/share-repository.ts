@@ -16,7 +16,7 @@ export async function createFileShare(fileId:string, token:string){
 }
 
 export async function deleteFileShare(fileId:string){
-    return prisma.file_shares.deleteMany({
+    return prisma.file_shares.delete({
         where: {
             file_id:fileId
         }

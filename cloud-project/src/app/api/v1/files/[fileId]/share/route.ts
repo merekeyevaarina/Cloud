@@ -1,6 +1,7 @@
 import {cookies} from "next/headers";
 import {getUserBySession} from "@/src/auth/service";
 import {createPublicFileShare, disablePublicFileShare} from "@/src/files/share-service";
+import {requireAuth} from "@/src/auth/require-auth";
 
 export async function POST (
     request:Request,
@@ -9,21 +10,9 @@ export async function POST (
     try {
         const {fileId} = await params;
 
-        const cookieStore = await cookies();
-        const sessionId = cookieStore.get("session")?.value
-        if(!sessionId){
-            return Response.json(
-                { error: "Необходимо войти в аккаунт" },
-                { status: 401 },
-            );
-        }
-
-        const user = await getUserBySession(sessionId);
-        if(!user){
-            return Response.json(
-                { error: "Сессия недействительна" },
-                { status: 401 },
-            );
+        const user = await requireAuth()
+        if (user instanceof Response) {
+            return user;
         }
 
         const share = await createPublicFileShare(fileId, user.id);
@@ -54,21 +43,11 @@ export async function DELETE (
 
         const {fileId} = await params;
 
-        const cookieStore = await cookies();
-        const sessionId = cookieStore.get("session")?.value;
-        if(!sessionId){
-            return Response.json(
-                { error: "Необходимо войти в аккаунт" },
-                { status: 401 },
-            );
+        const user = await requireAuth()
+        if (user instanceof Response) {
+            return user;
         }
-        const user = await getUserBySession(sessionId);
-        if(!user){
-            return Response.json(
-                { error: "Сессия недействительна" },
-                { status: 401 },
-            );
-        }
+
         await disablePublicFileShare(fileId, user.id);
 
         return Response.json(

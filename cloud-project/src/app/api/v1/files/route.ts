@@ -1,26 +1,15 @@
-import {cookies} from "next/headers";
-import {getUserBySession} from "@/src/auth/service";
-import {uploadUserFile} from "@/src/files/service";
+import {getUserFiles, uploadUserFile} from "@/src/files/service";
+import {requireAuth} from "@/src/auth/require-auth";
 
 export async function POST (request: Request) {
 
     try{
-        const cookieStore = await cookies();
-        const sessionId = cookieStore.get("session")?.value;
-        if (!sessionId) {
-            return Response.json(
-                { error: "Необходима авторизация" },
-                { status: 401 },
-            );
+        const user = await requireAuth();
+        if (user instanceof Response) {
+            return user;
         }
 
-        const user = await getUserBySession(sessionId);
-        if (!user) {
-            return Response.json(
-                { error: "Сессия недействительна" },
-                { status: 401 },
-            );
-        }
+
         const formData = await request.formData();
         const file = formData.get("file");
         const folderIdValue = formData.get("folderId");
@@ -79,4 +68,31 @@ export async function POST (request: Request) {
             { status: 500 },
         );
     }
+}
+
+export async function GET (request: Request) {
+    try{
+        const user = await requireAuth();
+        if (user instanceof Response) {
+            return user;
+        }
+
+
+        const {searchParams} = new URL(request.url);
+        const folderId = searchParams.get("folderId");
+
+        const files = await getUserFiles(user.id, folderId);
+
+        const serializedFiles = files.map((file) => ({
+            ...file,
+            size_bytes: file.size_bytes.toString(),
+        }));
+        return Response.json(serializedFiles);
+
+    }catch(error){
+        console.error("Ошибка получения файлов:", error);
+    }
+
+
+
 }
