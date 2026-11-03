@@ -57,3 +57,13 @@ export async function downloadPublicFile(token:string){
 
 }
 
+export async function getPublicFileInfo(token:string){
+    const share = await findPublicFileByToken(token)
+    if (!share) {
+        return null
+    }
+    return {
+        name: share.file.name,
+        sizeBytes: share.file.size_bytes
+    }
+}

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import {findPublicFileByToken} from "@/src/files/share-repository";
+import {getPublicFileInfo} from "@/src/files/share-service";
 
 type PublicFilePageProps = {
     params: Promise<{ token: string }>;
@@ -10,15 +10,12 @@ export default async function PublicFilePage({
                                              }: PublicFilePageProps) {
     const { token } = await params;
 
-    const share = await findPublicFileByToken(token);
-
-    if (!share) {
+    const file = await getPublicFileInfo(token)
+    if (!file) {
         notFound();
     }
 
-    const file = share.file;
-
-    const sizeInMb = (Number(file.size_bytes) / (1024 * 1024)).toFixed(2);
+    const sizeInMb = (Number(file.sizeBytes) / (1024 * 1024)).toFixed(2);
 
     return (
         <main className="flex min-h-screen items-center justify-center p-6">

@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="file repository,service,storage refactor 2">
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/share/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/share/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/public-shares/[token]/download/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/public-shares/[token]/download/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/share-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/share-repository.ts" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="share repository,service, route refactor">
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/s/[token]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/s/[token]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/files/share-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/share-service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -339,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793695508341</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="share repository,service, route refactor">
+      <option name="closed" value="true" />
+      <created>1793702084366</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1793702084366</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -350,7 +355,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init" />
     <MESSAGE value="architecture changed/regester page added" />
     <MESSAGE value="prisma added" />
     <MESSAGE value="db changed/created classes of error/ added argon2/tested post http requests" />
@@ -375,7 +379,8 @@
     <MESSAGE value="share" />
     <MESSAGE value="file repository,service,storage refactor" />
     <MESSAGE value="file repository,service,storage refactor 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="file repository,service,storage refactor 2" />
+    <MESSAGE value="share repository,service, route refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="share repository,service, route refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
