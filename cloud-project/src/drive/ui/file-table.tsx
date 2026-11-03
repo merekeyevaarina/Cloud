@@ -11,7 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/src/shared/ui/table";
-import type { DriveFile } from "../lib/drive-data";
+import type { DriveFile } from "./drive-data";
 import { DeleteFileButton } from "./buttons/delete-file-button";
 import { DownloadFileButton } from "./buttons/download-file-button";
 import {ShareFileButton} from "@/src/drive/ui/buttons/share-file-button";

@@ -1,36 +1,169 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cloud Drive
 
-## Getting Started
+Cloud Drive — веб-приложение для хранения, управления и обмена файлами. Пользователи могут регистрироваться, загружать файлы, создавать папки, скачивать файлы и делиться ими с помощью публичных ссылок.
 
-First, run the development server:
+## Возможности
+
+- Регистрация и авторизация пользователей.
+- Защищённая сессия с использованием HTTP-only cookie.
+- Загрузка файлов размером до 50 МБ.
+- Просмотр списка файлов.
+- Создание папок и работа с вложенными папками.
+- Скачивание и удаление файлов.
+- Создание публичных ссылок для обмена файлами.
+- Отключение публичного доступа к файлам.
+- Хранение файлов в S3-совместимом хранилище.
+- Хранение информации о пользователях, папках и файлах в PostgreSQL.
+
+## Технологии
+
+- **Next.js** — React-фреймворк для frontend и backend.
+- **TypeScript** — типизация JavaScript.
+- **PostgreSQL** — реляционная база данных.
+- **Prisma ORM** — взаимодействие с базой данных.
+- **Argon2** — хеширование паролей.
+- **S3-compatible storage** — хранение файлов.
+- **SeaweedFS** — локальное S3-совместимое хранилище для разработки.
+
+### Разделение ответственности
+
+- **app** — страницы приложения и API-маршруты.
+- **users** — регистрация, авторизация и работа с пользователями.
+- **auth** — создание, проверка и удаление пользовательских сессий.
+- **files** — бизнес-логика работы с файлами, доступ к базе данных и файловому хранилищу.
+- **drive** — интерфейс файлового менеджера.
+- **shared** — общие компоненты, утилиты и настройки.
+- **generated/prisma** — сгенерированный Prisma Client.
+
+## Требования
+
+Перед запуском установите:
+
+- Node.js 22 или новее.
+- npm.
+- PostgreSQL.
+- S3-совместимое хранилище (для локальной разработки используется SeaweedFS).
+
+## Установка и запуск
+
+### 1. Клонирование проекта
+
+```bash
+git clone https://github.com/merekeyevaarina/Cloud
+cd cloud-project
+```
+
+### 2. Установка зависимостей
+
+```bash
+npm install
+```
+
+### 3. Настройка переменных окружения
+
+Создайте файл `.env` в корне проекта.
+
+Пример конфигурации:
+
+```env
+DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/cloud_database"
+
+APP_URL="http://localhost:3000"
+
+S3_ENDPOINT="http://localhost:8333"
+S3_BUCKET="cloud-files"
+S3_ACCESS_KEY="your-access-key"
+S3_SECRET_KEY="your-secret-key"
+S3_REGION="us-east-1"
+```
+
+Замените значения на параметры вашей локальной конфигурации.
+
+Не добавляйте `.env` в GitHub. Для примера настройки используйте `.env.example` без настоящих паролей и секретных ключей.
+
+### 4. Настройка базы данных
+
+Примените миграции Prisma:
+
+```bash
+npx prisma migrate dev
+```
+
+Сгенерируйте Prisma Client:
+
+```bash
+npx prisma generate
+```
+
+### 5. Запуск приложения
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+После запуска приложение будет доступно по адресу:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## API
 
-## Learn More
+Все основные API-маршруты используют версионирование `/api/v1`.
 
-To learn more about Next.js, take a look at the following resources:
+### Авторизация
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Метод | Endpoint | Описание |
+|---|---|---|
+| POST | `/api/v1/auth/register` | Регистрация |
+| POST | `/api/v1/auth/login` | Авторизация |
+| POST | `/api/v1/auth/logout` | Выход из аккаунта |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Работа с файлами
 
-## Deploy on Vercel
+| Метод | Endpoint | Описание |
+|---|---|---|
+| GET | `/api/v1/files` | Получение списка файлов |
+| POST | `/api/v1/files` | Загрузка файла |
+| DELETE | `/api/v1/files/:id` | Удаление файла |
+| GET | `/api/v1/files/:id/download` | Скачивание файла |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Работа с папками
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Метод | Endpoint | Описание |
+|---|---|---|
+| POST | `/api/v1/folders` | Создание папки |
+| GET | `/api/v1/folders/:id` | Получение содержимого папки |
+
+### Публичный доступ
+
+| Метод | Endpoint                                      | Описание |
+|---|-----------------------------------------------|---|
+| POST | `/api/v1/files/:id/share`                     | Создание публичной ссылки |
+| DELETE | `/api/v1/files/:id/share`                     | Отключение публичной ссылки |
+| GET | `/api/v1/public-shares/files/:token`          | Получение информации о файле |
+| GET | `/api/v1/public-shares/files/:token/download` | Скачивание публичного файла |
+
+## Безопасность
+
+- Пароли пользователей хранятся в виде хешей Argon2.
+- Сессии передаются через HTTP-only cookies.
+- Приватные API-маршруты требуют авторизации.
+- Проверяется принадлежность файлов пользователю.
+- Файлы хранятся в приватном S3-совместимом хранилище.
+- Для публичного доступа используются уникальные случайные токены.
+- Размер загружаемого файла ограничен 50 МБ.
+
+## Хранение данных
+
+PostgreSQL используется для хранения метаданных:
+
+- информации о пользователях;
+- пользовательских сессий;
+- папок и их вложенности;
+- информации о файлах;
+- публичных ссылок.
+
+Содержимое файлов хранится отдельно — в S3-совместимом хранилище. В базе данных сохраняется уникальный ключ объекта (`storage_key`), по которому приложение находит файл.
+
+## Автор
+
+Merekeyeva Arina

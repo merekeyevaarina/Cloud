@@ -1,5 +1,5 @@
 import { Separator } from "@/src/shared/ui/separator";
-import type { DriveFile, DriveFolder } from "../lib/drive-data";
+import type { DriveFile, DriveFolder } from "./drive-data";
 import { DriveHeader } from "./drive-header";
 import { DriveSidebar } from "./drive-sidebar";
 import { FileTable } from "./file-table";
