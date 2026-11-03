@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="share">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/files/share-repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/public-shares/[token]/download/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/public-shares/[token]/download/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/s/[token]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/s/[token]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/components/.gitkeep" beforeDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="file repository,service,storage refactor">
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/auth/require-auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/download/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/download/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/files/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/share-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/share-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/files/storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/storage.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +48,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -327,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793615135936</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="file repository,service,storage refactor">
+      <option name="closed" value="true" />
+      <created>1793632615631</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1793632615631</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -362,7 +368,8 @@
     <MESSAGE value="delete file, download file business logic" />
     <MESSAGE value="public share/repository and business logic" />
     <MESSAGE value="share" />
-    <option name="LAST_COMMIT_MESSAGE" value="share" />
+    <MESSAGE value="file repository,service,storage refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="file repository,service,storage refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

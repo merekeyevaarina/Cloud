@@ -3,24 +3,24 @@ import {getUserBySession} from "@/src/auth/service";
 import {uploadUserFile} from "@/src/files/service";
 
 export async function POST (request: Request) {
-    const cookieStore = await cookies();
-    const sessionId = cookieStore.get("session")?.value;
-    if (!sessionId) {
-        return Response.json(
-            { error: "Необходима авторизация" },
-            { status: 401 },
-        );
-    }
-    const user = await getUserBySession(sessionId);
-
-    if (!user) {
-        return Response.json(
-            { error: "Сессия недействительна" },
-            { status: 401 },
-        );
-    }
 
     try{
+        const cookieStore = await cookies();
+        const sessionId = cookieStore.get("session")?.value;
+        if (!sessionId) {
+            return Response.json(
+                { error: "Необходима авторизация" },
+                { status: 401 },
+            );
+        }
+
+        const user = await getUserBySession(sessionId);
+        if (!user) {
+            return Response.json(
+                { error: "Сессия недействительна" },
+                { status: 401 },
+            );
+        }
         const formData = await request.formData();
         const file = formData.get("file");
         const folderIdValue = formData.get("folderId");
@@ -62,8 +62,9 @@ export async function POST (request: Request) {
         ? error.message
                 : "Не удалось загрузить файл";
         if (
-            message === "Размер файла не должен превышать 50 МБ" ||
-            message === "Нельзя загрузить пустой файл"
+            message === "Размер файла не должен превышать 50МБ" ||
+            message === "Нельзя загрузить пустой файл" ||
+            message === "Имя файла не может быть пустым"
         ) {
             return Response.json({ error: message }, { status: 400 });
         }

@@ -1,8 +1,15 @@
-import {createFileRecord, findFilesByOwner, findFolderByOwner} from "@/src/files/repository";
+import {
+    createFileRecord,
+    deleteFileRecord,
+    findFileByOwner,
+    findFilesByOwner,
+    findFolderByOwner
+} from "@/src/files/repository";
 import {randomUUID} from "node:crypto";
-import {deleteFileFromStorage, uploadFileToStorage} from "@/src/files/storage";
+import {deleteFileFromStorage, downloadFileFromStorage, uploadFileToStorage} from "@/src/files/storage";
 
 const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50 МБ
+
 export async function getUserFiles(
     ownerId: string,
     folderId: string | null = null) {
@@ -53,4 +60,40 @@ export async function uploadUserFile(
         throw error;
     }
 }
+
+
+export async function deleteUserFile(
+    fileId: string,
+    ownerId: string,
+){
+    const file = await findFileByOwner(fileId, ownerId);
+    if (!file) {
+        throw new Error("Файл не найден");
+    }
+
+    await deleteFileFromStorage(file.storage_key);
+    await deleteFileRecord(file.id);
+}
+
+export async function downloadUserFile(
+    fileId: string,
+    ownerId: string,
+){
+    const file = await findFileByOwner(fileId, ownerId);
+    if (!file) {
+        throw new Error("Файл не найден");
+    }
+
+    const result = await downloadFileFromStorage(file.storage_key)
+    if (!result.Body) {
+        throw new Error("Содержимое файла не найдено");
+    }
+    return {
+        name: file.name,
+        mimeType: file.mime_type,
+        body: result.Body
+    }
+}
+
+
 

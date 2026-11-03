@@ -58,6 +58,9 @@ export async function findFileByOwner(fileId: string, ownerId:string){
         },
         select:{
             id: true,
+            storage_key:true,
+            name: true,
+            mime_type: true,
         }
     })
 }
@@ -76,3 +79,12 @@ export async function findFolderByOwner(
         },
     });
 }
+
+export async function deleteFileRecord(fileId: string) {
+    return prisma.files.delete({
+        where:{
+            id: fileId,
+        }
+    })
+}
+
