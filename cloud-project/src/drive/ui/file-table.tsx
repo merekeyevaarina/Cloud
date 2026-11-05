@@ -37,6 +37,17 @@ function getFileIcon(mimeType: string):LucideIcon{
   return FileIcon;
 }
 
+function getFileType(mimeType: string): string {
+  if (mimeType === "application/pdf") return "PDF";
+  if (mimeType.includes("word")) return "Word";
+  if (mimeType.includes("spreadsheet")) return "Excel";
+  if (mimeType.includes("presentation")) return "PowerPoint";
+  if (mimeType.startsWith("image/")) return "Изображение";
+  if (mimeType.startsWith("text/")) return "Текст";
+  if (mimeType.includes("zip")) return "ZIP";
+
+  return "Файл";
+}
 
 function formatFileSize(bytes:bigint):string{
   const size = Number(bytes);
@@ -92,8 +103,11 @@ export function FileTable({files}: FileTableProps) {
                       </Badge>
                       <div className="min-w-0">
                         <div className="truncate text-sm font-medium">{file.name}</div>
-                        <div className="max-w-[50px] mt-1 text-xs text-muted-foreground">{file.mime_type}</div>
-                      </div>
+                        <div
+                            className="mt-1 max-w-[150px] truncate text-xs text-muted-foreground"
+                            title={file.mime_type}>
+                          {file.mime_type}
+                        </div>                      </div>
                     </div>
                   </TableCell>
                   <TableCell className="px-4 py-4">
@@ -106,7 +120,7 @@ export function FileTable({files}: FileTableProps) {
                   <TableCell className="max-w-[50px] px-4 py-4 text-sm text-muted-foreground">{formatFileSize(file.size_bytes)}</TableCell>
                   <TableCell className=" px-4 py-4 text-sm text-muted-foreground">{formatDate(file.created_at)}</TableCell>
                   <TableCell className="px-4 py-4">
-                    <Badge variant="muted" className="bg-muted text-muted-foreground">{file.mime_type.split("/ ")[1] ?? "файл"}</Badge>
+                    <Badge variant="muted" className="bg-muted text-muted-foreground">{getFileType(file.mime_type)}</Badge>
                   </TableCell>
                 </TableRow>
               );

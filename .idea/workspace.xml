@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix 2">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix 3">
       <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +143,7 @@
       <workItem from="1793261919529" duration="6409000" />
       <workItem from="1793273014145" duration="4610000" />
       <workItem from="1793786515144" duration="715000" />
-      <workItem from="1793880866893" duration="3441000" />
+      <workItem from="1793880866893" duration="4116000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -385,7 +385,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793883168205</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="ui fix 3">
+      <option name="closed" value="true" />
+      <created>1793888511057</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1793888511057</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -396,7 +404,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="src/auth create repository and service" />
     <MESSAGE value="change loginUser(sessionId)" />
     <MESSAGE value="create cookies" />
     <MESSAGE value="session business logic" />
@@ -421,14 +428,15 @@
     <MESSAGE value="Read me and architecture fix" />
     <MESSAGE value="ui fix" />
     <MESSAGE value="ui fix 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui fix 2" />
+    <MESSAGE value="ui fix 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui fix 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx</url>
-          <line>50</line>
+          <line>61</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
