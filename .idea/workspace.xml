@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix">
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix 2">
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +143,7 @@
       <workItem from="1793261919529" duration="6409000" />
       <workItem from="1793273014145" duration="4610000" />
       <workItem from="1793786515144" duration="715000" />
-      <workItem from="1793880866893" duration="2266000" />
+      <workItem from="1793880866893" duration="3441000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -379,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793882186383</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="ui fix 2">
+      <option name="closed" value="true" />
+      <created>1793883168205</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1793883168205</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -390,7 +396,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="src/auth create repositore and service" />
     <MESSAGE value="src/auth create repository and service" />
     <MESSAGE value="change loginUser(sessionId)" />
     <MESSAGE value="create cookies" />
@@ -415,7 +420,8 @@
     <MESSAGE value="architecture fix" />
     <MESSAGE value="Read me and architecture fix" />
     <MESSAGE value="ui fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui fix" />
+    <MESSAGE value="ui fix 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui fix 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

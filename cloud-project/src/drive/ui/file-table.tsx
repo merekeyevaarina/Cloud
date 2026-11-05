@@ -85,14 +85,14 @@ export function FileTable({files}: FileTableProps) {
               const Icon = getFileIcon(file.mime_type);
               return (
                 <TableRow key={file.id}>
-                  <TableCell className="px-5 py-4">
+                  <TableCell className="px-5 py-4 max-w-[200px]">
                     <div className="flex items-center gap-3">
                       <Badge variant="muted" className="size-10 shrink-0 rounded-xl bg-secondary p-0 text-primary">
                         <Icon aria-hidden="true" className="size-5" />
                       </Badge>
                       <div className="min-w-0">
                         <div className="truncate text-sm font-medium">{file.name}</div>
-                        <div className="mt-1 text-xs text-muted-foreground">{file.mime_type}</div>
+                        <div className="max-w-[50px] mt-1 text-xs text-muted-foreground">{file.mime_type}</div>
                       </div>
                     </div>
                   </TableCell>
@@ -103,8 +103,8 @@ export function FileTable({files}: FileTableProps) {
                       <DeleteFileButton fileId={file.id} />
                     </div>
                   </TableCell>
-                  <TableCell className="px-4 py-4 text-sm text-muted-foreground">{formatFileSize(file.size_bytes)}</TableCell>
-                  <TableCell className="px-4 py-4 text-sm text-muted-foreground">{formatDate(file.created_at)}</TableCell>
+                  <TableCell className="max-w-[50px] px-4 py-4 text-sm text-muted-foreground">{formatFileSize(file.size_bytes)}</TableCell>
+                  <TableCell className=" px-4 py-4 text-sm text-muted-foreground">{formatDate(file.created_at)}</TableCell>
                   <TableCell className="px-4 py-4">
                     <Badge variant="muted" className="bg-muted text-muted-foreground">{file.mime_type.split("/ ")[1] ?? "файл"}</Badge>
                   </TableCell>
