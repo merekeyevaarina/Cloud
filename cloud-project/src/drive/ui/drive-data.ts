@@ -18,6 +18,15 @@ export type DriveFile = {
   folder_id: string | null;
 };
 
+export function formatStorageSize(bytes: bigint) {
+  const size = Number(bytes);
+
+  if (size < 1024) return `${size} Б`;
+  if (size < 1024 ** 2) return `${(size / 1024).toFixed(2)} КБ`;
+  if (size < 1024 ** 3) return `${(size / (1024 ** 2)).toFixed(2)} МБ`;
+
+  return `${(size / (1024 ** 3)).toFixed(2)} ГБ`;
+}
 
 export async function storageSize() {
   const user = await requireAuth();
@@ -28,8 +37,7 @@ export async function storageSize() {
 
   const totalBytes = await getUserStorageUsage(user.id);
 
-  const totalGB = `${(Number(totalBytes) / (1024 ** 3)).toFixed(2)} ГБ`;
-
+  const totalGB = formatStorageSize(totalBytes);
   const totalBytesLimit = 15 * 1024 ** 3;
   const total = `${(totalBytesLimit / (1024 ** 3)).toFixed(0)} ГБ`;
 

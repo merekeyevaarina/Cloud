@@ -97,5 +97,5 @@ export async function getUserStorageUsage(ownerId: string) {
             size_bytes:true
         }
     })
-    return result._sum.size_bytes ?? '0';
+    return result._sum.size_bytes ?? BigInt(0);
 }
