@@ -85,10 +85,10 @@ export function FileTable({files}: FileTableProps) {
           <TableHeader>
             <TableRow className="hover:bg-transparent">
               <TableHead className="px-5 py-3.5 text-xs">Название</TableHead>
+              <TableHead className="px-4 py-3.5 text-xs">Действия</TableHead>
               <TableHead className="px-4 py-3.5 text-xs">Размер</TableHead>
               <TableHead className="px-4 py-3.5 text-xs">Дата загрузки</TableHead>
               <TableHead className="px-4 py-3.5 text-xs">Тип</TableHead>
-              <TableHead className="px-4 py-3.5 text-xs">Действия</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
