@@ -3,7 +3,10 @@ import { HardDrive } from "lucide-react";
 import { Badge } from "@/src/shared/ui/badge";
 import { Button } from "@/src/shared/ui/button";
 import { Progress } from "@/src/shared/ui/progress";
-import { storageUsage } from "./drive-data";
+import {storageSize} from "@/src/drive/ui/drive-data";
+
+
+export const storageUsage = await storageSize()
 
 export function DriveSidebar() {
   return (

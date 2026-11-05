@@ -88,3 +88,14 @@ export async function deleteFileRecord(fileId: string) {
     })
 }
 
+export async function getUserStorageUsage(ownerId: string) {
+    const result = await prisma.files.aggregate({
+        where: {
+            owner_id: ownerId,
+        },
+        _sum:{
+            size_bytes:true
+        }
+    })
+    return result._sum.size_bytes ?? '0';
+}
