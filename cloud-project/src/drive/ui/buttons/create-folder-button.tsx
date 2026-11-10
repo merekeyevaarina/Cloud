@@ -24,6 +24,8 @@ export  function CreateFolderButton(){
         setIsLoading(true);
         setError('')
 
+
+
         try{
             const response = await fetch("/api/v1/folders", {
                 method: 'POST',
@@ -39,7 +41,9 @@ export  function CreateFolderButton(){
             }
             setName("");
             setIsLoading(false);
+            setIsOpen(false)
             router.refresh()
+
         }
         catch{
             setError("Не удалось связаться с сервером");
