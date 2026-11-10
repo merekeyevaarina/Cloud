@@ -105,7 +105,7 @@ export function FileTable({files}: FileTableProps) {
                         <Icon aria-hidden="true" className="size-5" />
                       </Badge>
                       <div className="min-w-0">
-                        {file.mime_type.startsWith("image/") ? (
+                        {file.mime_type === "image/png" ? (
                             <ImagePreviewButton
                                 fileId={file.id}
                                 fileName={file.name}

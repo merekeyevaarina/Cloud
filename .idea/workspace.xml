@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/preview/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/image-preview-button.tsx" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix file-table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/preview/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/preview/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,15 +152,7 @@
       <workItem from="1794043807307" duration="815000" />
       <workItem from="1794210805967" duration="25000" />
       <workItem from="1794218139689" duration="37000" />
-      <workItem from="1794298040968" duration="13164000" />
-    </task>
-    <task id="LOCAL-00001" summary="add login page">
-      <option name="closed" value="true" />
-      <created>1790965129405</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1790965129405</updated>
+      <workItem from="1794298040968" duration="14267000" />
     </task>
     <task id="LOCAL-00002" summary="init">
       <option name="closed" value="true" />
@@ -530,7 +522,31 @@
       <option name="project" value="LOCAL" />
       <updated>1794321547392</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="ui fix">
+      <option name="closed" value="true" />
+      <created>1794324081539</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1794324081539</updated>
+    </task>
+    <task id="LOCAL-00049" summary="ui fix">
+      <option name="closed" value="true" />
+      <created>1794324087739</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1794324087739</updated>
+    </task>
+    <task id="LOCAL-00050" summary="ui fix file-table">
+      <option name="closed" value="true" />
+      <created>1794324262873</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1794324262874</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -541,7 +557,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add upload button" />
     <MESSAGE value="register bug fix/delete file api" />
     <MESSAGE value="delete file, download file business logic" />
     <MESSAGE value="public share/repository and business logic" />
@@ -566,17 +581,7 @@
     <MESSAGE value="logout button fix" />
     <MESSAGE value="logout button ui fix" />
     <MESSAGE value="ui fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui fix" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx</url>
-          <line>61</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="ui fix file-table" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui fix file-table" />
   </component>
 </project>
