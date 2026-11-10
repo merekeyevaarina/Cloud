@@ -62,10 +62,11 @@ function formatFileSize(bytes:bigint):string{
   return `${(size / 1024 ** 3).toFixed(1)} ГБ`;
 }
 
-function formatDate(date: Date):string {
+function formatDate(date: Date): string {
   return new Intl.DateTimeFormat("ru-RU", {
-    dateStyle:"medium",
-    timeStyle:"short",
+    dateStyle: "medium",
+    timeStyle: "short",
+    timeZone: "Asia/Almaty",
   }).format(date);
 }
 

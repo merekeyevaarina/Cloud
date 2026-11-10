@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix file-table">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/preview/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/preview/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="preview route" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,15 +148,7 @@
       <workItem from="1794043807307" duration="815000" />
       <workItem from="1794210805967" duration="25000" />
       <workItem from="1794218139689" duration="37000" />
-      <workItem from="1794298040968" duration="14267000" />
-    </task>
-    <task id="LOCAL-00002" summary="init">
-      <option name="closed" value="true" />
-      <created>1791027955460</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1791027955460</updated>
+      <workItem from="1794298040968" duration="14937000" />
     </task>
     <task id="LOCAL-00003" summary="architecture changed/regester page added">
       <option name="closed" value="true" />
@@ -546,7 +534,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794324262874</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="preview route">
+      <option name="closed" value="true" />
+      <created>1794324948788</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1794324948789</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -557,7 +553,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="register bug fix/delete file api" />
     <MESSAGE value="delete file, download file business logic" />
     <MESSAGE value="public share/repository and business logic" />
     <MESSAGE value="share" />
@@ -582,6 +577,7 @@
     <MESSAGE value="logout button ui fix" />
     <MESSAGE value="ui fix" />
     <MESSAGE value="ui fix file-table" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui fix file-table" />
+    <MESSAGE value="preview route" />
+    <option name="LAST_COMMIT_MESSAGE" value="preview route" />
   </component>
 </project>
