@@ -1,3 +1,5 @@
+"use client"
+
 import {FileArchive, FileIcon, FileImage, FileText} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Badge } from "@/src/shared/ui/badge";
