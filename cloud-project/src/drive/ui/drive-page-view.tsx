@@ -18,13 +18,10 @@ type DrivePageViewProps = {
 export function DrivePageView({ folders, files, folderId }: DrivePageViewProps) {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen flex-col lg:flex-row">
         <DriveSidebar />
         <section className="min-w-0 flex-1">
           <DriveHeader />
-          <div className="flex justify-end px-5 pt-4 sm:px-8 lg:px-10">
-            <LogoutButton />
-          </div>
           <div className="mx-auto max-w-[1440px] px-5 py-8 sm:px-8 lg:px-10 lg:py-10">
             <div className="mb-8 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
               <div>
