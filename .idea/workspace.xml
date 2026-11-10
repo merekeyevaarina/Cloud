@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="logout button ui fix">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix">
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/preview/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/image-preview-button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -151,7 +152,7 @@
       <workItem from="1794043807307" duration="815000" />
       <workItem from="1794210805967" duration="25000" />
       <workItem from="1794218139689" duration="37000" />
-      <workItem from="1794298040968" duration="11253000" />
+      <workItem from="1794298040968" duration="13164000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -521,7 +522,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794321125803</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="ui fix">
+      <option name="closed" value="true" />
+      <created>1794321547392</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1794321547392</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -543,7 +552,6 @@
     <MESSAGE value="share repository,service, route refactor 2" />
     <MESSAGE value="architecture fix" />
     <MESSAGE value="Read me and architecture fix" />
-    <MESSAGE value="ui fix" />
     <MESSAGE value="ui fix 2" />
     <MESSAGE value="ui fix 3" />
     <MESSAGE value="ui fix 4" />
@@ -557,7 +565,8 @@
     <MESSAGE value="logout button add in ui" />
     <MESSAGE value="logout button fix" />
     <MESSAGE value="logout button ui fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="logout button ui fix" />
+    <MESSAGE value="ui fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
