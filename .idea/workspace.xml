@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix 3">
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix 4">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_11_2026,_11_47_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_11_2026__11_47__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/prisma.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/prisma.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/shared/lib/prisma.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/shared/lib/prisma.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,11 +95,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cloud-project" />
       <recent name="$PROJECT_DIR$/cloud-project/src/app/api/v1" />
       <recent name="$PROJECT_DIR$/cloud-project/src/app/v1" />
       <recent name="$PROJECT_DIR$/cloud-project/src/drive" />
       <recent name="$PROJECT_DIR$/cloud-project/src/drive/lib" />
-      <recent name="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.111.ts">
@@ -143,7 +151,14 @@
       <workItem from="1793261919529" duration="6409000" />
       <workItem from="1793273014145" duration="4610000" />
       <workItem from="1793786515144" duration="715000" />
-      <workItem from="1793880866893" duration="4116000" />
+      <workItem from="1793880866893" duration="4810000" />
+      <workItem from="1794029668397" duration="10000" />
+      <workItem from="1794031514816" duration="66000" />
+      <workItem from="1794032535123" duration="11000" />
+      <workItem from="1794043807307" duration="815000" />
+      <workItem from="1794210805967" duration="25000" />
+      <workItem from="1794218139689" duration="37000" />
+      <workItem from="1794298040968" duration="2996000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -393,7 +408,23 @@
       <option name="project" value="LOCAL" />
       <updated>1793888511057</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="ui fix 3">
+      <option name="closed" value="true" />
+      <created>1793889188356</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1793889188356</updated>
+    </task>
+    <task id="LOCAL-00033" summary="ui fix 4">
+      <option name="closed" value="true" />
+      <created>1793889275092</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1793889275095</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -404,7 +435,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change loginUser(sessionId)" />
     <MESSAGE value="create cookies" />
     <MESSAGE value="session business logic" />
     <MESSAGE value="delete session/logout button" />
@@ -429,7 +459,8 @@
     <MESSAGE value="ui fix" />
     <MESSAGE value="ui fix 2" />
     <MESSAGE value="ui fix 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui fix 3" />
+    <MESSAGE value="ui fix 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui fix 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

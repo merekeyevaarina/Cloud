@@ -51,7 +51,7 @@ export async function createFileRecord(data: CreateFileRecordInput) {
 }
 
 export async function findFileByOwner(fileId: string, ownerId:string){
-    return prisma.files.findFirst({
+    return prisma.files.findUnique({
         where: {
             id: fileId,
             owner_id: ownerId,
