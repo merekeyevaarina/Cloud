@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix 4">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_11_2026,_11_47_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_11_2026__11_47__Changes_.xml" beforeDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="neon init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/prisma.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/prisma.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/shared/lib/prisma.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/shared/lib/prisma.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +152,7 @@
       <workItem from="1794043807307" duration="815000" />
       <workItem from="1794210805967" duration="25000" />
       <workItem from="1794218139689" duration="37000" />
-      <workItem from="1794298040968" duration="2996000" />
+      <workItem from="1794298040968" duration="4342000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -424,7 +418,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793889275095</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="neon init">
+      <option name="closed" value="true" />
+      <created>1794301734271</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1794301734271</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -435,7 +437,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create cookies" />
     <MESSAGE value="session business logic" />
     <MESSAGE value="delete session/logout button" />
     <MESSAGE value="added types and Zod" />
@@ -460,7 +461,8 @@
     <MESSAGE value="ui fix 2" />
     <MESSAGE value="ui fix 3" />
     <MESSAGE value="ui fix 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui fix 4" />
+    <MESSAGE value="neon init" />
+    <option name="LAST_COMMIT_MESSAGE" value="neon init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
