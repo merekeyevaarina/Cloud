@@ -7,6 +7,7 @@ import { FolderGrid } from "./folder-grid";
 import { CreateFolderButton } from "./buttons/create-folder-button";
 import { DriveBreadcrumb } from "./drive-breadcrumb";
 import { UploadFileButton } from "./buttons/upload-file-button";
+import {LogoutButton} from "@/src/auth/ui/LogoutButton";
 
 type DrivePageViewProps = {
   folders: DriveFolder[];
@@ -22,7 +23,7 @@ export function DrivePageView({ folders, files, folderId }: DrivePageViewProps) 
         <section className="min-w-0 flex-1">
           <DriveHeader />
           <div className="mx-auto max-w-[1440px] px-5 py-8 sm:px-8 lg:px-10 lg:py-10">
-            <div className="mb-8 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div className="mb-8 flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
               <div>
                 <h1 className="text-3xl font-semibold tracking-[-0.04em]">Мой диск</h1>
                 <DriveBreadcrumb folderId={folderId} />
@@ -31,6 +32,7 @@ export function DrivePageView({ folders, files, folderId }: DrivePageViewProps) 
               <div className="flex gap-2">
                 <UploadFileButton folderId={folderId} />
                 <CreateFolderButton />
+                <LogoutButton/>
               </div>
             </div>
 
