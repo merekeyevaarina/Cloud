@@ -25,7 +25,7 @@ export  function CreateFolderButton(){
         setError('')
 
         try{
-            const response = await fetch("/api/folders", {
+            const response = await fetch("/api/v1/folders", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
