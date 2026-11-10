@@ -22,8 +22,11 @@ export function DrivePageView({ folders, files, folderId }: DrivePageViewProps) 
         <DriveSidebar />
         <section className="min-w-0 flex-1">
           <DriveHeader />
+          <div className="flex justify-end px-5 pt-4 sm:px-8 lg:px-10">
+            <LogoutButton />
+          </div>
           <div className="mx-auto max-w-[1440px] px-5 py-8 sm:px-8 lg:px-10 lg:py-10">
-            <div className="mb-8 flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
+            <div className="mb-8 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
               <div>
                 <h1 className="text-3xl font-semibold tracking-[-0.04em]">Мой диск</h1>
                 <DriveBreadcrumb folderId={folderId} />
@@ -32,7 +35,6 @@ export function DrivePageView({ folders, files, folderId }: DrivePageViewProps) 
               <div className="flex gap-2">
                 <UploadFileButton folderId={folderId} />
                 <CreateFolderButton />
-                <LogoutButton/>
               </div>
             </div>
 
