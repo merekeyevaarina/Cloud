@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="preview route" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="bug fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,23 +148,7 @@
       <workItem from="1794043807307" duration="815000" />
       <workItem from="1794210805967" duration="25000" />
       <workItem from="1794218139689" duration="37000" />
-      <workItem from="1794298040968" duration="14937000" />
-    </task>
-    <task id="LOCAL-00003" summary="architecture changed/regester page added">
-      <option name="closed" value="true" />
-      <created>1791100838746</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1791100838746</updated>
-    </task>
-    <task id="LOCAL-00004" summary="prisma added">
-      <option name="closed" value="true" />
-      <created>1791211644684</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1791211644684</updated>
+      <workItem from="1794298040968" duration="15255000" />
     </task>
     <task id="LOCAL-00005" summary="db changed/created classes of error/ added argon2/tested post http requests">
       <option name="closed" value="true" />
@@ -542,7 +526,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794324948789</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1794335722566</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1794335722566</updated>
+    </task>
+    <task id="LOCAL-00053" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1794335729546</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1794335729546</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -553,7 +553,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete file, download file business logic" />
     <MESSAGE value="public share/repository and business logic" />
     <MESSAGE value="share" />
     <MESSAGE value="file repository,service,storage refactor" />
@@ -578,6 +577,7 @@
     <MESSAGE value="ui fix" />
     <MESSAGE value="ui fix file-table" />
     <MESSAGE value="preview route" />
-    <option name="LAST_COMMIT_MESSAGE" value="preview route" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
 </project>
