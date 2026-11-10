@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="fix folder ui">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="logout button add in ui" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,7 +148,7 @@
       <workItem from="1794043807307" duration="815000" />
       <workItem from="1794210805967" duration="25000" />
       <workItem from="1794218139689" duration="37000" />
-      <workItem from="1794298040968" duration="10268000" />
+      <workItem from="1794298040968" duration="10628000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <option name="closed" value="true" />
@@ -488,7 +486,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794311414776</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="logout button add in ui">
+      <option name="closed" value="true" />
+      <created>1794320743660</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1794320743660</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -499,7 +505,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add business logic and repository for folders" />
     <MESSAGE value="folder create/ connect ui and business logic" />
     <MESSAGE value="file loading" />
     <MESSAGE value="add upload button" />
@@ -524,7 +529,8 @@
     <MESSAGE value="fix api drive" />
     <MESSAGE value="s3 config for neon" />
     <MESSAGE value="fix folder ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix folder ui" />
+    <MESSAGE value="logout button add in ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="logout button add in ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
