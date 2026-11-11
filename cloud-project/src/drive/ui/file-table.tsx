@@ -112,7 +112,7 @@ export function FileTable({files}: FileTableProps) {
                                 fileName={file.name}
                             />
                         ) : (
-                            <div className="truncate text-sm font-medium">
+                            <div className="max-w-[150px] truncate text-sm font-medium">
                               {file.name}
                             </div>
                         )}
