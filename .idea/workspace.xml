@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="upload-url api service and storage" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="bug fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,15 +150,7 @@
       <workItem from="1794218139689" duration="37000" />
       <workItem from="1794298040968" duration="17765000" />
       <workItem from="1794468659475" duration="4906000" />
-      <workItem from="1794489481085" duration="5157000" />
-    </task>
-    <task id="LOCAL-00008" summary="src/auth create repository and service">
-      <option name="closed" value="true" />
-      <created>1791391699351</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1791391699351</updated>
+      <workItem from="1794489481085" duration="5515000" />
     </task>
     <task id="LOCAL-00009" summary="change loginUser(sessionId)">
       <option name="closed" value="true" />
@@ -544,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794566874792</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1794567496621</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1794567496621</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -576,10 +576,10 @@
     <MESSAGE value="logout button ui fix" />
     <MESSAGE value="ui fix file-table" />
     <MESSAGE value="preview route" />
-    <MESSAGE value="bug fix" />
     <MESSAGE value="ui fix" />
     <MESSAGE value="ui fix/s3 fix" />
     <MESSAGE value="upload-url api service and storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload-url api service and storage" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
 </project>

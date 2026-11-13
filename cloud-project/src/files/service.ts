@@ -113,6 +113,12 @@ export async function createUserUploadUrl(
     input:createUserUploadUrlProps
 ){
 
+
+    console.log("INPUT:", input);
+    console.log("SIZE:", input.size);
+    console.log("TYPE:", typeof input.size);
+    console.log("IS INTEGER:", Number.isInteger(input.size));
+
     if(!Number.isInteger(input.size) || input.size <= MAX_FILE_SIZE){
         throw new Error("Некорректный размер файла");
     }
