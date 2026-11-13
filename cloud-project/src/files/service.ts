@@ -132,10 +132,11 @@ export async function createUserUploadUrl(
     }
     if(input.folderId){
         const folder = await findFolderByOwner(input.folderId, ownerId);
+        if (!folder) {
+            throw new Error("Папка не найдена");
+        }
     }
-    if (!input.folderId) {
-        throw new Error("Папка не найдена");
-    }
+
     const storageKey = `${ownerId}.${randomUUID()}`
     const uploadUrl = await createUploadUrl(
         storageKey,

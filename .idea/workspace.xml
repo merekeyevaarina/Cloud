@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="log tests" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="bug fix">
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/service.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,15 +152,7 @@
       <workItem from="1794218139689" duration="37000" />
       <workItem from="1794298040968" duration="17765000" />
       <workItem from="1794468659475" duration="4906000" />
-      <workItem from="1794489481085" duration="5833000" />
-    </task>
-    <task id="LOCAL-00010" summary="create cookies">
-      <option name="closed" value="true" />
-      <created>1791452139632</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1791452139632</updated>
+      <workItem from="1794489481085" duration="6133000" />
     </task>
     <task id="LOCAL-00011" summary="session business logic">
       <option name="closed" value="true" />
@@ -544,7 +538,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794567712508</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1794568017211</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1794568017211</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -578,8 +580,8 @@
     <MESSAGE value="ui fix" />
     <MESSAGE value="ui fix/s3 fix" />
     <MESSAGE value="upload-url api service and storage" />
-    <MESSAGE value="bug fix" />
     <MESSAGE value="log tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="log tests" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
 </project>
