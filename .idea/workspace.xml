@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix/s3 fix">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/upload-url/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/image-preview-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/image-preview-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/storage.ts" afterDir="false" />
-    </list>
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="upload-url api service and storage" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,15 +150,7 @@
       <workItem from="1794218139689" duration="37000" />
       <workItem from="1794298040968" duration="17765000" />
       <workItem from="1794468659475" duration="4906000" />
-      <workItem from="1794489481085" duration="4554000" />
-    </task>
-    <task id="LOCAL-00007" summary="src/auth create repositore and service">
-      <option name="closed" value="true" />
-      <created>1791391666116</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1791391666116</updated>
+      <workItem from="1794489481085" duration="5157000" />
     </task>
     <task id="LOCAL-00008" summary="src/auth create repository and service">
       <option name="closed" value="true" />
@@ -552,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794387167485</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="upload-url api service and storage">
+      <option name="closed" value="true" />
+      <created>1794566874791</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1794566874792</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -563,7 +555,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="share" />
     <MESSAGE value="file repository,service,storage refactor" />
     <MESSAGE value="file repository,service,storage refactor 2" />
     <MESSAGE value="share repository,service, route refactor" />
@@ -588,6 +579,7 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value="ui fix" />
     <MESSAGE value="ui fix/s3 fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui fix/s3 fix" />
+    <MESSAGE value="upload-url api service and storage" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload-url api service and storage" />
   </component>
 </project>

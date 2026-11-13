@@ -14,7 +14,7 @@ import {
 } from "@/src/files/storage";
 import {file} from "zod";
 
-const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50 МБ
+export const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50 МБ
 
 export async function getUserFiles(
     ownerId: string,
@@ -113,7 +113,7 @@ export async function createUserUploadUrl(
     input:createUserUploadUrlProps
 ){
 
-    if(!Number.isInteger(input.size) || input.size <= 0){
+    if(!Number.isInteger(input.size) || input.size <= MAX_FILE_SIZE){
         throw new Error("Некорректный размер файла");
     }
     if(input.size > 50){
