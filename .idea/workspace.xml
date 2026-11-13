@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="bug fix" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="log tests" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,15 +150,7 @@
       <workItem from="1794218139689" duration="37000" />
       <workItem from="1794298040968" duration="17765000" />
       <workItem from="1794468659475" duration="4906000" />
-      <workItem from="1794489481085" duration="5515000" />
-    </task>
-    <task id="LOCAL-00009" summary="change loginUser(sessionId)">
-      <option name="closed" value="true" />
-      <created>1791392572576</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1791392572576</updated>
+      <workItem from="1794489481085" duration="5833000" />
     </task>
     <task id="LOCAL-00010" summary="create cookies">
       <option name="closed" value="true" />
@@ -544,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794567496621</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="log tests">
+      <option name="closed" value="true" />
+      <created>1794567712508</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1794567712508</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -555,7 +555,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="file repository,service,storage refactor" />
     <MESSAGE value="file repository,service,storage refactor 2" />
     <MESSAGE value="share repository,service, route refactor" />
     <MESSAGE value="share repository,service, route refactor 2" />
@@ -580,6 +579,7 @@
     <MESSAGE value="ui fix/s3 fix" />
     <MESSAGE value="upload-url api service and storage" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="log tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="log tests" />
   </component>
 </project>

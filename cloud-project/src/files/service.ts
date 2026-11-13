@@ -119,10 +119,10 @@ export async function createUserUploadUrl(
     console.log("TYPE:", typeof input.size);
     console.log("IS INTEGER:", Number.isInteger(input.size));
 
-    if(!Number.isInteger(input.size) || input.size <= MAX_FILE_SIZE){
+    if(!Number.isInteger(input.size) || input.size <= 0){
         throw new Error("Некорректный размер файла");
     }
-    if(input.size > 50){
+    if(input.size > MAX_FILE_SIZE){
         throw new Error("Размер файла не должен превышать 50МБ");
     }
 
