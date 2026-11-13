@@ -15,7 +15,7 @@ export function ImagePreviewButton({fileId,fileName}: ImagePreviewButtonProps) {
             <button
                 type="button"
                 onClick={() => setIsOpen(true)}
-                className="truncate text-left font-medium transition-colors hover:text-primary hover:underline"
+                className="min-w-0 max-w-[150px] truncate text-left font-medium transition-colors hover:text-primary hover:underline"
             >
                 {fileName}
             </button>

@@ -6,7 +6,13 @@ import {
     findFolderByOwner
 } from "@/src/files/repository";
 import {randomUUID} from "node:crypto";
-import {deleteFileFromStorage, downloadFileFromStorage, uploadFileToStorage} from "@/src/files/storage";
+import {
+    createUploadUrl,
+    deleteFileFromStorage,
+    downloadFileFromStorage,
+    uploadFileToStorage
+} from "@/src/files/storage";
+import {file} from "zod";
 
 const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50 МБ
 
@@ -92,6 +98,51 @@ export async function downloadUserFile(
         name: file.name,
         mimeType: file.mime_type,
         body: result.Body
+    }
+}
+
+type createUserUploadUrlProps = {
+    name: string;
+    size: number;
+    mimeType: string;
+    folderId: string | null;
+}
+
+export async function createUserUploadUrl(
+    ownerId: string,
+    input:createUserUploadUrlProps
+){
+
+    if(!Number.isInteger(input.size) || input.size <= 0){
+        throw new Error("Некорректный размер файла");
+    }
+    if(input.size > 50){
+        throw new Error("Размер файла не должен превышать 50МБ");
+    }
+
+    const name = input.name.trim();
+    if(!name){
+        throw new Error("Имя файла не может быть пустым");
+    }
+    if(input.folderId){
+        const folder = await findFolderByOwner(input.folderId, ownerId);
+    }
+    if (!input.folderId) {
+        throw new Error("Папка не найдена");
+    }
+    const storageKey = `${ownerId}.${randomUUID()}`
+    const uploadUrl = await createUploadUrl(
+        storageKey,
+        input.mimeType || "application/octet-stream",
+    )
+
+    return {
+        uploadUrl,
+        storageKey,
+        name,
+        size:input.size,
+        mimeType: input.mimeType || "application/octet-stream",
+        folderId:input.folderId,
     }
 }
 

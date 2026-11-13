@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="bug fix">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="ui fix/s3 fix">
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/upload-url/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/image-preview-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/image-preview-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/storage.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -150,15 +156,9 @@
       <workItem from="1794043807307" duration="815000" />
       <workItem from="1794210805967" duration="25000" />
       <workItem from="1794218139689" duration="37000" />
-      <workItem from="1794298040968" duration="16772000" />
-    </task>
-    <task id="LOCAL-00006" summary="sessions created table in bd">
-      <option name="closed" value="true" />
-      <created>1791390312306</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1791390312306</updated>
+      <workItem from="1794298040968" duration="17765000" />
+      <workItem from="1794468659475" duration="4906000" />
+      <workItem from="1794489481085" duration="4554000" />
     </task>
     <task id="LOCAL-00007" summary="src/auth create repositore and service">
       <option name="closed" value="true" />
@@ -544,7 +544,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794335997905</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="ui fix">
+      <option name="closed" value="true" />
+      <created>1794387167484</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1794387167485</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -555,7 +563,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="public share/repository and business logic" />
     <MESSAGE value="share" />
     <MESSAGE value="file repository,service,storage refactor" />
     <MESSAGE value="file repository,service,storage refactor 2" />
@@ -576,10 +583,11 @@
     <MESSAGE value="logout button add in ui" />
     <MESSAGE value="logout button fix" />
     <MESSAGE value="logout button ui fix" />
-    <MESSAGE value="ui fix" />
     <MESSAGE value="ui fix file-table" />
     <MESSAGE value="preview route" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="ui fix" />
+    <MESSAGE value="ui fix/s3 fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui fix/s3 fix" />
   </component>
 </project>
