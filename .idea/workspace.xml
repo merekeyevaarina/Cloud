@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="bug fix">
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/image-preview-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/image-preview-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-page-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-page-view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-sidebar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,15 +155,7 @@
       <workItem from="1794218139689" duration="37000" />
       <workItem from="1794298040968" duration="17765000" />
       <workItem from="1794468659475" duration="4906000" />
-      <workItem from="1794489481085" duration="6133000" />
-    </task>
-    <task id="LOCAL-00011" summary="session business logic">
-      <option name="closed" value="true" />
-      <created>1791474877258</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1791474877258</updated>
+      <workItem from="1794489481085" duration="15906000" />
     </task>
     <task id="LOCAL-00012" summary="delete session/logout button">
       <option name="closed" value="true" />
@@ -546,7 +541,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794568017211</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1794568295662</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1794568295662</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ThunderClientSettings">

@@ -7,7 +7,6 @@ import { FolderGrid } from "./folder-grid";
 import { CreateFolderButton } from "./buttons/create-folder-button";
 import { DriveBreadcrumb } from "./drive-breadcrumb";
 import { UploadFileButton } from "./buttons/upload-file-button";
-import {LogoutButton} from "@/src/auth/ui/LogoutButton";
 
 type DrivePageViewProps = {
   folders: DriveFolder[];

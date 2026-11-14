@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/src/shared/ui/button";
 import { X } from "lucide-react";
 import {useState} from "react";

@@ -12,7 +12,6 @@ export async function DriveSidebar() {
     return (
         <aside className="flex w-full shrink-0 items-center justify-between border-b bg-card px-4 py-3 lg:w-64 lg:flex-col lg:items-stretch lg:border-b-0 lg:border-r lg:px-5 lg:py-7">
 
-            {/* Логотип */}
             <Link
                 href="/drive"
                 className="hidden items-center gap-3 px-2 text-lg font-semibold tracking-wide lg:mb-10 lg:flex"
@@ -23,7 +22,6 @@ export async function DriveSidebar() {
                 cloud
             </Link>
 
-            {/* Навигация */}
             <nav aria-label="Основная навигация" className="flex-1 lg:flex-none">
                 <Button
                     asChild
@@ -37,7 +35,6 @@ export async function DriveSidebar() {
                 </Button>
             </nav>
 
-            {/* Использование хранилища */}
             <section
                 aria-label="Использование хранилища"
                 className="mt-auto hidden lg:block"
