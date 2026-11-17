@@ -9,10 +9,9 @@ import {randomUUID} from "node:crypto";
 import {
     createUploadUrl,
     deleteFileFromStorage,
-    downloadFileFromStorage,
+    downloadFileFromStorage, getUploadedFileInfo,
     uploadFileToStorage
 } from "@/src/files/storage";
-import {file} from "zod";
 
 export const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50 МБ
 
@@ -112,13 +111,6 @@ export async function createUserUploadUrl(
     ownerId: string,
     input:createUserUploadUrlProps
 ){
-
-
-    console.log("INPUT:", input);
-    console.log("SIZE:", input.size);
-    console.log("TYPE:", typeof input.size);
-    console.log("IS INTEGER:", Number.isInteger(input.size));
-
     if(!Number.isInteger(input.size) || input.size <= 0){
         throw new Error("Некорректный размер файла");
     }
@@ -153,5 +145,63 @@ export async function createUserUploadUrl(
     }
 }
 
+type CompleteUserUploadProps = {
+    storageKey: string;
+    name: string;
+    folderId: string | null;
+}
 
+export async function completeUserUpload(ownerId:string, input: CompleteUserUploadProps){
+    if(!input.storageKey.startsWith(`${ownerId}.`)){
+        throw new Error("Некорректный ключ файла");
+    }
+
+    const name = input.name.trim();
+    if(!name){
+        throw new Error("Имя файла не может быть пустым");
+    }
+
+    if(input.folderId){
+        const folder = await findFolderByOwner(
+            input.folderId,
+            ownerId
+        )
+        if(!folder){
+          throw new Error("Папка не найдена")
+        }
+    }
+
+    const fileInfo = await getUploadedFileInfo(input.storageKey);
+    if(
+        typeof fileInfo.size !== "number" ||
+        fileInfo.size <= 0
+    ){
+        throw new Error("Загруженный файл пуст или не найден")
+    }
+    if(fileInfo.size > MAX_FILE_SIZE){
+        await deleteFileFromStorage(input.storageKey);
+        throw new Error("Размер файла не должен превышать 50МБ");
+    }
+
+    try{
+        return await createFileRecord({
+            ownerId,
+            folderId:input.folderId,
+            name,
+            storageKey: input.storageKey,
+            mimeType: fileInfo.mimeType || "application/octet-stream",
+            sizeBytes: BigInt(fileInfo.size),
+        })
+    }catch(error){
+        try {
+            await deleteFileFromStorage(input.storageKey);
+        }catch(cleanupError){
+            console.error(
+                "Не удалось удалить файл из Storage:",
+                cleanupError,
+            );
+        }
+        throw error;
+    }
+}
 

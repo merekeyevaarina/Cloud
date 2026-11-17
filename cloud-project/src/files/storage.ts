@@ -1,4 +1,4 @@
-import {PutObjectCommand, DeleteObjectCommand, GetObjectCommand} from "@aws-sdk/client-s3";
+import {PutObjectCommand, DeleteObjectCommand, GetObjectCommand, HeadObjectCommand} from "@aws-sdk/client-s3";
 import {s3} from "@/src/shared/lib/s3";
 import {getSignedUrl} from "@aws-sdk/s3-request-presigner";
 
@@ -60,4 +60,17 @@ export async function createUploadUrl(storageKey:string, mimeType:string) {
         }
     );
     return uploadUrl;
-} 
+}
+
+export async function getUploadedFileInfo(storageKey:string){
+    const command = new HeadObjectCommand({
+        Bucket: getBucket(),
+        Key: storageKey,
+    })
+
+    const result = await s3.send(command);
+    return{
+        size: result.ContentLength,
+        mimeType: result.ContentType,
+    }
+}
