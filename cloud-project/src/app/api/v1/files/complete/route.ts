@@ -33,7 +33,11 @@ export async function POST(request: Request) {
             },
         );
 
-        return Response.json(uploadedFile);
+        return Response.json({
+            ...uploadedFile,
+            size_bytes: uploadedFile.size_bytes.toString(),
+        }
+    );
 
     } catch (error) {
         const message =

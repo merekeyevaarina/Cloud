@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="complete route">
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/upload-file-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/upload-file-button.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="upload button" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,15 +153,7 @@
       <workItem from="1794489481085" duration="16055000" />
       <workItem from="1794639724836" duration="131000" />
       <workItem from="1794646673025" duration="1469000" />
-      <workItem from="1794912442161" duration="6264000" />
-    </task>
-    <task id="LOCAL-00015" summary="add business logic and repository for folders">
-      <option name="closed" value="true" />
-      <created>1791890561556</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1791890561556</updated>
+      <workItem from="1794912442161" duration="6796000" />
     </task>
     <task id="LOCAL-00016" summary="folder create/ connect ui and business logic">
       <option name="closed" value="true" />
@@ -549,7 +539,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794920517973</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="upload button">
+      <option name="closed" value="true" />
+      <created>1794921370239</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1794921370240</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -560,7 +558,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="share repository,service, route refactor 2" />
     <MESSAGE value="architecture fix" />
     <MESSAGE value="Read me and architecture fix" />
     <MESSAGE value="ui fix 2" />
@@ -585,6 +582,7 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value="complete url business logic" />
     <MESSAGE value="complete route" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete route" />
+    <MESSAGE value="upload button" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload button" />
   </component>
 </project>
