@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="bug fix">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="preview business logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/preview/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/app/api/v1/files/[fileId]/preview/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-project/src/files/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/storage.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,23 +157,7 @@
       <workItem from="1794489481085" duration="16055000" />
       <workItem from="1794639724836" duration="131000" />
       <workItem from="1794646673025" duration="1469000" />
-      <workItem from="1794912442161" duration="13847000" />
-    </task>
-    <task id="LOCAL-00017" summary="add upload button">
-      <option name="closed" value="true" />
-      <created>1792216667290</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1792216667290</updated>
-    </task>
-    <task id="LOCAL-00018" summary="register bug fix/delete file api">
-      <option name="closed" value="true" />
-      <created>1793265899764</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1793265899764</updated>
+      <workItem from="1794912442161" duration="14534000" />
     </task>
     <task id="LOCAL-00019" summary="delete file, download file business logic">
       <option name="closed" value="true" />
@@ -552,7 +535,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794921816657</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="preview business logic">
+      <option name="closed" value="true" />
+      <created>1794981727155</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1794981727155</updated>
+    </task>
+    <task id="LOCAL-00067" summary="preview business logic">
+      <option name="closed" value="true" />
+      <created>1794981806835</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1794981806836</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -563,7 +562,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="architecture fix" />
     <MESSAGE value="Read me and architecture fix" />
     <MESSAGE value="ui fix 2" />
     <MESSAGE value="ui fix 3" />
@@ -588,6 +586,7 @@
     <MESSAGE value="complete route" />
     <MESSAGE value="upload button" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="preview business logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="preview business logic" />
   </component>
 </project>

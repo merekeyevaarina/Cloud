@@ -18,6 +18,7 @@ import { DeleteFileButton } from "./buttons/delete-file-button";
 import { DownloadFileButton } from "./buttons/download-file-button";
 import {ShareFileButton} from "@/src/drive/ui/buttons/share-file-button";
 import { ImagePreviewButton } from "./buttons/image-preview-button";
+import {ALLOWED_IMAGE_TYPES} from "@/src/files/service";
 
 type FileTableProps = {
   files: DriveFile[];
@@ -106,7 +107,7 @@ export function FileTable({files}: FileTableProps) {
                         <Icon aria-hidden="true" className="size-5" />
                       </Badge>
                       <div className="min-w-0">
-                        {file.mime_type === "image/png" ? (
+                        {ALLOWED_IMAGE_TYPES.includes(file.mime_type) ? (
                             <ImagePreviewButton
                                 fileId={file.id}
                                 fileName={file.name}

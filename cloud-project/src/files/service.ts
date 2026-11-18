@@ -206,16 +206,25 @@ export async function completeUserUpload(ownerId:string, input: CompleteUserUplo
     }
 }
 
-export async function getUserFilePreviewUrl(fileId:string, ownerId:string) {
+export const ALLOWED_IMAGE_TYPES = [
+    "image/png",
+    "image/jpeg",
+];
+
+export async function getUserFilePreviewUrl(
+    fileId: string,
+    ownerId: string,
+) {
     const file = await findFileByOwner(fileId, ownerId);
+
     if (!file) {
         throw new Error("Файл не найден");
     }
-    if (file.mime_type !== "image/png" ) {
-        throw new Error("Предпросмотр доступен только для PNG");
+
+    if (!ALLOWED_IMAGE_TYPES.includes(file.mime_type)) {
+        throw new Error("Предпросмотр этого формата не поддерживается");
     }
+
     return createPreviewUrl(file.storage_key);
-
 }
-
 
