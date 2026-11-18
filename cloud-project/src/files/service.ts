@@ -7,6 +7,7 @@ import {
 } from "@/src/files/repository";
 import {randomUUID} from "node:crypto";
 import {
+    createPreviewUrl,
     createUploadUrl,
     deleteFileFromStorage,
     downloadFileFromStorage, getUploadedFileInfo,

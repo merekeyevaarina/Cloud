@@ -75,3 +75,21 @@ export async function getUploadedFileInfo(storageKey:string){
     }
 }
 
+export async function createPreviewUrl(storageKey: string) {
+    const command = new GetObjectCommand({
+        Bucket: getBucket(),
+        Key: storageKey,
+        ResponseContentType: "image/png",
+        ResponseContentDisposition: "inline",
+    });
+
+    const previewUrl = await getSignedUrl(
+        s3,
+        command,
+        {
+            expiresIn: 300,
+        },
+    );
+
+    return previewUrl;
+}
