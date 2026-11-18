@@ -74,3 +74,4 @@ export async function getUploadedFileInfo(storageKey:string){
         mimeType: result.ContentType,
     }
 }
+

@@ -205,3 +205,16 @@ export async function completeUserUpload(ownerId:string, input: CompleteUserUplo
     }
 }
 
+export async function getUserFilePreviewUrl(fileId:string, ownerId:string) {
+    const file = await findFileByOwner(fileId, ownerId);
+    if (!file) {
+        throw new Error("Файл не найден");
+    }
+    if (file.mime_type !== "image/png" ) {
+        throw new Error("Предпросмотр доступен только для PNG");
+    }
+    return createPreviewUrl(file.storage_key);
+
+}
+
+
