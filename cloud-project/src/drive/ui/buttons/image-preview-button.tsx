@@ -1,26 +1,63 @@
-'use client'
+
+"use client"
 
 import { Button } from "@/src/shared/ui/button";
 import { X } from "lucide-react";
-import {useState} from "react";
+import { useState } from "react";
 
 type ImagePreviewButtonProps = {
     fileId: string;
     fileName: string;
-}
+};
 
-export function ImagePreviewButton({fileId,fileName}: ImagePreviewButtonProps) {
+export function ImagePreviewButton({
+                                       fileId,
+                                       fileName,
+                                   }: ImagePreviewButtonProps) {
     const [isOpen, setIsOpen] = useState(false);
-    const imageUrl = `/api/v1/files/${fileId}/preview-url`;
+    const [imageUrl, setImageUrl] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
+    async function openPreview() {
+        setIsOpen(true);
+        setImageUrl(null);
+        setError(null);
+        setIsLoading(true);
+
+        try {
+            const response = await fetch(
+                `/api/v1/files/${fileId}/preview-url`
+            );
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || "Не удалось открыть изображение");
+            }
+
+            setImageUrl(data.previewUrl);
+        } catch (error) {
+            setError(
+                error instanceof Error
+                    ? error.message
+                    : "Не удалось открыть изображение"
+            );
+        } finally {
+            setIsLoading(false);
+        }
+    }
+
     return (
         <>
             <button
                 type="button"
-                onClick={() => setIsOpen(true)}
+                onClick={openPreview}
                 className="min-w-0 max-w-[150px] truncate text-left font-medium transition-colors hover:text-primary hover:underline"
             >
                 {fileName}
             </button>
+
             {isOpen && (
                 <div
                     role="dialog"
@@ -38,6 +75,7 @@ export function ImagePreviewButton({fileId,fileName}: ImagePreviewButtonProps) {
                             <p className="truncate text-sm font-medium">
                                 {fileName}
                             </p>
+
                             <Button
                                 type="button"
                                 variant="ghost"
@@ -49,11 +87,22 @@ export function ImagePreviewButton({fileId,fileName}: ImagePreviewButtonProps) {
                                 <X className="size-5" />
                             </Button>
                         </div>
-                        <img
-                            src={imageUrl}
-                            alt={fileName}
-                            className="max-h-[75vh] max-w-full rounded-md object-contain"
-                        />
+
+                        {isLoading && <p>Загрузка изображения...</p>}
+
+                        {error && (
+                            <p className="text-sm text-destructive">
+                                {error}
+                            </p>
+                        )}
+
+                        {imageUrl && (
+                            <img
+                                src={imageUrl}
+                                alt={fileName}
+                                className="max-h-[75vh] max-w-full rounded-md object-contain"
+                            />
+                        )}
                     </div>
                 </div>
             )}
