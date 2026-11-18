@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="bug fix" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="preview button">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,23 +155,7 @@
       <workItem from="1794489481085" duration="16055000" />
       <workItem from="1794639724836" duration="131000" />
       <workItem from="1794646673025" duration="1469000" />
-      <workItem from="1794912442161" duration="15471000" />
-    </task>
-    <task id="LOCAL-00021" summary="share">
-      <option name="closed" value="true" />
-      <created>1793615040620</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1793615040620</updated>
-    </task>
-    <task id="LOCAL-00022" summary="share">
-      <option name="closed" value="true" />
-      <created>1793615135936</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1793615135936</updated>
+      <workItem from="1794912442161" duration="17463000" />
     </task>
     <task id="LOCAL-00023" summary="file repository,service,storage refactor">
       <option name="closed" value="true" />
@@ -547,7 +533,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794982765491</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="preview button fix">
+      <option name="closed" value="true" />
+      <created>1794990218213</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1794990218213</updated>
+    </task>
+    <task id="LOCAL-00071" summary="preview button">
+      <option name="closed" value="true" />
+      <created>1794990394598</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1794990394598</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -558,8 +560,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Read me and architecture fix" />
-    <MESSAGE value="ui fix 2" />
     <MESSAGE value="ui fix 3" />
     <MESSAGE value="ui fix 4" />
     <MESSAGE value="neon init" />
@@ -583,6 +583,8 @@
     <MESSAGE value="upload button" />
     <MESSAGE value="preview business logic" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="preview button fix" />
+    <MESSAGE value="preview button" />
+    <option name="LAST_COMMIT_MESSAGE" value="preview button" />
   </component>
 </project>
