@@ -11,7 +11,7 @@ type ImagePreviewButtonProps = {
 
 export function ImagePreviewButton({fileId,fileName}: ImagePreviewButtonProps) {
     const [isOpen, setIsOpen] = useState(false);
-    const imageUrl = `/api/v1/files/${fileId}/preview`;
+    const imageUrl = `/api/v1/files/${fileId}/preview-url`;
     return (
         <>
             <button
