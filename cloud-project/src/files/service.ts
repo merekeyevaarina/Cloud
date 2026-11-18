@@ -13,6 +13,7 @@ import {
     downloadFileFromStorage, getUploadedFileInfo,
     uploadFileToStorage
 } from "@/src/files/storage";
+import {ALLOWED_IMAGE_TYPES} from "@/src/files/constants";
 
 export const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50 МБ
 
@@ -206,10 +207,6 @@ export async function completeUserUpload(ownerId:string, input: CompleteUserUplo
     }
 }
 
-export const ALLOWED_IMAGE_TYPES = [
-    "image/png",
-    "image/jpeg",
-];
 
 export async function getUserFilePreviewUrl(
     fileId: string,

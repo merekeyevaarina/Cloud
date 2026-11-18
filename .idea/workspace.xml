@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="preview business logic">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/files/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/files/service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="bug fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,15 +153,7 @@
       <workItem from="1794489481085" duration="16055000" />
       <workItem from="1794639724836" duration="131000" />
       <workItem from="1794646673025" duration="1469000" />
-      <workItem from="1794912442161" duration="14534000" />
-    </task>
-    <task id="LOCAL-00019" summary="delete file, download file business logic">
-      <option name="closed" value="true" />
-      <created>1793281819890</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1793281819890</updated>
+      <workItem from="1794912442161" duration="14854000" />
     </task>
     <task id="LOCAL-00020" summary="public share/repository and business logic">
       <option name="closed" value="true" />
@@ -551,7 +539,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794981806836</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1794982385427</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1794982385427</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -585,8 +581,8 @@
     <MESSAGE value="complete url business logic" />
     <MESSAGE value="complete route" />
     <MESSAGE value="upload button" />
-    <MESSAGE value="bug fix" />
     <MESSAGE value="preview business logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="preview business logic" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
 </project>

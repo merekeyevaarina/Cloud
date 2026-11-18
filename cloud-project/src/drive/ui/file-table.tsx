@@ -18,7 +18,7 @@ import { DeleteFileButton } from "./buttons/delete-file-button";
 import { DownloadFileButton } from "./buttons/download-file-button";
 import {ShareFileButton} from "@/src/drive/ui/buttons/share-file-button";
 import { ImagePreviewButton } from "./buttons/image-preview-button";
-import {ALLOWED_IMAGE_TYPES} from "@/src/files/service";
+import {ALLOWED_IMAGE_TYPES} from "@/src/files/constants";
 
 type FileTableProps = {
   files: DriveFile[];
