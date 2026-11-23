@@ -28,6 +28,9 @@ export function UploadFileButton({ folderId }: UploadFileButtonProps) {
         setUploading(true);
 
         try {
+            const start = performance.now();
+            console.log("Начало загрузки");
+
             const urlResponse = await fetch("/api/v1/files/upload-url", {
                 method: "POST",
                 headers: {
@@ -40,6 +43,8 @@ export function UploadFileButton({ folderId }: UploadFileButtonProps) {
                     folderId,
                 }),
             });
+            console.log("Получение upload URL:", performance.now() - start);
+
 
             const urlData = await urlResponse.json();
 
@@ -60,6 +65,7 @@ export function UploadFileButton({ folderId }: UploadFileButtonProps) {
             if (!storageResponse.ok) {
                 throw new Error("Не удалось загрузить файл в Storage");
             }
+            console.log("Загрузка в Storage:", performance.now() - start);
 
             const completeResponse = await fetch(
                 "/api/v1/files/complete",
@@ -83,6 +89,9 @@ export function UploadFileButton({ folderId }: UploadFileButtonProps) {
                     completeData.error || "Не удалось завершить загрузку"
                 );
             }
+            console.log("Завершение загрузки:", performance.now() - start);
+            console.log("До router.refresh:", performance.now() - start);
+
 
             router.refresh();
 
