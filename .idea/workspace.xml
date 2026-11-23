@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="preview button">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="preview bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,15 +156,9 @@
       <workItem from="1794489481085" duration="16055000" />
       <workItem from="1794639724836" duration="131000" />
       <workItem from="1794646673025" duration="1469000" />
-      <workItem from="1794912442161" duration="17463000" />
-    </task>
-    <task id="LOCAL-00023" summary="file repository,service,storage refactor">
-      <option name="closed" value="true" />
-      <created>1793632615631</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1793632615631</updated>
+      <workItem from="1794912442161" duration="20631000" />
+      <workItem from="1795235915329" duration="3000" />
+      <workItem from="1795418620255" duration="976000" />
     </task>
     <task id="LOCAL-00024" summary="file repository,service,storage refactor 2">
       <option name="closed" value="true" />
@@ -549,7 +544,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794990394598</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="preview bug fix">
+      <option name="closed" value="true" />
+      <created>1794992744859</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1794992744859</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -560,7 +563,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ui fix 3" />
     <MESSAGE value="ui fix 4" />
     <MESSAGE value="neon init" />
     <MESSAGE value="fix: add tailwind postcss dependency" />
@@ -585,6 +587,7 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value="preview button fix" />
     <MESSAGE value="preview button" />
-    <option name="LAST_COMMIT_MESSAGE" value="preview button" />
+    <MESSAGE value="preview bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="preview bug fix" />
   </component>
 </project>
