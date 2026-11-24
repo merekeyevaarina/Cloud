@@ -1,16 +1,17 @@
-
 'use client'
 
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/src/shared/ui/button";
 import { Upload } from "lucide-react";
+import type {DriveFile} from "@/src/drive/ui/drive-types";
 
 type UploadFileButtonProps = {
     folderId: string | null;
+    onUploadComplete: (file: DriveFile) => void;
 };
 
-export function UploadFileButton({ folderId }: UploadFileButtonProps) {
+export function UploadFileButton({ folderId,onUploadComplete }: UploadFileButtonProps) {
     const inputRef = useRef<HTMLInputElement>(null);
     const router = useRouter();
 
@@ -89,6 +90,13 @@ export function UploadFileButton({ folderId }: UploadFileButtonProps) {
                     completeData.error || "Не удалось завершить загрузку"
                 );
             }
+            const newFile:DriveFile = {
+                ...completeData,
+                size_bytes: BigInt(completeData.size_bytes),
+                createdAt: new Date(completeData.created_at),
+            }
+
+            onUploadComplete(newFile);
             console.log("Завершение загрузки:", performance.now() - start);
             console.log("До router.refresh:", performance.now() - start);
 

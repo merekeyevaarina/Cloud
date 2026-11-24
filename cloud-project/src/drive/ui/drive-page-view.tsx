@@ -1,12 +1,11 @@
 import { Separator } from "@/src/shared/ui/separator";
-import type { DriveFile, DriveFolder } from "./drive-data";
 import { DriveHeader } from "./drive-header";
 import { DriveSidebar } from "./drive-sidebar";
-import { FileTable } from "./file-table";
 import { FolderGrid } from "./folder-grid";
 import { CreateFolderButton } from "./buttons/create-folder-button";
 import { DriveBreadcrumb } from "./drive-breadcrumb";
-import { UploadFileButton } from "./buttons/upload-file-button";
+import {DriveFile, DriveFolder} from "@/src/drive/ui/drive-types";
+import {FilesSection} from "@/src/drive/ui/files-section";
 
 type DrivePageViewProps = {
   folders: DriveFolder[];
@@ -29,7 +28,6 @@ export function DrivePageView({ folders, files, folderId }: DrivePageViewProps) 
                 <p className="mt-2 text-sm text-muted-foreground">Ваши файлы и папки в одном месте</p>
               </div>
               <div className="flex gap-2">
-                <UploadFileButton folderId={folderId} />
                 <CreateFolderButton />
               </div>
             </div>
@@ -44,7 +42,7 @@ export function DrivePageView({ folders, files, folderId }: DrivePageViewProps) 
                 <h2 id="files-heading" className="text-base font-semibold">Файлы</h2>
                 <p className="mt-1 text-xs text-muted-foreground">Последние добавленные файлы</p>
               </div>
-              <FileTable files={files} />
+              <FilesSection initialFiles={files} folderId={folderId} />
             </section>
 
             <Separator className="mt-8" />

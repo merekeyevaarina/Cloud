@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="file-table: delete &quot;use client&quot;">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="upload-file-button:add speed logs">
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/files-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/upload-file-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/upload-file-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-page-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-page-view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -157,15 +163,8 @@
       <workItem from="1794646673025" duration="1469000" />
       <workItem from="1794912442161" duration="20631000" />
       <workItem from="1795235915329" duration="3000" />
-      <workItem from="1795418620255" duration="3046000" />
-    </task>
-    <task id="LOCAL-00025" summary="share repository,service, route refactor">
-      <option name="closed" value="true" />
-      <created>1793702084366</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1793702084366</updated>
+      <workItem from="1795418620255" duration="4146000" />
+      <workItem from="1795453264851" duration="4607000" />
     </task>
     <task id="LOCAL-00026" summary="share repository,service, route refactor 2">
       <option name="closed" value="true" />
@@ -551,7 +550,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795419974158</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="upload-file-button:add speed logs">
+      <option name="closed" value="true" />
+      <created>1795422161751</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1795422161751</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -562,7 +569,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="neon init" />
     <MESSAGE value="fix: add tailwind postcss dependency" />
     <MESSAGE value="fix s3" />
     <MESSAGE value="fix api" />
@@ -587,6 +593,7 @@
     <MESSAGE value="preview button" />
     <MESSAGE value="preview bug fix" />
     <MESSAGE value="file-table: delete &quot;use client&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="file-table: delete &quot;use client&quot;" />
+    <MESSAGE value="upload-file-button:add speed logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload-file-button:add speed logs" />
   </component>
 </project>

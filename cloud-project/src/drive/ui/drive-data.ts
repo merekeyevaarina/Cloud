@@ -1,22 +1,8 @@
 import {getUserStorageUsage} from "@/src/files/repository";
 import {requireAuth} from "@/src/auth/require-auth";
 import {redirect} from "next/navigation";
+import {DriveFolder, DriveFile} from "@/src/drive/ui/drive-types";
 
-export type DriveFolder = {
-  id: string;
-  name: string;
-  fileCount: string;
-  updatedAt: string;
-};
-
-export type DriveFile = {
-  id: string;
-  name: string;
-  mime_type: string;
-  size_bytes: bigint;
-  created_at: Date;
-  folder_id: string | null;
-};
 
 export function formatStorageSize(bytes: bigint) {
   const size = Number(bytes);

@@ -11,12 +11,12 @@ import {
   TableHeader,
   TableRow,
 } from "@/src/shared/ui/table";
-import type { DriveFile } from "./drive-data";
 import { DeleteFileButton } from "./buttons/delete-file-button";
 import { DownloadFileButton } from "./buttons/download-file-button";
 import {ShareFileButton} from "@/src/drive/ui/buttons/share-file-button";
 import { ImagePreviewButton } from "./buttons/image-preview-button";
 import {ALLOWED_IMAGE_TYPES} from "@/src/files/constants";
+import {DriveFile} from "@/src/drive/ui/drive-types";
 
 type FileTableProps = {
   files: DriveFile[];
