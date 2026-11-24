@@ -93,7 +93,7 @@ export function UploadFileButton({ folderId,onUploadComplete }: UploadFileButton
             const newFile:DriveFile = {
                 ...completeData,
                 size_bytes: BigInt(completeData.size_bytes),
-                createdAt: new Date(completeData.created_at),
+                created_at: new Date(completeData.created_at),
             }
 
             onUploadComplete(newFile);
