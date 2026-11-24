@@ -3,8 +3,8 @@
 import { Folder } from "lucide-react";
 import { Badge } from "@/src/shared/ui/badge";
 import { Card, CardContent } from "@/src/shared/ui/card";
-import type { DriveFolder } from "./drive-data";
 import {useRouter, useSearchParams} from "next/navigation";
+import {DriveFolder} from "@/src/drive/ui/drive-types";
 
 type FolderGridProps = {
   folders: DriveFolder[];
