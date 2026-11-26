@@ -10,6 +10,7 @@ type FolderNavigationProps = {
 }
 
 export function FolderNavigation({initialFolders}: FolderNavigationProps) {
+    console.log("FolderNavigation component rendered");
     const [folders, setFolders] = useState(initialFolders);
     return (
         <nav aria-label="Мои папки">
