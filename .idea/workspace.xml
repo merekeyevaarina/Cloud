@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="folder-navigation: add folder nav" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="drive-sidebar: add folderNavigation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,15 +156,7 @@
       <workItem from="1794912442161" duration="20631000" />
       <workItem from="1795235915329" duration="3000" />
       <workItem from="1795418620255" duration="4146000" />
-      <workItem from="1795453264851" duration="11065000" />
-    </task>
-    <task id="LOCAL-00033" summary="ui fix 4">
-      <option name="closed" value="true" />
-      <created>1793889275092</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1793889275095</updated>
+      <workItem from="1795453264851" duration="11385000" />
     </task>
     <task id="LOCAL-00034" summary="neon init">
       <option name="closed" value="true" />
@@ -550,7 +542,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795677673620</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="drive-sidebar: add folderNavigation">
+      <option name="closed" value="true" />
+      <created>1795677952464</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1795677952464</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -561,7 +561,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logout button fix" />
     <MESSAGE value="logout button ui fix" />
     <MESSAGE value="ui fix file-table" />
     <MESSAGE value="preview route" />
@@ -586,6 +585,7 @@
     <MESSAGE value="delete-file-button: add handleDelete and change state" />
     <MESSAGE value="drive-sidebar: add folder section" />
     <MESSAGE value="folder-navigation: add folder nav" />
-    <option name="LAST_COMMIT_MESSAGE" value="folder-navigation: add folder nav" />
+    <MESSAGE value="drive-sidebar: add folderNavigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="drive-sidebar: add folderNavigation" />
   </component>
 </project>

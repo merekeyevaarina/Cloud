@@ -1,7 +1,6 @@
 import { Separator } from "@/src/shared/ui/separator";
 import { DriveHeader } from "./drive-header";
 import { DriveSidebar } from "./drive-sidebar";
-import { FolderGrid } from "./folder-grid";
 import { CreateFolderButton } from "./buttons/create-folder-button";
 import { DriveBreadcrumb } from "./drive-breadcrumb";
 import {DriveFile, DriveFolder} from "@/src/drive/ui/drive-types";
@@ -31,11 +30,6 @@ export function DrivePageView({ folders, files, folderId }: DrivePageViewProps) 
                 <CreateFolderButton />
               </div>
             </div>
-
-            <section aria-labelledby="folders-heading" className="mb-9">
-              <h2 id="folders-heading" className="mb-4 text-base font-semibold">Папки</h2>
-              <FolderGrid folders={folders} />
-            </section>
 
             <section aria-labelledby="files-heading">
               <div className="mb-4">
