@@ -1,12 +1,17 @@
 
 import Link from "next/link";
-import { HardDrive } from "lucide-react";
+import { HardDrive, Folder } from "lucide-react";
 import { Badge } from "@/src/shared/ui/badge";
 import { Button } from "@/src/shared/ui/button";
 import { Progress } from "@/src/shared/ui/progress";
 import { storageSize } from "@/src/drive/ui/drive-data";
+import type { DriveFolder } from "@/src/drive/ui/drive-types";
 
-export async function DriveSidebar() {
+type DriveSidebarProps = {
+    folders: DriveFolder[];
+};
+
+export async function DriveSidebar({ folders }: DriveSidebarProps) {
     const storageUsage = await storageSize();
 
     return (
@@ -30,9 +35,28 @@ export async function DriveSidebar() {
                 >
                     <Link href="/drive">
                         <HardDrive />
-                        Мой диск
+                        Все файлы
                     </Link>
                 </Button>
+
+                <div className="mt-6">
+                    <h2 className="mb-3 px-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Мои папки
+                    </h2>
+
+                    <div className="space-y-1">
+                        {folders.map((folder) => (
+                            <Link
+                                key={folder.id}
+                                href={`/drive?folderId=${folder.id}`}
+                                className="flex h-10 items-center gap-3 rounded-xl px-3 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                            >
+                                <Folder className="size-4 shrink-0" />
+                                <span className="truncate">{folder.name}</span>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
             </nav>
 
             <section
@@ -41,9 +65,7 @@ export async function DriveSidebar() {
             >
                 <div className="mb-3 flex items-center justify-between gap-2 text-xs text-muted-foreground">
                     <span>Хранилище</span>
-                    <span>
-            {storageUsage.used} из {storageUsage.total}
-          </span>
+                    <span>{storageUsage.used} из {storageUsage.total}</span>
                 </div>
 
                 <Progress value={storageUsage.percent} className="h-1.5" />
