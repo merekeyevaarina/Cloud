@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="file-section:created file&#10;drive-types:created file&#10;drive-page-view:add file-section" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="upload-file-button:bug fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,23 +158,7 @@
       <workItem from="1794912442161" duration="20631000" />
       <workItem from="1795235915329" duration="3000" />
       <workItem from="1795418620255" duration="4146000" />
-      <workItem from="1795453264851" duration="4989000" />
-    </task>
-    <task id="LOCAL-00027" summary="architecture fix">
-      <option name="closed" value="true" />
-      <created>1793734117180</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1793734117180</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Read me and architecture fix">
-      <option name="closed" value="true" />
-      <created>1793734733938</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1793734733938</updated>
+      <workItem from="1795453264851" duration="6598000" />
     </task>
     <task id="LOCAL-00029" summary="ui fix">
       <option name="closed" value="true" />
@@ -550,7 +536,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795505745487</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="folder-drive:bug fix">
+      <option name="closed" value="true" />
+      <created>1795505892844</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1795505892846</updated>
+    </task>
+    <task id="LOCAL-00077" summary="upload-file-button:bug fix">
+      <option name="closed" value="true" />
+      <created>1795506139847</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1795506139847</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -561,8 +563,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix s3" />
-    <MESSAGE value="fix api" />
     <MESSAGE value="fix api drive" />
     <MESSAGE value="s3 config for neon" />
     <MESSAGE value="fix folder ui" />
@@ -586,6 +586,8 @@
     <MESSAGE value="file-table: delete &quot;use client&quot;" />
     <MESSAGE value="upload-file-button:add speed logs" />
     <MESSAGE value="file-section:created file&#10;drive-types:created file&#10;drive-page-view:add file-section" />
-    <option name="LAST_COMMIT_MESSAGE" value="file-section:created file&#10;drive-types:created file&#10;drive-page-view:add file-section" />
+    <MESSAGE value="folder-drive:bug fix" />
+    <MESSAGE value="upload-file-button:bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload-file-button:bug fix" />
   </component>
 </project>
