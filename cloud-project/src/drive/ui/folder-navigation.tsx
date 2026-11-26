@@ -1,19 +1,30 @@
-'use client'
+"use client";
 
-import {DriveFolder} from "@/src/drive/ui/drive-types";
-import {useState} from "react";
-import Link from "next/link";
-import {Folder} from "lucide-react";
+import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Folder } from "lucide-react";
+import type { DriveFolder } from "@/src/drive/ui/drive-types";
 
 type FolderNavigationProps = {
     initialFolders: DriveFolder[];
-}
+};
 
-export function FolderNavigation({initialFolders}: FolderNavigationProps) {
-    console.log("FolderNavigation component rendered");
-    const [folders, setFolders] = useState(initialFolders);
-    console.log("initialFolders:", initialFolders);
-    console.log("folders:", folders);
+export function FolderNavigation({ initialFolders }: FolderNavigationProps) {
+    const [folders] = useState(initialFolders);
+
+    const router = useRouter();
+    const searchParams = useSearchParams();
+
+    function openFolder(folderId: string) {
+        const params = new URLSearchParams(searchParams.toString());
+        params.set("folderId", folderId);
+        router.push(`/drive?${params.toString()}`);
+    }
+
+    if (folders.length === 0) {
+        return <p className="px-3 text-sm text-muted-foreground">Папок пока нет.</p>;
+    }
+
     return (
         <nav aria-label="Мои папки">
             <h2 className="mb-3 px-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -22,15 +33,16 @@ export function FolderNavigation({initialFolders}: FolderNavigationProps) {
 
             <div className="space-y-1">
                 {folders.map((folder) => (
-                    <Link
+                    <button
                         key={folder.id}
-                        href={`/drive?folderId=${folder.id}`}
-                        className="flex h-10 items-center gap-3 rounded-xl px-3 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                        onClick={() => openFolder(folder.id)}
+                        className="flex h-10 w-full items-center gap-3 rounded-xl px-3 text-left text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                     >
                         <Folder className="size-4 shrink-0" />
                         <span className="truncate">{folder.name}</span>
-                    </Link>
+                    </button>
                 ))}
             </div>
         </nav>
-    );}
+    );
+}

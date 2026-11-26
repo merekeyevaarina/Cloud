@@ -27,7 +27,7 @@ export function DrivePageView({ folders, files, folderId }: DrivePageViewProps) 
                 <p className="mt-2 text-sm text-muted-foreground">Ваши файлы и папки в одном месте</p>
               </div>
               <div className="flex gap-2">
-                <CreateFolderButton />
+                <CreateFolderButton parentId={folderId} />
               </div>
             </div>
 

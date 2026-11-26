@@ -6,10 +6,14 @@ import {Plus} from "lucide-react";
 import {Button} from "@/src/shared/ui/button";
 import { Input } from "@/src/shared/ui/input";
 
-export  function CreateFolderButton(){
+type CreateFolderButtonProps = {
+    parentId: string | null;
+};
+
+export function CreateFolderButton({ parentId }: CreateFolderButtonProps) {
     const [isOpen, setIsOpen] = useState(false);
-    const [name, setName] = useState('');
-    const [error, setError] = useState('');
+    const [name, setName] = useState("");
+    const [error, setError] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
     const router = useRouter();
@@ -32,7 +36,7 @@ export  function CreateFolderButton(){
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({name: trimmedName}),
+                body: JSON.stringify({name: trimmedName, parentId}),
             })
             const data = await response.json();
             if(!response.ok){
