@@ -18,11 +18,6 @@ import { ImagePreviewButton } from "./buttons/image-preview-button";
 import {ALLOWED_IMAGE_TYPES} from "@/src/files/constants";
 import {DriveFile} from "@/src/drive/ui/drive-types";
 
-type FileTableProps = {
-  files: DriveFile[];
-}
-
-
 function getFileIcon(mimeType: string):LucideIcon{
   if(mimeType.startsWith("image/")) return FileImage;
   if( mimeType === "application/zip" ||
@@ -69,8 +64,12 @@ function formatDate(date: Date): string {
   }).format(date);
 }
 
+type FileTableProps = {
+  files: DriveFile[];
+  onDelete:(fileId: string) => void;
+}
 
-export function FileTable({files}: FileTableProps) {
+export function FileTable({files,onDelete}: FileTableProps) {
 
   if(files.length === 0) {
     return (
@@ -126,7 +125,7 @@ export function FileTable({files}: FileTableProps) {
                     <div className="flex items-center gap-1">
                       <DownloadFileButton fileId={file.id} />
                       <ShareFileButton fileId={file.id}/>
-                      <DeleteFileButton fileId={file.id} />
+                      <DeleteFileButton fileId={file.id} onDelete={onDelete}/>
                     </div>
                   </TableCell>
                   <TableCell className="max-w-[50px] px-4 py-4 text-sm text-muted-foreground">{formatFileSize(file.size_bytes)}</TableCell>

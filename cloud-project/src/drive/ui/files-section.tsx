@@ -17,6 +17,9 @@ export function FilesSection({ initialFiles, folderId }: FilesSectionProps) {
         setFiles((previousFiles) => [newFile,...previousFiles]);
     }
 
+    function handleDelete(fileId: string) {
+        setFiles((previousFiles) => previousFiles.filter((file) => file.id !== fileId));
+    }
     return (
         <section aria-labelledby="files-heading">
             <div className="mb-4 flex items-center justify-between">
@@ -26,7 +29,7 @@ export function FilesSection({ initialFiles, folderId }: FilesSectionProps) {
                 />
             </div>
 
-            <FileTable files={files} />
+            <FileTable files={files} onDelete={handleDelete} />
         </section>
     );
 }

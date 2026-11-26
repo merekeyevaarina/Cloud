@@ -3,14 +3,14 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Trash2 } from "lucide-react";
-
 import { Button } from "@/src/shared/ui/button";
 
 type DeleteFileButtonProps = {
   fileId: string;
+  onDelete: (fileId: string) => void;
 };
 
-export function DeleteFileButton({ fileId }: DeleteFileButtonProps) {
+export function DeleteFileButton({ fileId, onDelete }: DeleteFileButtonProps) {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
@@ -36,7 +36,7 @@ export function DeleteFileButton({ fileId }: DeleteFileButtonProps) {
                 return;
             }
 
-            router.refresh();
+            onDelete(fileId);
         } catch {
             setError("Не удалось подключиться к серверу");
         } finally {

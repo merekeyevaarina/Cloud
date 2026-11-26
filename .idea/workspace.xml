@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="upload-file-button:bug fix">
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="file-section:bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/delete-file-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/buttons/delete-file-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/file-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/files-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/files-section.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,15 +161,7 @@
       <workItem from="1794912442161" duration="20631000" />
       <workItem from="1795235915329" duration="3000" />
       <workItem from="1795418620255" duration="4146000" />
-      <workItem from="1795453264851" duration="6598000" />
-    </task>
-    <task id="LOCAL-00029" summary="ui fix">
-      <option name="closed" value="true" />
-      <created>1793882186383</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1793882186383</updated>
+      <workItem from="1795453264851" duration="7302000" />
     </task>
     <task id="LOCAL-00030" summary="ui fix 2">
       <option name="closed" value="true" />
@@ -552,7 +547,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795506139847</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="file-section:bug fix">
+      <option name="closed" value="true" />
+      <created>1795673420352</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1795673420352</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -563,7 +566,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix api drive" />
     <MESSAGE value="s3 config for neon" />
     <MESSAGE value="fix folder ui" />
     <MESSAGE value="logout button add in ui" />
@@ -588,6 +590,7 @@
     <MESSAGE value="file-section:created file&#10;drive-types:created file&#10;drive-page-view:add file-section" />
     <MESSAGE value="folder-drive:bug fix" />
     <MESSAGE value="upload-file-button:bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload-file-button:bug fix" />
+    <MESSAGE value="file-section:bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="file-section:bug fix" />
   </component>
 </project>
