@@ -34,7 +34,7 @@ export default async function DrivePage({searchParams}: DrivePageProps){
 
   const files = await getUserFiles(user.id, folderId ?? null);
   const folders = await getUserFolders(user.id, folderId ?? null);
-
+  console.log("Папки из БД:", folders);
   return <DrivePageView files={files}
                         folderId={folderId ?? null}
                         folders={folders.map((folder) => ({

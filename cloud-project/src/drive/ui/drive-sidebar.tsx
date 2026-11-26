@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { HardDrive } from "lucide-react";
 import { Badge } from "@/src/shared/ui/badge";
