@@ -12,6 +12,8 @@ type FolderNavigationProps = {
 export function FolderNavigation({initialFolders}: FolderNavigationProps) {
     console.log("FolderNavigation component rendered");
     const [folders, setFolders] = useState(initialFolders);
+    console.log("initialFolders:", initialFolders);
+    console.log("folders:", folders);
     return (
         <nav aria-label="Мои папки">
             <h2 className="mb-3 px-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
