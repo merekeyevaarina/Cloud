@@ -1,11 +1,12 @@
 
 import Link from "next/link";
-import { HardDrive, Folder } from "lucide-react";
+import { HardDrive } from "lucide-react";
 import { Badge } from "@/src/shared/ui/badge";
 import { Button } from "@/src/shared/ui/button";
 import { Progress } from "@/src/shared/ui/progress";
 import { storageSize } from "@/src/drive/ui/drive-data";
 import type { DriveFolder } from "@/src/drive/ui/drive-types";
+import { FolderNavigation } from "@/src/drive/ui/folder-navigation";
 
 type DriveSidebarProps = {
     folders: DriveFolder[];
@@ -40,22 +41,7 @@ export async function DriveSidebar({ folders }: DriveSidebarProps) {
                 </Button>
 
                 <div className="mt-6">
-                    <h2 className="mb-3 px-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                        Мои папки
-                    </h2>
-
-                    <div className="space-y-1">
-                        {folders.map((folder) => (
-                            <Link
-                                key={folder.id}
-                                href={`/drive?folderId=${folder.id}`}
-                                className="flex h-10 items-center gap-3 rounded-xl px-3 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                            >
-                                <Folder className="size-4 shrink-0" />
-                                <span className="truncate">{folder.name}</span>
-                            </Link>
-                        ))}
-                    </div>
+                    <FolderNavigation initialFolders={folders} />
                 </div>
             </nav>
 

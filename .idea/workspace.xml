@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="delete-file-button: add handleDelete and change state">
-      <change afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/folder-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-page-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-page-view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-sidebar.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="folder-navigation: add folder nav" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -161,23 +156,7 @@
       <workItem from="1794912442161" duration="20631000" />
       <workItem from="1795235915329" duration="3000" />
       <workItem from="1795418620255" duration="4146000" />
-      <workItem from="1795453264851" duration="10732000" />
-    </task>
-    <task id="LOCAL-00031" summary="ui fix 3">
-      <option name="closed" value="true" />
-      <created>1793888511057</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1793888511057</updated>
-    </task>
-    <task id="LOCAL-00032" summary="ui fix 3">
-      <option name="closed" value="true" />
-      <created>1793889188356</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1793889188356</updated>
+      <workItem from="1795453264851" duration="11065000" />
     </task>
     <task id="LOCAL-00033" summary="ui fix 4">
       <option name="closed" value="true" />
@@ -555,7 +534,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795674208868</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="drive-sidebar: add folder section">
+      <option name="closed" value="true" />
+      <created>1795677498411</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1795677498411</updated>
+    </task>
+    <task id="LOCAL-00081" summary="folder-navigation: add folder nav">
+      <option name="closed" value="true" />
+      <created>1795677673620</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1795677673620</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -566,8 +561,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix folder ui" />
-    <MESSAGE value="logout button add in ui" />
     <MESSAGE value="logout button fix" />
     <MESSAGE value="logout button ui fix" />
     <MESSAGE value="ui fix file-table" />
@@ -591,6 +584,8 @@
     <MESSAGE value="upload-file-button:bug fix" />
     <MESSAGE value="file-section:bug fix" />
     <MESSAGE value="delete-file-button: add handleDelete and change state" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete-file-button: add handleDelete and change state" />
+    <MESSAGE value="drive-sidebar: add folder section" />
+    <MESSAGE value="folder-navigation: add folder nav" />
+    <option name="LAST_COMMIT_MESSAGE" value="folder-navigation: add folder nav" />
   </component>
 </project>
