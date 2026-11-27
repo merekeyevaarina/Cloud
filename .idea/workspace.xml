@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="fix(git): delete neon and idea">
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/files-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/files-section.tsx" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="refactor(file-section): add key for files grid in folders">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,15 +159,7 @@
       <workItem from="1795235915329" duration="3000" />
       <workItem from="1795418620255" duration="4146000" />
       <workItem from="1795453264851" duration="14190000" />
-      <workItem from="1795760663185" duration="963000" />
-    </task>
-    <task id="LOCAL-00040" summary="fix api drive">
-      <option name="closed" value="true" />
-      <created>1794308304700</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1794308304700</updated>
+      <workItem from="1795760663185" duration="1797000" />
     </task>
     <task id="LOCAL-00041" summary="s3 config for neon">
       <option name="closed" value="true" />
@@ -553,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795760979268</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="refactor(file-section): add key for files grid in folders">
+      <option name="closed" value="true" />
+      <created>1795761827342</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1795761827342</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -575,7 +575,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ui fix/s3 fix" />
     <MESSAGE value="upload-url api service and storage" />
     <MESSAGE value="log tests" />
     <MESSAGE value="complete url business logic" />
@@ -600,6 +599,7 @@
     <MESSAGE value="debug" />
     <MESSAGE value="create-folder-button: bugfix" />
     <MESSAGE value="fix(git): delete neon and idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(git): delete neon and idea" />
+    <MESSAGE value="refactor(file-section): add key for files grid in folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(file-section): add key for files grid in folders" />
   </component>
 </project>

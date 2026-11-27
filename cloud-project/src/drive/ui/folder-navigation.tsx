@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Folder } from "lucide-react";
 import type { DriveFolder } from "@/src/drive/ui/drive-types";
@@ -10,8 +9,6 @@ type FolderNavigationProps = {
 };
 
 export function FolderNavigation({ initialFolders }: FolderNavigationProps) {
-    const [folders] = useState(initialFolders);
-
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -21,7 +18,7 @@ export function FolderNavigation({ initialFolders }: FolderNavigationProps) {
         router.push(`/drive?${params.toString()}`);
     }
 
-    if (folders.length === 0) {
+    if (initialFolders.length === 0) {
         return <p className="px-3 text-sm text-muted-foreground">Папок пока нет.</p>;
     }
 
@@ -32,7 +29,7 @@ export function FolderNavigation({ initialFolders }: FolderNavigationProps) {
             </h2>
 
             <div className="space-y-1">
-                {folders.map((folder) => (
+                {initialFolders.map((folder) => (
                     <button
                         key={folder.id}
                         onClick={() => openFolder(folder.id)}
