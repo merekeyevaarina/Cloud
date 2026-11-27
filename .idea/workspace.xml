@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="refactor(file-section): add key for files grid in folders">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="refactor(folder-navigation): delete useState because it doesnt upldate file-section" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,15 +157,7 @@
       <workItem from="1795235915329" duration="3000" />
       <workItem from="1795418620255" duration="4146000" />
       <workItem from="1795453264851" duration="14190000" />
-      <workItem from="1795760663185" duration="1797000" />
-    </task>
-    <task id="LOCAL-00041" summary="s3 config for neon">
-      <option name="closed" value="true" />
-      <created>1794309335621</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1794309335621</updated>
+      <workItem from="1795760663185" duration="2497000" />
     </task>
     <task id="LOCAL-00042" summary="fix folder ui">
       <option name="closed" value="true" />
@@ -553,7 +543,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795761827342</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="refactor(folder-navigation): delete useState because it doesnt upldate file-section">
+      <option name="closed" value="true" />
+      <created>1795762718013</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1795762718016</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -575,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="upload-url api service and storage" />
     <MESSAGE value="log tests" />
     <MESSAGE value="complete url business logic" />
     <MESSAGE value="complete route" />
@@ -600,6 +597,7 @@
     <MESSAGE value="create-folder-button: bugfix" />
     <MESSAGE value="fix(git): delete neon and idea" />
     <MESSAGE value="refactor(file-section): add key for files grid in folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(file-section): add key for files grid in folders" />
+    <MESSAGE value="refactor(folder-navigation): delete useState because it doesnt upldate file-section" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(folder-navigation): delete useState because it doesnt upldate file-section" />
   </component>
 </project>

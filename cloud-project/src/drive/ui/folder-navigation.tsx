@@ -17,6 +17,7 @@ export function FolderNavigation({ initialFolders }: FolderNavigationProps) {
         params.set("folderId", folderId);
         router.push(`/drive?${params.toString()}`);
     }
+    router.refresh();
 
     if (initialFolders.length === 0) {
         return <p className="px-3 text-sm text-muted-foreground">Папок пока нет.</p>;
