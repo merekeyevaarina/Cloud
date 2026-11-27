@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="refactor(folder-section): return">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/files-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/files-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/folder-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/folder-grid.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -38,11 +38,14 @@ export async function DriveSidebar({ folders }: DriveSidebarProps) {
                         Все файлы
                     </Link>
                 </Button>
-
-                <div className="mt-6">
-                    <FolderGrid folders={folders} />
-                </div>
             </nav>
+
+            <section className="mt-6">
+                <h2 className="mb-3 px-3 text-xs font-semibold text-muted-foreground">
+                    Папки
+                </h2>
+                <FolderGrid folders={folders} />
+            </section>
 
             <section
                 aria-label="Использование хранилища"

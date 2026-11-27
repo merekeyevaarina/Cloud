@@ -25,14 +25,14 @@ export function FolderGrid({ folders }: FolderGridProps) {
   }
 
   return (
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-2">
           {folders.map((folder) => (
         <Card
             key={folder.id}
             role="button"
             tabIndex={0}
             onClick={() => openFolder(folder.id)}
-            className="flex-row items-center gap-3 rounded-2xl p-4 shadow-none transition-colors hover:bg-accent/40">
+            className="flex-row items-center gap-3 rounded-xl p-3 shadow-none transition-colors hover:bg-accent/40 cursor-pointer">
           <Badge variant="muted" className="size-11 shrink-0 rounded-xl bg-secondary p-0 text-primary">
             <Folder aria-hidden="true" className="size-5" />
           </Badge>
