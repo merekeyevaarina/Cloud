@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="refactor(folder-grid): return" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="refactor(folder-section): return">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/files-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/files-section.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,15 +160,7 @@
       <workItem from="1795235915329" duration="3000" />
       <workItem from="1795418620255" duration="4146000" />
       <workItem from="1795453264851" duration="14190000" />
-      <workItem from="1795760663185" duration="3202000" />
-    </task>
-    <task id="LOCAL-00045" summary="logout button fix">
-      <option name="closed" value="true" />
-      <created>1794320966284</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1794320966284</updated>
+      <workItem from="1795760663185" duration="3988000" />
     </task>
     <task id="LOCAL-00046" summary="logout button ui fix">
       <option name="closed" value="true" />
@@ -551,7 +546,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795763742541</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="refactor(folder-section): return">
+      <option name="closed" value="true" />
+      <created>1795764020073</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1795764020073</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -573,7 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="complete route" />
     <MESSAGE value="upload button" />
     <MESSAGE value="preview business logic" />
     <MESSAGE value="bug fix" />
@@ -598,6 +600,7 @@
     <MESSAGE value="refactor(folder-navigation): delete useState because it doesnt upldate file-section" />
     <MESSAGE value="refactor(folder-navigation): add router refresh for actual files" />
     <MESSAGE value="refactor(folder-grid): return" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(folder-grid): return" />
+    <MESSAGE value="refactor(folder-section): return" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(folder-section): return" />
   </component>
 </project>

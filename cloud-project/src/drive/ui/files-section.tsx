@@ -11,6 +11,16 @@ type FilesSectionProps = {
 };
 
 export function FilesSection({ initialFiles, folderId }: FilesSectionProps) {
+    return (
+        <FilesSectionContent
+            key={folderId ?? "root"}
+            initialFiles={initialFiles}
+            folderId={folderId}
+        />
+    );
+}
+
+function FilesSectionContent({ initialFiles, folderId }: FilesSectionProps) {
     const [files, setFiles] = useState(initialFiles);
 
     function handleUploadComplete(newFile: DriveFile) {
