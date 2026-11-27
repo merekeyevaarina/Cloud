@@ -32,7 +32,7 @@ export function FilesSection({ initialFiles, folderId }: FilesSectionProps) {
                 />
             </div>
 
-            <FileTable key={folderId ?? "root"} files={files} onDelete={handleDelete} />
+            <FileTable files={files} onDelete={handleDelete} />
         </section>
     );
 }
