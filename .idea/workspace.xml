@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="refactor(folder-section): return">
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/drive-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-project/src/drive/ui/folder-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-project/src/drive/ui/folder-grid.tsx" afterDir="false" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="refactor(drive-sidebar, folder-grid):fix vesion">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,14 +160,6 @@
       <workItem from="1795418620255" duration="4146000" />
       <workItem from="1795453264851" duration="14190000" />
       <workItem from="1795760663185" duration="3988000" />
-    </task>
-    <task id="LOCAL-00046" summary="logout button ui fix">
-      <option name="closed" value="true" />
-      <created>1794321125803</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1794321125803</updated>
     </task>
     <task id="LOCAL-00047" summary="ui fix">
       <option name="closed" value="true" />
@@ -554,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795764020073</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="refactor(drive-sidebar, folder-grid):fix vesion">
+      <option name="closed" value="true" />
+      <created>1795766106097</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1795766106097</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -576,7 +575,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="upload button" />
     <MESSAGE value="preview business logic" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="preview button fix" />
@@ -601,6 +599,7 @@
     <MESSAGE value="refactor(folder-navigation): add router refresh for actual files" />
     <MESSAGE value="refactor(folder-grid): return" />
     <MESSAGE value="refactor(folder-section): return" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(folder-section): return" />
+    <MESSAGE value="refactor(drive-sidebar, folder-grid):fix vesion" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(drive-sidebar, folder-grid):fix vesion" />
   </component>
 </project>

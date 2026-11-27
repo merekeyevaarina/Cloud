@@ -1,7 +1,6 @@
 'use client'
 
 import { useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 import { Button } from "@/src/shared/ui/button";
 import { Upload } from "lucide-react";
 import type {DriveFile} from "@/src/drive/ui/drive-types";
@@ -13,7 +12,6 @@ type UploadFileButtonProps = {
 
 export function UploadFileButton({ folderId,onUploadComplete }: UploadFileButtonProps) {
     const inputRef = useRef<HTMLInputElement>(null);
-    const router = useRouter();
 
     const [uploading, setUploading] = useState(false);
     const [error, setError] = useState("");
@@ -98,10 +96,8 @@ export function UploadFileButton({ folderId,onUploadComplete }: UploadFileButton
 
             onUploadComplete(newFile);
             console.log("Завершение загрузки:", performance.now() - start);
-            console.log("До router.refresh:", performance.now() - start);
 
 
-            router.refresh();
 
         } catch (error) {
             setError(
