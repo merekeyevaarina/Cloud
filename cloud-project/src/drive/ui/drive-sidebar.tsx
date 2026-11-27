@@ -5,7 +5,7 @@ import { Button } from "@/src/shared/ui/button";
 import { Progress } from "@/src/shared/ui/progress";
 import { storageSize } from "@/src/drive/ui/drive-data";
 import type { DriveFolder } from "@/src/drive/ui/drive-types";
-import { FolderNavigation } from "@/src/drive/ui/folder-navigation";
+import {FolderGrid} from "@/src/drive/ui/folder-grid";
 
 type DriveSidebarProps = {
     folders: DriveFolder[];
@@ -40,7 +40,7 @@ export async function DriveSidebar({ folders }: DriveSidebarProps) {
                 </Button>
 
                 <div className="mt-6">
-                    <FolderNavigation initialFolders={folders} />
+                    <FolderGrid folders={folders} />
                 </div>
             </nav>
 

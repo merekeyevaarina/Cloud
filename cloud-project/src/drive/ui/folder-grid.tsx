@@ -25,8 +25,8 @@ export function FolderGrid({ folders }: FolderGridProps) {
   }
 
   return (
-    <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-      {folders.map((folder) => (
+      <div className="flex flex-col gap-1">
+          {folders.map((folder) => (
         <Card
             key={folder.id}
             role="button"

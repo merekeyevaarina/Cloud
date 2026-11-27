@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="refactor(folder-navigation): delete useState because it doesnt upldate file-section" />
+    <list default="true" id="ef130512-e23c-489e-80b5-2b3616a92e24" name="Changes" comment="refactor(folder-navigation): add router refresh for actual files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,15 +157,7 @@
       <workItem from="1795235915329" duration="3000" />
       <workItem from="1795418620255" duration="4146000" />
       <workItem from="1795453264851" duration="14190000" />
-      <workItem from="1795760663185" duration="2497000" />
-    </task>
-    <task id="LOCAL-00042" summary="fix folder ui">
-      <option name="closed" value="true" />
-      <created>1794311414776</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1794311414776</updated>
+      <workItem from="1795760663185" duration="2809000" />
     </task>
     <task id="LOCAL-00043" summary="logout button add in ui">
       <option name="closed" value="true" />
@@ -551,7 +543,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795762718016</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="refactor(folder-navigation): add router refresh for actual files">
+      <option name="closed" value="true" />
+      <created>1795763220027</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1795763220028</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="ThunderClientSettings">
@@ -573,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="log tests" />
     <MESSAGE value="complete url business logic" />
     <MESSAGE value="complete route" />
     <MESSAGE value="upload button" />
@@ -598,6 +597,7 @@
     <MESSAGE value="fix(git): delete neon and idea" />
     <MESSAGE value="refactor(file-section): add key for files grid in folders" />
     <MESSAGE value="refactor(folder-navigation): delete useState because it doesnt upldate file-section" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(folder-navigation): delete useState because it doesnt upldate file-section" />
+    <MESSAGE value="refactor(folder-navigation): add router refresh for actual files" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(folder-navigation): add router refresh for actual files" />
   </component>
 </project>
